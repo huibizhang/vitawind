@@ -1,11 +1,10 @@
 {
   "name": "vite-plugin-tailwind-hmr",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "support tailwind hot reload for vite HMR",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "npm i -D tailwindcss autoprefixer postcss postcss-cli"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,7 @@
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.1.2"
   },
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",

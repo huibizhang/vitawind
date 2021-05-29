@@ -4,7 +4,7 @@ var exec = require('child_process').exec;
 // var postcss = require("postcss");
 // var postcssCli = require("postcss-cli");
 
-module.exports = function( tailwindCCS, outputCSS ) {
+module.exports = function( tailwindCSS, outputCSS ) {
 
   console.log('\x1b[33m%s\x1b[0m',"TailwindCSS",'\x1b[37m', "is now watching ...");
 
@@ -15,9 +15,9 @@ module.exports = function( tailwindCCS, outputCSS ) {
   let errorFile = []
   let haveError = false;
   
-  if(!re1.test(tailwindCCS)){
+  if(!re1.test(tailwindCSS)){
     haveError = true
-    errorFile.push(tailwindCCS)
+    errorFile.push(tailwindCSS)
   }
   if(!re2.test(outputCSS)){
     haveError = true
@@ -32,13 +32,12 @@ module.exports = function( tailwindCCS, outputCSS ) {
     return {}
   }else{
     // console.log(
-    //   `FileChecked: ${tailwindCCS}\n`,
+    //   `FileChecked: ${tailwindCSS}\n`,
     //   `FileChecked: ${outputCCS}\n`
     // );
   }
 
-  var cmd = exec(`postcss ${tailwindCCS} -o ${outputCSS} -w`, function(err, stdout, stderr) {
-  
+  var cmd = exec(`postcss ${tailwindCSS} -o ${outputCSS} -w`, function(err, stdout, stderr) {
     if (err) {
       // handle error
       if(!/postcss/g.test(err)){

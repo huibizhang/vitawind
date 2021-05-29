@@ -1,1 +1,1 @@
-# Vite-plugin-tailwind-hmr
+# Vitailwind

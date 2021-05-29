@@ -1,14 +1,14 @@
 {
-  "name": "vite-plugin-tailwind-hmr",
+  "name": "vitailwind",
   "version": "0.2.4",
-  "description": "support tailwind hot reload for vite HMR",
+  "description": "Install Tailwindcss that support hot reload for vite HMR.",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huibizhang/vite-plugin-tailwind-hmr.git"
+    "url": "git+https://github.com/huibizhang/vitailwind.git"
   },
   "keywords": [
     "vite",

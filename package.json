@@ -11,10 +11,20 @@
     "url": "git+https://github.com/huibizhang/vite-plugin-tailwind-hmr.git"
   },
   "keywords": [
-    "tailwind"
+    "vite",
+    "vite plugin",
+    "tailwind",
+    "tailwindcss",
+    "hmr"
   ],
   "author": "huibizhang",
   "license": "MIT",
+  "peerDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.2"
+  },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.0",

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "vite-plugin-tailwind-hmr"
+    "url": "https://github.com/huibizhang/vite-plugin-tailwind-hmr"
   },
   "keywords": [
     "tailwind"

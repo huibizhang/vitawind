@@ -26,6 +26,6 @@
     "tailwindcss": "^2.1.2"
   },
   "bin": {
-    "vitailwind": "./scripts/cli.js"
+    "vitailwind": "./cli.js"
   }
 }

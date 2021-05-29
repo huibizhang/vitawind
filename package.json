@@ -1,11 +1,10 @@
 {
   "name": "vitailwind",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Install Tailwindcss that support hot reload for vite HMR.",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "tailwind init -p"
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,6 @@
     "tailwindcss": "^2.1.2"
   },
   "bin": {
-    "vitailwind": "./scripts/index.js",
-    "vitailwind init": "./scripts/init.js"
+    "vitailwind": "./scripts/cli.js"
   }
 }

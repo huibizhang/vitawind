@@ -1,8 +1,8 @@
 var exec = require('child_process').exec;
-var tailwind = require("tailwindcss");
-var autoprefixer = require("autoprefixer");
-var postcss = require("postcss");
-var postcssCli = require("postcss-cli");
+// var tailwind = require("tailwindcss");
+// var autoprefixer = require("autoprefixer");
+// var postcss = require("postcss");
+// var postcssCli = require("postcss-cli");
 
 module.exports = function( tailwindCCS, outputCSS ) {
 

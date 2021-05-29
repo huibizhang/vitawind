@@ -27,6 +27,6 @@
     "tailwindcss": "^2.1.2"
   },
   "bin": {
-    "vitailwind": "tailwind init -p"
+    "vitailwind": "npx tailwind init -p"
   }
 }

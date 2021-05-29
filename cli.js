@@ -43,4 +43,5 @@ function init() {
 }
 
 console.log('\n\x1b[32m' + 'Starting vitailwind initialize...','\x1b[37m');
+
 init();

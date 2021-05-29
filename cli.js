@@ -3,6 +3,8 @@ var exec = require('child_process').exec;
 
 module.exports = function() {
 
+  console.log("starting vitailwind initialize...\n\n");
+
   var cmd = exec(`npx tailwind init -p`, function(err, stdout, stderr) {
     if (err) {
       // handle error

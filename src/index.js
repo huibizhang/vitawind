@@ -30,6 +30,11 @@ module.exports = function( tailwindCCS, outputCSS ) {
     }
     console.log('\x1b[31m' + `Tailwind watcher stopped.`);
     return {}
+  }else{
+    // console.log(
+    //   `FileChecked: ${tailwindCCS}\n`,
+    //   `FileChecked: ${outputCCS}\n`
+    // );
   }
 
   var cmd = exec(`postcss ${tailwindCCS} -o ${outputCSS} -w`, function(err, stdout, stderr) {

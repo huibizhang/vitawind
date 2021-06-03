@@ -33,14 +33,14 @@
 Before talking Vitawind , We need to know something about Vite.
 
 ### Vite
-[Vite] is the best frontend dev tool in my mind. Actually , Vite is really fast and convinent when your are devloping Vue or React project. Instead to **Webpack** is , Vite's [Hot Module Replacement (HMR)] resolve that devlopers always need to take a long long time for waiting dev server updated when  modifying a very small thing.
+[Vite](https://vitejs.dev/) is the best frontend dev tool in my mind. Actually , Vite is really fast and convinent when your are devloping Vue or React project. Instead to **Webpack** is , Vite's [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement) resolve that devlopers always need to take a long long time for waiting dev server updated when  modifying a very small thing.
 
 ### What's the problem ?
-Even though Vite is very fast , very helpful for devloping web application , but still have a problem. When you're using [TailwindCSS] and **configuring purge or JIT mode** , you may need to re-build the css file which you're using in pages  because that **Tailwind will tree-shake the unused class** to keep the css file's size is small.
+Even though Vite is very fast , very helpful for devloping web application , but still have a problem. When you're using [TailwindCSS](https://tailwindcss.tw/) and **configuring purge or JIT mode** , you may need to re-build the css file which you're using in pages  because that **Tailwind will tree-shake the unused class** to keep the css file's size is small.
 
 Because of this, you need to let Tailwind rebuild automatically when dev server is hot-updating , or you'll **never see your changes are active**. (Restart dev server can rebuild Tailwind before the port open , but make sure your Tailwind is in JIT mode.)
 
-In the case of [VueCLI] , we can using Webpack and [BrowserSync] to make it effact , but what about Vite ? Vite have own mechanism of hot-update , it's hard to detect timing from outside to rebuild.
+In the case of [VueCLI](https://cli.vuejs.org/) , we can using Webpack and [BrowserSync](https://alexanderzeitler.com/articles/watch-tailwind-changes-update-browser-sync/) to make it effact , but what about Vite ? Vite have own mechanism of hot-update , it's hard to detect timing from outside to rebuild.
 
 ### Vitawind
 Vitawind is a Vite plugin , launching with Vite dev server. Easy to use , just import Vitawind and add one line setting , you'll have the most fantastic devloper experience !
@@ -60,7 +60,7 @@ Installing vitawind , then Tailwind will be installed in your vite project by np
 
 npx vitawind
 ```
-Run `npx vitaiwnd` and vitawind will generates config file all you need and setting automatically , but if you want to create the full configurations of `tailwind.config.js` , or maybe you want to create or set config files with your own setting , you can [configuring vitawind with arguments].
+Run `npx vitaiwnd` and vitawind will generates config file all you need and setting automatically , but if you want to create the full configurations of `tailwind.config.js` , or maybe you want to create or set config files with your own setting , you can [configuring vitawind with arguments](#configuring-with-arguments).
 
 #### Using
 The final part , we need to add a line of css file import , just like :
@@ -162,17 +162,3 @@ export default defineConfig({
 ## License
 
 MIT
-
-
-<!-- links -->
-[Hot Module Replacement (HMR)]:(https://vitejs.dev/guide/features.html#hot-module-replacement)
-
-[Vite]:(https://vitejs.dev/)
-
-[TailwindCSS]:(https://tailwindcss.tw/)
-
-[VueCLI]:(https://cli.vuejs.org/)
-
-[BrowserSync]:(https://alexanderzeitler.com/articles/watch-tailwind-changes-update-browser-sync/)
-
-[configuring vitawind with arguments]: #configuring-with-arguments

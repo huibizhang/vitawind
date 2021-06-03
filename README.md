@@ -139,7 +139,7 @@ export default defineConfig({
         // add vitawind using in plugins list.
         vitawind()
 
-        // if you havd ran `-o`, you need to 
+        // if you had ran `-o`, you need to 
         // add your source.css and output.css file for vitawind
         vitawind('your-source.css-file','your-output.css-file')
     ]

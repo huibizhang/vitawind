@@ -4,11 +4,11 @@ var exec = require('child_process').exec;
 // var postcss = require("postcss");
 // var postcssCli = require("postcss-cli");
 
-module.exports = function( tailwindCSS, outputCSS ) {
+module.exports = function( tailwindCSS = 'tailwind.css', outputCSS = './src/index.css' ) {
 
   console.log('\x1b[33m%s\x1b[0m',"TailwindCSS",'\x1b[37m', "is now watching ...");
 
-  const reg = /(\w+)\.(css)/g
+  const reg = /(\w+)\.(w+)/g
   const re1 = new RegExp(reg)
   const re2 = new RegExp(reg)
 

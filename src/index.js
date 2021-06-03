@@ -8,7 +8,7 @@ module.exports = function( tailwindCSS = 'tailwind.css', outputCSS = './src/inde
 
   console.log('\x1b[33m%s\x1b[0m',"TailwindCSS",'\x1b[37m', "is now watching ...");
 
-  const reg = /(\w+)\.(w+)/g
+  const reg = /(\w+)\.(\w+)/g
   const re1 = new RegExp(reg)
   const re2 = new RegExp(reg)
 
@@ -26,7 +26,7 @@ module.exports = function( tailwindCSS = 'tailwind.css', outputCSS = './src/inde
 
   if(haveError){
     for(i=0;i<errorFile.length;i++){
-      console.log('\x1b[31m' + `FileTypeError: ${errorFile[i]} . FileType should be a .css`);
+      console.log('\x1b[31m' + `FileNameError: ${errorFile[i]}.`);
     }
     console.log('\x1b[31m' + `Tailwind watcher stopped.`);
     return {}
@@ -36,6 +36,8 @@ module.exports = function( tailwindCSS = 'tailwind.css', outputCSS = './src/inde
     //   `FileChecked: ${outputCCS}\n`
     // );
   }
+
+  console.log(`postcss ${tailwindCSS} -o ${outputCSS} -w`)
 
   var cmd = exec(`postcss ${tailwindCSS} -o ${outputCSS} -w`, function(err, stdout, stderr) {
     if (err) {

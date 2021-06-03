@@ -176,11 +176,3 @@ MIT
 [BrowserSync]:(https://alexanderzeitler.com/articles/watch-tailwind-changes-update-browser-sync/)
 
 [configuring vitawind with arguments]: #configuring-with-arguments
-
-<!-- css -->
-<style>
-    #dep{
-        color:#AAAAAA;
-        line-height:30px;
-    }
-</style>

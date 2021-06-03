@@ -23,7 +23,7 @@
 
 # Vitawind 🌪⚡
 
-> #### The Lightning Wind , Stronger and Faster .
+> #### The Lightning Wind , Stronger and Faster.
 
 - 🧰 Easy To Install
 - ⚡️ Support For Vite HMR
@@ -53,7 +53,7 @@ Vitawind is a Vite plugin , launching with Vite dev server. Easy to use , just i
 ```bash
 npm install vitawind 
 ```
-Installing vitawind , then Tailwind will be installed in your vite project by npm .
+Installing vitawind , then Tailwind will be installed in your vite project by npm.
 
 #### Configuration
 ```bash

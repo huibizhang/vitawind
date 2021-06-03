@@ -14,9 +14,12 @@
     "url": "git+https://github.com/huibizhang/vitawind.git"
   },
   "keywords": [
-    "vitailwind",
+    "vitawind",
     "vite",
+    "vitejs",
     "vite plugin",
+    "vitejs plugin",
+    "vite-plugin",
     "tailwind",
     "tailwindcss",
     "hmr"

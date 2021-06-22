@@ -1,6 +1,6 @@
 {
   "name": "vitawind",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Install Tailwindcss that support hot reload for vite HMR.",
   "main": "./src/index.js",
   "engines": {

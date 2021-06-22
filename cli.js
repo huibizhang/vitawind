@@ -2,20 +2,14 @@
 var exec = require('child_process').exec
 var fs = require('fs')
 
+const configPath = process.cwd() + '/vitawind.config.js'
+var config = fs.existsSync(configPath) ? require(configPath) : {}
+
+var watcher = require('./lib/watch')
+var settings = require('./lib/setting')
+
 var async = false
 
-var settings = {
-  tailwind:{
-    configMode: 'normal',
-    sourceFile: '',
-    outputFile: '',
-  },
-  vite:{
-    configMode: 'auto'
-  },
-  errors:0,
-  errorString:""
-}
 
 function configure( _setting ){
   var args = process.argv
@@ -60,6 +54,14 @@ function configure( _setting ){
       }
       case '--manual':{
         _setting.vite.configMode = "manual"
+        break;
+      }
+      case '-w':{
+        _setting.runMode = "watch"
+        break;
+      }
+      case '--watch':{
+        _setting.runMode = "watch"
         break;
       }
     }
@@ -256,7 +258,41 @@ function modifyViteConfig( _setting ){
   console.log('')
 }
 
+function watch(_config , _setting) {
+
+  if(_config=={}){
+
+    if(!fs.existsSync(process.cwd()+'/tailwind.css') && _setting.errors==0){
+      _setting.errors++
+      _setting.errorString = 'tailwind.css file is not found.'
+    }
+    if(!fs.existsSync(process.cwd()+'/src/index.css') && _setting.errors==0){
+      _setting.errors++
+      _setting.errorString = './src/index.css file is not found.'
+    }
+
+    if(_setting.errors==0){
+      watcher()
+    } else {
+      console.log('  ','\x1b[31m' + "Error:" + _setting.errorString,'\x1b[37m\n');
+      return
+    }
+  } else {
+    watcher(_config.source,_config.output)
+  }
+}
+
 configure(settings)
 
-console.log('\n\x1b[32m' + 'Starting vitailwind initialize...','\x1b[37m')
-init(settings)
+const run = settings.runMode == "watch"
+
+if (!run) {
+  console.log('\n\x1b[32m' + 'Starting vitailwind initialize...','\x1b[37m')
+  init(settings)
+}else {
+  console.log(config)
+  watch(config)
+}
+
+
+

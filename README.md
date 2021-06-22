@@ -85,17 +85,24 @@ npx vitaiwind -f
 ```
 
 #### Set customzie filename and path
-Tailwind compiliing css need to get a source and output 2 css files. By default, vitawind will named filenames like:
+<!-- Tailwind compiliing css need to get a source and output 2 css files. By default, vitawind will named filenames like: -->
+Tailwind compiling css need to get an output css files. By default, vitawind will named filenames like:
 
-- source css file: `tailwind.css`
-- output css file: `./src/index.css`
+<!-- - source css file: `tailwind.css`
+- output css file:`./src/index.css` -->
+- `./src/index.css`
 
 But you can also customize filenames you like , to do this , use  `-o` or `--output` option:
+<!-- ```bash
+npx vitaiwind -o {tailwind.css} {output.css}
+# or `npx vitawind --output ...
+``` -->
 ```bash
-npx vitaiwind -o {source.css} {output.css}
+npx vitaiwind -o {output.css}
 # or `npx vitawind --output ...
 ```
-> **Warning :** It's must need 2 arguments follow behind **`-o`** or **`--output`** command , you can't just only set one filename .
+<!-- > **Warning :** It's must need 2 arguments follow behind **`-o`** or **`--output`** command , you can't just only set one filename . -->
+> **Warning :** It's must need an argument follow behind **`-o`** or **`--output`** command.
 
 #### Using after `--output` option
 Difference with [Using](#using) part , we need to add a line of css file import , **this is output.css , and change the filename to your customize output.css filename setting in last section by `-o` option** :
@@ -111,7 +118,7 @@ createApp(App).mount('#app')
 after add to `./src/main.js` , you can open dev server by `npm run dev` command as fast as you can ... because , it's working ! Enjoy your devloping time , thank you ! 🤪
 <br>
 
-There is one more argument `-m` ( or `--manual` ) that has not been mentioned yet , for good to find , it's will introduction in [Manually](#manually) part.
+<!-- There is one more argument `-m` ( or `--manual` ) that has not been mentioned yet , for good to find , it's will introduction in [Manually](#manually) part.
 
 <br>
 
@@ -146,7 +153,7 @@ export default defineConfig({
 })
 ```
 ---
-<br>
+<br> -->
 
 ## Dependencies 
 
@@ -154,8 +161,8 @@ export default defineConfig({
 | ------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | TailwindCSS                                                   | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/tailwindcss?style=flat-square&label=%20)                  |
 | autoprefixer                                                  | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/autoprefixer?style=flat-square&label=%20)                 |
-| postcss                                                       | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss?style=flat-square&label=%20)                      |
-| postcss-cli                                                   | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss-cli?style=flat-square&label=%20)                  |
+<!-- | postcss                                                       | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss?style=flat-square&label=%20)                      |
+| postcss-cli                                                   | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss-cli?style=flat-square&label=%20)                  | -->
 
 <!-- ## Contribution -->
 

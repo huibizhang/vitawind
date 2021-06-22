@@ -39,9 +39,8 @@ function configure( _setting ){
       }
       case '-o':{
         var isCommand = ['-f','--full','-o','--output','-m','--manual']
-        if(isCommand.indexOf(array[index+1])==-1 && isCommand.indexOf(array[index+2])==-1){
-          _setting.tailwind.sourceFile = array[index+1]
-          _setting.tailwind.outputFile = array[index+2]
+        if(isCommand.indexOf(array[index+1])==-1){
+          _setting.tailwind.outputFile = array[index+1]
         }else{
           _setting.errors++
           _setting.errorString = " command -o syntax error." + '\x1b[33m' + "\nVisits https://github.com/huibizhang/vitawind#configuring-with-arguments"
@@ -50,9 +49,8 @@ function configure( _setting ){
       }
       case '--output':{
         var isCommand = ['-f','--full','-o','--output','-m','--manual']
-        if(isCommand.indexOf(array[index+1])==-1 && isCommand.indexOf(array[index+2])==-1){
-          _setting.tailwind.sourceFile = array[index+1]
-          _setting.tailwind.outputFile = array[index+2]
+        if(isCommand.indexOf(array[index+1])==-1){
+          _setting.tailwind.outputFile = array[index+1]
         }else{
           _setting.errors++
           _setting.errorString = " command --output syntax error." + '\x1b[33m' + "\nVisits https://github.com/huibizhang/vitawind#configuring-with-arguments"
@@ -148,6 +146,8 @@ function init( _setting ) {
         var outputFile = (_setting.tailwind.outputFile)==''?'./src/index.css':_setting.tailwind.outputFile
         if(!async){
           try {
+            let lastPath = outputFile.substring(0, outputFile.lastIndexOf("/"))
+            fs.mkdirSync(lastPath,{recursive:true})
             fs.writeFileSync(outputFile,tailwindContents)
             console.log('  ','\x1b[33m' + "✅ Created file:" + '\x1b[37m' + ` ${outputFile}`)
           } catch (error) {

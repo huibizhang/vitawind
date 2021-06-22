@@ -1,20 +1,25 @@
 #!/usr/bin/env node
 var exec = require('child_process').exec
 var fs = require('fs')
+var settings = require('./lib/setting')
+var packageJson = require('./package.json')
+
+//console.log(settings)
 
 var async = false
 
-var settings = {
-  tailwind:{
-    configMode: 'normal',
-    sourceFile: '',
-    outputFile: '',
+var localSettings = {
+  tailwind: {
+    configMode: "normal",
+    sourceFile: "",
+    outputFile: "",
   },
-  vite:{
-    configMode: 'auto'
+  vite: {
+    configMode: "auto",
   },
-  errors:0,
-  errorString:""
+  initial:true,
+  errors: 0,
+  errorString: "",
 }
 
 function configure( _setting ){
@@ -54,13 +59,17 @@ function configure( _setting ){
         }
         break;
       }
-      case '-m':{
-        _setting.vite.configMode = "manual"
-        break;
-      }
-      case '--manual':{
-        _setting.vite.configMode = "manual"
-        break;
+      // case '-m':{
+      //   _setting.vite.configMode = "manual"
+      //   break;
+      // }
+      // case '--manual':{
+      //   _setting.vite.configMode = "manual"
+      //   break;
+      // }
+      case 'version':{
+        _setting.initial = false
+        console.log(packageJson.version)
       }
     }
   })
@@ -108,30 +117,32 @@ function init( _setting ) {
         _setting.errors++
       }
 
-      if(_setting.errors==0){
-        var sourceFile = (_setting.tailwind.sourceFile)==''?'./tailwind.css':_setting.tailwind.sourceFile
-        var tailwindContents = '@tailwind base;\n@tailwind components;\n@tailwind utilities;'
-        if(!fs.existsSync(sourceFile)){
-          if(!async){
-            try {
-              fs.writeFileSync(sourceFile,tailwindContents)
-              console.log('  ','\x1b[33m' + "✅ Created file:" + '\x1b[37m' + ` ${sourceFile}`)
-            } catch (error) {
-              _setting.errorString = error
-              _setting.errors++
-            }
-          }else{
-            fs.writeFileSync(sourceFile,tailwindContents,function (error) {
-                if(error){
-                  _setting.errorString = error
-                  _setting.errors++
-                }else{
-                  console.log('  ','\x1b[33m' + "✅ Created file:" + '\x1b[37m' + ` ${sourceFile}`)
-                }
-            })
-          }
-        } 
-      }
+      var tailwindContents = '@tailwind base;\n@tailwind components;\n@tailwind utilities;'
+
+      // if(_setting.errors==0){
+      //   var sourceFile = (_setting.tailwind.sourceFile)==''?'./tailwind.css':_setting.tailwind.sourceFile
+      //   var tailwindContents = '@tailwind base;\n@tailwind components;\n@tailwind utilities;'
+      //   if(!fs.existsSync(sourceFile)){
+      //     if(!async){
+      //       try {
+      //         fs.writeFileSync(sourceFile,tailwindContents)
+      //         console.log('  ','\x1b[33m' + "✅ Created file:" + '\x1b[37m' + ` ${sourceFile}`)
+      //       } catch (error) {
+      //         _setting.errorString = error
+      //         _setting.errors++
+      //       }
+      //     }else{
+      //       fs.writeFileSync(sourceFile,tailwindContents,function (error) {
+      //           if(error){
+      //             _setting.errorString = error
+      //             _setting.errors++
+      //           }else{
+      //             console.log('  ','\x1b[33m' + "✅ Created file:" + '\x1b[37m' + ` ${sourceFile}`)
+      //           }
+      //       })
+      //     }
+      //   } 
+      // }
 
       if(_setting.errors==0){
         var outputFile = (_setting.tailwind.outputFile)==''?'./src/index.css':_setting.tailwind.outputFile
@@ -155,7 +166,12 @@ function init( _setting ) {
         }
       }
     }
-    modifyViteConfig( _setting )
+
+    if(_setting.errors>0){
+      console.log('  ','\x1b[31m' + "Error:" + _setting.errorString,'\x1b[37m\n');
+      return
+    }
+    // modifyViteConfig( _setting )
   });
 
   cmd.on('exit', function (code) {
@@ -256,7 +272,12 @@ function modifyViteConfig( _setting ){
   console.log('')
 }
 
-configure(settings)
+configure(localSettings)
 
-console.log('\n\x1b[32m' + 'Starting vitailwind initialize...','\x1b[37m')
-init(settings)
+if(localSettings.initial){
+  console.log('\n\x1b[32m' + 'Starting vitailwind initialize...','\x1b[37m')
+  init(localSettings)
+}
+
+
+

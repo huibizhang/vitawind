@@ -1,3 +1,4 @@
+
 var exec = require('child_process').exec;
 // var tailwind = require("tailwindcss");
 // var autoprefixer = require("autoprefixer");
@@ -37,9 +38,9 @@ module.exports = function( tailwindCSS = 'tailwind.css', outputCSS = './src/inde
     // );
   }
 
-  console.log(`postcss ${tailwindCSS} -o ${outputCSS} -w`)
+  // console.log(`tailwindcss -i ${tailwindCSS} -o ${outputCSS} -w`)
 
-  var cmd = exec(`postcss ${tailwindCSS} -o ${outputCSS} -w`, function(err, stdout, stderr) {
+  var cmd = exec(`tailwindcss -i ${tailwindCSS} -o ${outputCSS} -w`, function(err, stdout, stderr) {
     if (err) {
       // handle error
       if(!/postcss/g.test(err)){

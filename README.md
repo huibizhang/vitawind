@@ -26,24 +26,21 @@
 > #### The Lightning Wind , Stronger and Faster.
 
 - 🧰 Easy To Install
-- ⚡️ Support For Vite HMR
+- ⚡️ Automatically open Tailwind JIT Mode
 - ⚙ One-Command Setting
 
 ## Why Vitawind
-Before talking Vitawind , We need to know something about Vite.
+Vitawind is a Vite helper that can installing and setting Tailwind CSS in few steps. Easy to use , just install Vitawind and add one line setting , you'll have the most fantastic devloper experience !
 
 ### Vite
 [Vite](https://vitejs.dev/) is the best frontend dev tool in my mind. Actually , Vite is really fast and convinent when your are devloping Vue or React project. Instead to **Webpack** is , Vite's [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement) resolve that devlopers always need to take a long long time for waiting dev server updated when  modifying a very small thing.
 
-### What's the problem ?
+<!-- ### What's the problem ?
 Even though Vite is very fast , very helpful for devloping web application , but still have a problem. When you're using [TailwindCSS](https://tailwindcss.tw/) and **configuring purge or JIT mode** , you may need to re-build the css file which you're using in pages  because that **Tailwind will tree-shake the unused class** to keep the css file's size is small.
 
 Because of this, you need to let Tailwind rebuild automatically when dev server is hot-updating , or you'll **never see your changes are active**. (Restart dev server can rebuild Tailwind before the port open , but make sure your Tailwind is in JIT mode.)
 
-In the case of [VueCLI](https://cli.vuejs.org/) , we can using Webpack and [BrowserSync](https://alexanderzeitler.com/articles/watch-tailwind-changes-update-browser-sync/) to make it effact , but what about Vite ? Vite have own mechanism of hot-update , it's hard to detect timing from outside to rebuild.
-
-### Vitawind
-Vitawind is a Vite plugin , launching with Vite dev server. Easy to use , just import Vitawind and add one line setting , you'll have the most fantastic devloper experience !
+In the case of [VueCLI](https://cli.vuejs.org/) , we can using Webpack and [BrowserSync](https://alexanderzeitler.com/articles/watch-tailwind-changes-update-browser-sync/) to make it effact , but what about Vite ? Vite have own mechanism of hot-update , it's hard to detect timing from outside to rebuild. -->
 
 ---
 

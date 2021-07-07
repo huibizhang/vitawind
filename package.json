@@ -1,6 +1,6 @@
 {
   "name": "vitawind",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Install and Setting Tailwindcss automatically for Vite",
   "main": "./src/index.js",
   "engines": {

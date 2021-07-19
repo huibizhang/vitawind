@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/huibizhang/vitawind.git"
   },
+  "homepage": "https://vitawind-blog.vercel.app/",
   "keywords": [
     "vitawind",
     "vite",

@@ -1,0 +1,17 @@
+{
+  "name": "vitawind-blog",
+  "version": "1.0.0",
+  "description": "Install and Setting Tailwindcss automatically for Vite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "author": "huibizhang",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^0.14.1",
+    "vuepress": "~1.7.1"
+  }
+}

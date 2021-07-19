@@ -17,5 +17,9 @@
   "dependencies": {
     "autoprefixer": "^10.0.2",
     "tailwindcss": "~2.2.2"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.0.2",
+    "tailwindcss": "~2.2.2"
   }
 }

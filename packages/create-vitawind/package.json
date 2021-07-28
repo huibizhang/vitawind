@@ -1,0 +1,37 @@
+{
+  "name": "create-vitawind",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "create-vitawind": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-*"
+  ],
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huibizhang/vitawind.git"
+  },
+  "homepage": "https://vitawind-blog.vercel.app/",
+  "keywords": [
+    "vitawind",
+    "vite",
+    "vitejs",
+    "vite plugin",
+    "vitejs plugin",
+    "vite-plugin",
+    "tailwind",
+    "tailwindcss",
+    "hmr"
+  ],
+  "author": "huibizhang",
+  "license": "MIT"
+}

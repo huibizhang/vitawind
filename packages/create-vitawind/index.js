@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-var exec = require('child_process').exec
+// var exec = require('child_process').exec
 const fs = require('fs')
 const path = require('path')
 const cwd = process.cwd()
-const pkgPath = path.resolve(process.argv[1])
+const pkgPath = path.resolve(process.argv[1]).replace('\\index.js','').replace('/index.js','')
 const rread = require('fs-readdir-recursive')
+const { argv } = require('process');
 
 const setting = {
   project_name: '',
@@ -14,61 +15,91 @@ const setting = {
   script: '',
   error: false,
   error_msg: "",
+  debug: false,
 }
 
 const configure = (_setting) => {
-  var args = process.argv
+  var args = argv
+
+  if (args.length===5 && args[4]==="--debug") {
+    _setting.debug = true
+  }
+
+  debugLogger("args: "+args)
+
+  if (args.length < 4) {
+    _setting.error = true
+    _setting.error_msg = `Please give project name\n\n${colorStr('Pattern: ','info')}npm init vitawind {project-name} {template}`
+    return
+  }
+
   _setting.project_name = args[2]
-  args.forEach((element,index,array) => {
-    if (index < 3) return
-
-    switch (element) {
-      case '--vue':{
-        _setting.template = "vite-vue"
-        _setting.script = "dev"
-        break
-      }
-      case '--react':{
-        _setting.template = "vite-react"
-        _setting.script = "dev"
-        break
-      }
-      case '--vuecli':{
-        _setting.template = "vuecli"
-        _setting.script = "serve"
-        break
-      }
-      case '--cra':{
-        _setting.template = "cra"
-        _setting.version = "v2.1.4"
-        _setting.script = "start"
-        break
-      }
-      case '--cra22':{
-        _setting.template = "cra"
-        _setting.version = "v2.2"
-        _setting.script = "start"
-        break
-      }
-      case '--ng':{
-        _setting.template = "ng"
-        _setting.script = "start"
-        break
-      }
-      case 'version':{
-        _setting.initial = false
-        console.log(packageJson.version)
-      }
+  if (!isValidPackageName(_setting.project_name)) {
+    _setting.project_name = toValidPackageName(_setting.project_name)
+  }
+  
+  const element = args[3]
+  switch (element) {
+    case '--vue':{
+      _setting.template = "vite-vue"
+      _setting.script = "dev"
+      break
     }
-
-    if (!element) {
-      _setting.error = true
-      _setting.error_msg = "Please give a template type."
-    } else if (!_setting.template) {
-      _setting.error = true
-      _setting.error_msg = `'${element}' isn't a valid template.`
+    case '--react':{
+      _setting.template = "vite-react"
+      _setting.script = "dev"
+      break
     }
-  })
+    case '--vuecli':{
+      _setting.template = "vuecli"
+      _setting.script = "serve"
+      break
+    }
+    case '--cra':{
+      _setting.template = "cra"
+      _setting.version = "v2.1.4"
+      _setting.script = "start"
+      break
+    }
+    case '--cra22':{
+      _setting.template = "cra"
+      _setting.version = "v2.2"
+      _setting.script = "start"
+      break
+    }
+    case '--ng':{
+      _setting.template = "ng"
+      _setting.script = "start"
+      break
+    }
+    case 'version':{
+      _setting.initial = false
+      console.log(packageJson.version)
+    }
+  }
+
+  if (!element) {
+    _setting.error = true
+    _setting.error_msg = "Please give a template type."
+  } else if (!_setting.template) {
+    _setting.error = true
+    _setting.error_msg = `'${element}' isn't a valid template.`
+  }
+}
+
+function isValidPackageName(projectName) {
+  return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(
+    projectName
+  )
+}
+
+function toValidPackageName(projectName) {
+  return projectName
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/^[._]/, '')
+    .replace(/[^a-z0-9-~]+/g, '-')
 }
 
 const getTemplateFullname = ( template, version ) => {
@@ -106,7 +137,7 @@ const dirExist = (path) => {
 
 const isEmpty = (path) => {
   const files = fs.readdirSync(path)
-  // console.log(files)
+  debugLogger(`files in directory '${path}': `+ files)
   return files.length===0
 }
 
@@ -130,11 +161,12 @@ const creator = (_setting) => {
       if (!fs.existsSync(src)) {
         _setting.error = true
         _setting.error_msg = 'Target template is not exist.'
+        debugLogger("source template path: " + src)
         return
       }
       
       const template = rread(src)
-      // console.log(template)
+      debugLogger("files in template: " + template)
 
       template
         .filter((filename) => filename.indexOf('package-lock.json')===-1 && filename.indexOf('yarn.lock')===-1)
@@ -143,7 +175,7 @@ const creator = (_setting) => {
         })
       console.log(
         `${colorStr('Template created.','success')}\n\n`,
-        `Now you need to do following steps:\n\n`,
+        `Now do following steps:\n\n`,
         `> ${colorStr('cd','info')} ${_setting.project_name}\n`,
         `> ${colorStr('npm','info')} install  (or \`yarn\`)\n`,
         `> ${colorStr('npm','info')} run ${_setting.script}  (or \`yarn ${_setting.script}\`)\n`
@@ -158,9 +190,15 @@ const creator = (_setting) => {
   }
 }
 
+const debugLogger = (msg) => {
+  if(setting.debug){
+    console.log(colorStr('','normal'),msg)
+  }
+}
+
 
 configure(setting)
-// console.log(setting)
+debugLogger(setting)
 
 creator(setting)
 

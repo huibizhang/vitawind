@@ -1,7 +1,7 @@
 {
   "name": "create-vitawind",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Scaffolding for your tailwind project",
   "main": "index.js",
   "bin": {
     "create-vitawind": "index.js"
@@ -23,6 +23,8 @@
   },
   "homepage": "https://vitawind-blog.vercel.app/",
   "keywords": [
+    "create vitawind",
+    "create-vitawind",
     "vitawind",
     "vite",
     "vitejs",
@@ -31,7 +33,9 @@
     "vite-plugin",
     "tailwind",
     "tailwindcss",
-    "hmr"
+    "vue-cli",
+    "cra",
+    "ng"
   ],
   "author": "huibizhang",
   "license": "MIT",

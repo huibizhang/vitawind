@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "create-vitawind": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-*"
+  ],
   "engines": {
     "node": ">=12.13.0"
   },

@@ -34,5 +34,8 @@
     "hmr"
   ],
   "author": "huibizhang",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "fs-readdir-recursive": "^1.1.0"
+  }
 }

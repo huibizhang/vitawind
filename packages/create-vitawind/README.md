@@ -25,10 +25,10 @@
 </p>
 <br/>
 
-#### Keep it simple, Keep it easy.
+### Keep it simple, Keep it easy.
 Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!
 
-#### How Can I do ?
+### How Can I do ?
 
 To start, open terminal at your directory where you want to put project. And, run following command:
 
@@ -41,7 +41,7 @@ base on this command, please give project name and choose a template, example:
 npm init vitawind my-first-app --vue
 ```
 
-#### Template List
+### Template List
 - --vue
 - --react
 - --vuecli
@@ -49,9 +49,5 @@ npm init vitawind my-first-app --vue
 - --cra22
 - --ng
 
-#### More
-<<<<<<< HEAD
+### More
 for more information, please read ["Scaffolding for your tailwind project"](https://vitawind-blog-huibizhang.vercel.app/scaffolding/)).
-=======
-for more information, please read ["Scaffolding for your tailwind project"](https://vitawind-blog-huibizhang.vercel.app/scaffolding/).
->>>>>>> 1bb4322 (add: readme.md)

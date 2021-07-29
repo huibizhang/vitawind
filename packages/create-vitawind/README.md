@@ -50,4 +50,8 @@ npm init vitawind my-first-app --vue
 - --ng
 
 #### More
+<<<<<<< HEAD
 for more information, please read ["Scaffolding for your tailwind project"](https://vitawind-blog-huibizhang.vercel.app/scaffolding/)).
+=======
+for more information, please read ["Scaffolding for your tailwind project"](https://vitawind-blog-huibizhang.vercel.app/scaffolding/).
+>>>>>>> 1bb4322 (add: readme.md)

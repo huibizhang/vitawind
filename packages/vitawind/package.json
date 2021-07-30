@@ -1,13 +1,10 @@
 {
   "name": "vitawind",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Install and Setting Tailwindcss automatically for Vite",
   "main": "./src/index.js",
   "engines": {
     "node": ">=12.13.0"
-  },
-  "bin": {
-    "vitawind": "./cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,10 +29,13 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^10.0.2",
-    "tailwindcss": "~2.2.2"
+    "tailwindcss": "~2.2.4"
   },
   "peerDependencies": {
     "autoprefixer": "^10.0.2",
-    "tailwindcss": "~2.2.2"
+    "tailwindcss": "~2.2.4"
+  },
+  "bin": {
+    "vitawind": "./cli.js"
   }
 }

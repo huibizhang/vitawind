@@ -5,10 +5,12 @@ The Tailwind CSS jit mode pre built-in template that can help you setup developi
 ::: tip There are full list of templates:
 - [`--vue`](#vue-in-vite)
 - [`--react`](#react-in-vite)
+- [`--vue-ts`](#vue-typescript-in-vite)
+- [`--react-ts`](#react-typescript-in-vite)
 - [`--vuecli`](#vue-cli)
 - [`--cra`](#create-react-app)
-- [`--cra22`](#create-react-app-tailwindcss-2-2)
 - [`--ng`](#angular)
+<!-- - [`--cra22`](#create-react-app-tailwindcss-2-2) -->
 :::
 <br>
 
@@ -35,6 +37,29 @@ cd {project-name}
 npm install  #or `yarn`
 npm run dev  #or `yarn dev`
 ```
+### Vue + Typescript in Vite 
+Use flag `--vue-ts` to create project with vue + typescript in vite.
+```shell
+npm init vitawind {project-name} --vue-ts
+```
+After creating project, you need:
+```shell
+cd {project-name}
+npm install  #or `yarn`
+npm run dev  #or `yarn dev`
+```
+
+### React + Typescript in Vite 
+Use flag `--react-ts` to create project with react + typescript in vite.
+```shell
+npm init vitawind {project-name} --react-ts
+```
+After creating project, you need:
+```shell
+cd {project-name}
+npm install  #or `yarn`
+npm run dev  #or `yarn dev`
+```
 
 ### Vue-CLI
 Use flag `--vuecli` to create project with Vue-CLI.
@@ -49,7 +74,7 @@ npm run serve  #or `yarn serve`
 ```
 
 ### Create React App 
-Use flag `--cra` to create project with Create React App and ***Tailwind CSS version is 2.1.4***. For newest version of Tailwind, see ["Create React App + TailwindCSS 2.2"](#create-react-app-tailwindcss-2-2) section.
+Use flag `--cra` to create project with Create React App.
 ```shell
 npm init vitawind {project-name} --cra
 ```
@@ -59,8 +84,19 @@ cd {project-name}
 npm install  #or `yarn`
 npm run start  #or `yarn start`
 ```
+<!-- ### Create React App 
+Use flag `--cra` to create project with Create React App and ***Tailwind CSS version is 2.1.4***. For newest version of Tailwind, see ["Create React App + TailwindCSS 2.2"](#create-react-app-tailwindcss-2-2) section.
+```shell
+npm init vitawind {project-name} --cra
+```
+After creating project, you need:
+```shell
+cd {project-name}
+npm install  #or `yarn`
+npm run start  #or `yarn start`
+``` -->
 
-### Create React App + TailwindCSS 2.2
+<!-- ### Create React App + TailwindCSS 2.2
 Use flag `--cra22` to create project with Create React App and ***Tailwind CSS version is 2.2 or higher***.
 
 ```shell
@@ -71,7 +107,7 @@ After creating project, you need:
 cd {project-name}
 npm install  #or `yarn`
 npm run start  #or `yarn start`
-```
+``` -->
 
 ### Angular
 Use flag `--ng` to create project with Angular CLI.

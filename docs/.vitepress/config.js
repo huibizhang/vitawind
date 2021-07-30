@@ -83,32 +83,41 @@ function getScaffoldingSidebar() {
       children: [
         {
           text: 'Vue in Vite',
-          link: '/scaffolding/templates#vue-in-vite'
+          link: '/scaffolding/templates#vue-in-vite',
+          children: [
+            {
+              text: 'Typescript for Vue',
+              link: '/scaffolding/templates#typescript-for-vue'
+            }
+          ]
         },
         {
           text: 'React in Vite',
-          link: '/scaffolding/templates#react-in-vite'
+          link: '/scaffolding/templates#react-in-vite',
+          children: [
+            {
+              text: 'Typescript for React',
+              link: '/scaffolding/templates#typescript-for-react'
+            }
+          ]
         },
         {
-          text: 'Vue + Typescript in Vite',
-          link: '/scaffolding/templates#vue-in-vite'
-        },
-        {
-          text: 'React + Typescript in Vite',
-          link: '/scaffolding/templates#react-in-vite'
-        },
-        {
-          text: 'Vue CLI',
-          link: '/scaffolding/templates#vue-cli'
-        },
-        {
-          text: 'Create React App',
-          link: '/scaffolding/templates#create-react-app'
-        },
-        {
-          text: 'Angular CLI',
-          link: '/scaffolding/templates#angular'
-        },
+          text: 'CLI',
+          children: [
+            {
+              text: 'Vue CLI',
+              link: '/scaffolding/templates#vue-cli'
+            },
+            {
+              text: 'Create React App',
+              link: '/scaffolding/templates#create-react-app'
+            },
+            {
+              text: 'Angular CLI',
+              link: '/scaffolding/templates#angular'
+            },
+          ]
+        }
       ]
     }
   ]

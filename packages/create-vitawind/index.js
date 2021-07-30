@@ -3,7 +3,6 @@
 const fs = require('fs')
 const path = require('path')
 const cwd = process.cwd()
-const pkgPath = path.resolve(process.argv[1]).replace('\\index.js','').replace('/index.js','')
 const rread = require('fs-readdir-recursive')
 var argv = require('minimist')(process.argv.slice(2));
 
@@ -21,7 +20,11 @@ const setting = {
 const configure = (_setting) => {
   _setting.debug = argv.debug
 
-  debugLogger("args: ",argv)
+  // debugLogger("args: " + process.argv)
+  debugLogger("args: ")
+  if (_setting.debug) {
+    console.log(argv)
+  }
 
   if (argv._.length===0) {
     _setting.error = true
@@ -125,7 +128,8 @@ const getTemplateFullname = ( template, version ) => {
 }
 
 const write = (file,content,_setting) => {
-  let src = pkgPath.concat(`/${getTemplateFullname(_setting.template,_setting.version)}/${file}`)
+  // let src = pkgPath.concat(`/${getTemplateFullname(_setting.template,_setting.version)}/${file}`)
+  let src = path.join(__dirname, getTemplateFullname(_setting.template,_setting.version), file)
   let dist = cwd.concat(`/${_setting.project_name}/${file}`)
   if (content) {
     fs.writeFileSync(dist,content)
@@ -168,8 +172,11 @@ const colorStr = (string,type='normal') => {
 const creator = (_setting) => {
   if (_setting.error) return
 
-  const src = pkgPath.concat(`/${getTemplateFullname(_setting.template,_setting.version)}`)
-  const dist = cwd.concat(`/${_setting.project_name}`)
+  // Windows Can Run, But linux based can't
+  // const src = pkgPath.concat(`/${getTemplateFullname(_setting.template,_setting.version)}`)
+  // and this can get correct path.
+  const src = path.join(__dirname, getTemplateFullname(_setting.template,_setting.version))
+  // const dist = cwd.concat(`/${_setting.project_name}`)
   if (dirExist(_setting.project_name)) {
     if (isEmpty(_setting.project_name)){
       if (!fs.existsSync(src)) {

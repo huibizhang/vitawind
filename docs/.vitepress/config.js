@@ -82,11 +82,19 @@ function getScaffoldingSidebar() {
       text: 'Templates',
       children: [
         {
-          text: 'Vue with Vite',
+          text: 'Vue in Vite',
           link: '/scaffolding/templates#vue-in-vite'
         },
         {
-          text: 'React with Vite',
+          text: 'React in Vite',
+          link: '/scaffolding/templates#react-in-vite'
+        },
+        {
+          text: 'Vue + Typescript in Vite',
+          link: '/scaffolding/templates#vue-in-vite'
+        },
+        {
+          text: 'React + Typescript in Vite',
           link: '/scaffolding/templates#react-in-vite'
         },
         {

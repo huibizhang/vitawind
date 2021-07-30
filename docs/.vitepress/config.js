@@ -73,7 +73,6 @@ function getScaffoldingSidebar() {
       text: 'Create Vitawind',
       children: [
         { text: 'Instruction', link: '/scaffolding/' },
-        { text: 'Usage', link: '/scaffolding/#how-can-i-do' },
       ]
     },
     {

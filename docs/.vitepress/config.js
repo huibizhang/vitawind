@@ -54,7 +54,7 @@ function getGuideSidebar() {
     {
       text: 'Getting Started',
       children: [
-        { text: 'Instruction', link: '/guide/' },
+        { text: 'Introdution', link: '/guide/' },
         { text: 'Usage', link: '/guide/usage' },
       ]
     },
@@ -75,7 +75,7 @@ function getScaffoldingSidebar() {
     {
       text: 'Create Vitawind',
       children: [
-        { text: 'Instruction', link: '/scaffolding/' },
+        { text: 'Introdution', link: '/scaffolding/' },
       ]
     },
     {

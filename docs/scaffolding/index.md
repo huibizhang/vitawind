@@ -1,11 +1,21 @@
+---
+title: Scaffolding
+head:
+  - - meta
+    - name: description
+      content: Scaffolding for your tailwind project. Keep it easy, Keep it simple.
+  - - meta
+    - name: keywords
+      content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
+sidebarDepth: 2
+---
+
 <script setup>
 import CreateVitawind from '../.vitepress/components/CreateVitawind.vue'
 </script>
 
 <CreateVitawind />
 
-
-## Scaffolding
 
 ### Keep it easy, Keep it simple.
 Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!

@@ -16,6 +16,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
+      { text: 'Scaffolding', link: '/scaffolding/', activeMatch: '^/scaffolding/' },
       // {
       //   text: 'Config Reference',
       //   link: '/config/basics',
@@ -28,9 +29,10 @@ module.exports = {
     ],
 
     sidebar: {
+      '/scaffolding/': getScaffoldingSidebar(),
       '/guide/': getGuideSidebar(),
+      '/': getGuideSidebar(),
       // '/advanced/': getConfigSidebar(),
-      '/': getGuideSidebar()
     }
   },
   // alias: {
@@ -59,6 +61,43 @@ function getGuideSidebar() {
         {
           text: 'Configurations',
           link: '/guide/configurations'
+        },
+      ]
+    }
+  ]
+}
+
+function getScaffoldingSidebar() {
+  return [
+    {
+      text: 'Create Vitawind',
+      children: [
+        { text: 'Instruction', link: '/scaffolding/' },
+        { text: 'Usage', link: '/scaffolding/#how-can-i-do' },
+      ]
+    },
+    {
+      text: 'Templates',
+      children: [
+        {
+          text: 'Vue with Vite',
+          link: '/scaffolding/templates#vue-in-vite'
+        },
+        {
+          text: 'React with Vite',
+          link: '/scaffolding/templates#react-in-vite'
+        },
+        {
+          text: 'Vue CLI',
+          link: '/scaffolding/templates#vue-cli'
+        },
+        {
+          text: 'Create React App',
+          link: '/scaffolding/templates#create-react-app'
+        },
+        {
+          text: 'Angular CLI',
+          link: '/scaffolding/templates#angular'
         },
       ]
     }

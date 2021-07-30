@@ -1,7 +1,7 @@
 <template>
   <div id="hp">
     <img id="logo" :src="logoPath" />
-    <h1 style="font-size: 40px" class="bg-pink-700">create-vitawind</h1>
+    <h1 style="font-size: 40px">create-vitawind</h1>
     <span
       style="
         font-size: 20px;
@@ -23,8 +23,11 @@
             src="https://img.shields.io/node/v/create-vitawind?style=flat-square"
             alt="node version"
         /></a>
-        <!-- <br>
-    <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/npm/dw/create-vitawind?style=flat-square" alt="npm-download"></a> -->
+        <a href="https://nodejs.org/en/about/releases/"
+          ><img
+            src="https://img.shields.io/npm/dw/create-vitawind?style=flat-square"
+            alt="npm-download"
+        /></a>
       </span>
     </p>
   </div>

@@ -3,12 +3,12 @@
 The Tailwind CSS jit mode pre built-in template that can help you setup developing environment quickly and easily.
 
 ::: tip There are full list of templates:
-- `--vue`
-- `--react`
-- `--vuecli`
-- `--cra`
-- `--cra22`
-- `--ng`
+- [`--vue`](#vue-in-vite)
+- [`--react`](#react-in-vite)
+- [`--vuecli`](#vue-cli)
+- [`--cra`](#create-react-app)
+- [`--cra22`](#create-react-app-tailwindcss-2-2)
+- [`--ng`](#angular)
 :::
 <br>
 

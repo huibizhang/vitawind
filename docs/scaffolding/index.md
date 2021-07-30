@@ -4,6 +4,9 @@ import CreateVitawind from '../.vitepress/components/CreateVitawind.vue'
 
 <CreateVitawind />
 
+
+## Scaffolding
+
 ### Keep it simple, Keep it easy.
 Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!
 

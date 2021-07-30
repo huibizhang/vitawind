@@ -27,7 +27,7 @@ To start, open terminal at your directory where you want to put project. And, ru
 ```shell
 npm init vitawind {project-name} {template}
 ```
-base on this command, please give project name and choose a template, example:
+base on this command, please give project name and choose a template, for example:
 
 ```shell
 npm init vitawind my-first-app --vue

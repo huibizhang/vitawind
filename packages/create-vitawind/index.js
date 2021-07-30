@@ -50,6 +50,16 @@ const configure = (_setting) => {
       _setting.script = "dev"
       break
     }
+    case '--vue-ts':{
+      _setting.template = "vite-vue-ts"
+      _setting.script = "dev"
+      break
+    }
+    case '--react-ts':{
+      _setting.template = "vite-react-ts"
+      _setting.script = "dev"
+      break
+    }
     case '--vuecli':{
       _setting.template = "vuecli"
       _setting.script = "serve"
@@ -57,16 +67,16 @@ const configure = (_setting) => {
     }
     case '--cra':{
       _setting.template = "cra"
-      _setting.version = "v2.1.4"
-      _setting.script = "start"
-      break
-    }
-    case '--cra22':{
-      _setting.template = "cra"
       _setting.version = "v2.2"
       _setting.script = "start"
       break
     }
+    // case '--cra214':{
+    //   _setting.template = "cra"
+    //   _setting.version = "v2.1.4"
+    //   _setting.script = "start"
+    //   break
+    // }
     case '--ng':{
       _setting.template = "ng"
       _setting.script = "start"

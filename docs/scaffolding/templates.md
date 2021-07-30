@@ -4,14 +4,14 @@ The Tailwind CSS jit mode pre built-in template that can help you setup developi
 
 ::: tip There are full list of templates:
 - [`--vue`](#vue-in-vite)
+- [`--vue-ts`](#typescript-for-vue)
 - [`--react`](#react-in-vite)
-- [`--vue-ts`](#vue-typescript-in-vite)
-- [`--react-ts`](#react-typescript-in-vite)
+- [`--react-ts`](#typescript-for-react)
 - [`--vuecli`](#vue-cli)
 - [`--cra`](#create-react-app)
 - [`--ng`](#angular)
-<!-- - [`--cra22`](#create-react-app-tailwindcss-2-2) -->
 :::
+<!-- - [`--cra22`](#create-react-app-tailwindcss-2-2) -->
 <br>
 
 ### Vue in Vite 
@@ -25,6 +25,8 @@ cd {project-name}
 npm install  #or `yarn`
 npm run dev  #or `yarn dev`
 ```
+#### Typescript for Vue 
+To create project with **typescript** for vue in vite, use flag `--vue-ts`.
 
 ### React in Vite 
 Use flag `--react` to create project with react in vite.
@@ -37,29 +39,8 @@ cd {project-name}
 npm install  #or `yarn`
 npm run dev  #or `yarn dev`
 ```
-### Vue + Typescript in Vite 
-Use flag `--vue-ts` to create project with vue + typescript in vite.
-```shell
-npm init vitawind {project-name} --vue-ts
-```
-After creating project, you need:
-```shell
-cd {project-name}
-npm install  #or `yarn`
-npm run dev  #or `yarn dev`
-```
-
-### React + Typescript in Vite 
-Use flag `--react-ts` to create project with react + typescript in vite.
-```shell
-npm init vitawind {project-name} --react-ts
-```
-After creating project, you need:
-```shell
-cd {project-name}
-npm install  #or `yarn`
-npm run dev  #or `yarn dev`
-```
+#### Typescript for React 
+To create project with **typescript** for react in vite, use flag `--react-ts`.
 
 ### Vue-CLI
 Use flag `--vuecli` to create project with Vue-CLI.

@@ -21,7 +21,7 @@
     "url": "git+https://github.com/huibizhang/vitawind.git",
     "directory": "packages/create-vitawind"
   },
-  "homepage": "https://vitawind-blog.vercel.app/",
+  "homepage": "https://vitawind-blog.vercel.app/scaffolding/",
   "keywords": [
     "create vitawind",
     "create-vitawind",

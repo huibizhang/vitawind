@@ -5,7 +5,7 @@ const path = require('path')
 const cwd = process.cwd()
 const pkgPath = path.resolve(process.argv[1]).replace('\\index.js','').replace('/index.js','')
 const rread = require('fs-readdir-recursive')
-const { argv } = require('process');
+var argv = require('minimist')(process.argv.slice(2));
 
 const setting = {
   project_name: '',
@@ -19,65 +19,69 @@ const setting = {
 }
 
 const configure = (_setting) => {
-  var args = argv
+  _setting.debug = argv.debug
 
-  if (args.length===5 && args[4]==="--debug") {
-    _setting.debug = true
-  }
+  debugLogger("args: ",argv)
 
-  debugLogger("args: "+args)
-
-  if (args.length < 4) {
+  if (argv._.length===0) {
     _setting.error = true
     _setting.error_msg = `Please give project name\n\n${colorStr('Pattern: ','info')}npm init vitawind {project-name} {template}`
     return
   }
 
-  _setting.project_name = args[2]
+  _setting.project_name = argv._[0]
   if (!isValidPackageName(_setting.project_name)) {
     _setting.project_name = toValidPackageName(_setting.project_name)
   }
-  
-  const element = args[3]
+
+  let element = ''
+  if (argv.vue) element = 'vue'
+  else if (argv['vue-ts']) element = 'vue-ts'
+  else if (argv.react) element = 'react'
+  else if (argv['react-ts']) element = 'react-ts'
+  else if (argv.vuecli) element = 'vuecli'
+  else if (argv.cra) element = 'cra'
+  else if (argv.ng) element = 'ng'
+
   switch (element) {
-    case '--vue':{
+    case 'vue':{
       _setting.template = "vite-vue"
       _setting.script = "dev"
       break
     }
-    case '--react':{
+    case 'react':{
       _setting.template = "vite-react"
       _setting.script = "dev"
       break
     }
-    case '--vue-ts':{
+    case 'vue-ts':{
       _setting.template = "vite-vue-ts"
       _setting.script = "dev"
       break
     }
-    case '--react-ts':{
+    case 'react-ts':{
       _setting.template = "vite-react-ts"
       _setting.script = "dev"
       break
     }
-    case '--vuecli':{
+    case 'vuecli':{
       _setting.template = "vuecli"
       _setting.script = "serve"
       break
     }
-    case '--cra':{
+    case 'cra':{
       _setting.template = "cra"
       _setting.version = "v2.2"
       _setting.script = "start"
       break
     }
-    // case '--cra214':{
+    // case 'cra214':{
     //   _setting.template = "cra"
     //   _setting.version = "v2.1.4"
     //   _setting.script = "start"
     //   break
     // }
-    case '--ng':{
+    case 'ng':{
       _setting.template = "ng"
       _setting.script = "start"
       break
@@ -179,7 +183,7 @@ const creator = (_setting) => {
       debugLogger("files in template: " + template)
 
       template
-        .filter((filename) => filename.indexOf('package-lock.json')===-1 && filename.indexOf('yarn.lock')===-1)
+        .filter((filename) => filename.indexOf('package-lock.json')===-1 && filename.indexOf('yarn.lock')===-1 && filename.indexOf('node_modules')===-1)
         .forEach((file) => {
           write(file,undefined,_setting)
         })

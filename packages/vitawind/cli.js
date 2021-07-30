@@ -82,7 +82,7 @@ function init( _setting ) {
 
   var full = (_setting.tailwind.configMode=='full')?'--full':''
   var postcss = fs.existsSync('./postcss.config.js')?'':'-p'
-  var command = `npx tailwind init ${full} ${postcss}`
+  var command = `npx tailwind init ${full} ${postcss} --jit`
 
   var cmd = exec(command, function(err, stdout, stderr) {
     if(stderr){
@@ -105,8 +105,9 @@ function init( _setting ) {
       try {
         var tailwindConfig = fs.readFileSync('tailwind.config.js', 'utf8')
         tailwindConfig = tailwindConfig.replace(
-          '  purge: [],',
-          `  mode: 'jit',\r\n\  purge: ['index.html','./src/**/*.{js,jsx,ts,tsx,vue}'],`
+          'purge: [],',
+          `purge: ['index.html','./src/**/*.{js,jsx,ts,tsx,vue,html}'],`
+          // `  mode: 'jit',\r\n\  purge: ['index.html','./src/**/*.{js,jsx,ts,tsx,vue,html}'],`
         )
         fs.writeFileSync('tailwind.config.js',tailwindConfig)
         console.log('  ','\x1b[33m' + "✅ Added setting for JIT:" + '\x1b[37m' + ` tailwind.config.js`)

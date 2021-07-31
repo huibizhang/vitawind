@@ -18,7 +18,7 @@ const setting = {
 }
 
 const configure = (_setting) => {
-  _setting.debug = argv.debug
+  _setting.debug = argv.debug || argv._.find(arg => arg==='--debug')
 
   // debugLogger("args: " + process.argv)
   debugLogger("args: ")
@@ -38,13 +38,13 @@ const configure = (_setting) => {
   }
 
   let element = ''
-  if (argv.vue) element = 'vue'
-  else if (argv['vue-ts']) element = 'vue-ts'
-  else if (argv.react) element = 'react'
-  else if (argv['react-ts']) element = 'react-ts'
-  else if (argv.vuecli) element = 'vuecli'
-  else if (argv.cra) element = 'cra'
-  else if (argv.ng) element = 'ng'
+  if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
+  else if (argv['vue-ts'] || argv._.find(arg => arg==='--vue-ts')) element = 'vue-ts'
+  else if (argv.react || argv._.find(arg => arg==='--react')) element = 'react'
+  else if (argv['react-ts'] || argv._.find(arg => arg==='--react-ts')) element = 'react-ts'
+  else if (argv.vuecli || argv._.find(arg => arg==='--vuecli')) element = 'vuecli'
+  else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
+  else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
 
   switch (element) {
     case 'vue':{

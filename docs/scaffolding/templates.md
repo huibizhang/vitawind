@@ -17,7 +17,7 @@ The Tailwind CSS jit mode pre built-in template that can help you setup developi
 ### Vue in Vite 
 Use flag `--vue` to create project with vue in vite.
 ```shell
-npm init vitawind {project-name} --vue
+npm init vitawind@latest {project-name} -- --vue
 ```
 After creating project, you need:
 ```shell
@@ -31,7 +31,7 @@ To create project with **typescript** for vue in vite, use flag `--vue-ts`.
 ### React in Vite 
 Use flag `--react` to create project with react in vite.
 ```shell
-npm init vitawind {project-name} --react
+npm init vitawind@latest {project-name} -- --react
 ```
 After creating project, you need:
 ```shell
@@ -45,7 +45,7 @@ To create project with **typescript** for react in vite, use flag `--react-ts`.
 ### Vue-CLI
 Use flag `--vuecli` to create project with Vue-CLI.
 ```shell
-npm init vitawind {project-name} --vuecli
+npm init vitawind@latest {project-name} -- --vuecli
 ```
 After creating project, you need:
 ```shell
@@ -57,7 +57,7 @@ npm run serve  #or `yarn serve`
 ### Create React App 
 Use flag `--cra` to create project with Create React App.
 ```shell
-npm init vitawind {project-name} --cra
+npm init vitawind@latest {project-name} -- --cra
 ```
 After creating project, you need:
 ```shell
@@ -94,7 +94,7 @@ npm run start  #or `yarn start`
 Use flag `--ng` to create project with Angular CLI.
 
 ```shell
-npm init vitawind {project-name} --ng
+npm init vitawind@latest {project-name} -- --ng
 ```
 After creating project, you need:
 ```shell

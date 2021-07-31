@@ -28,7 +28,7 @@ const configure = (_setting) => {
 
   if (argv._.length===0) {
     _setting.error = true
-    _setting.error_msg = `Please give project name\n\n${colorStr('Pattern: ','info')}npm init vitawind {project-name} {template}`
+    _setting.error_msg = `Please give project name.\n\n${colorStr('Pattern: ','info')}npm init vitawind {project-name} -- {template}`
     return
   }
 
@@ -97,10 +97,10 @@ const configure = (_setting) => {
 
   if (!element) {
     _setting.error = true
-    _setting.error_msg = "Please give a template type."
+    _setting.error_msg = `Please give a template type.\n\n${colorStr('Pattern: ','info')}npm init vitawind {project-name} -- {template}`
   } else if (!_setting.template) {
     _setting.error = true
-    _setting.error_msg = `'${element}' isn't a valid template.`
+    _setting.error_msg = `'${element}' isn't a valid template.\n\n${colorStr('Pattern: ','info')}For more information, see https://vitawind-blog.vercel.app/scaffolding/templates.html`
   }
 }
 

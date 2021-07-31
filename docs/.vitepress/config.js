@@ -4,7 +4,7 @@ module.exports = {
   title: 'Vitawind',
   description: "Vitawind, Install and Setting Tailwindcss automatically for Vite",
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }]
+    ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
   markdown: {
     lineNumbers: true,

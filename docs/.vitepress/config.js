@@ -9,7 +9,7 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     // options for markdown-it-anchor
-    anchor: { permalink: false },
+    anchor: { permalink: true },
     // options for markdown-it-toc
     toc: { includeLevel: [1, 2] },
   },
@@ -73,7 +73,7 @@ function getGuideSidebar() {
 function getScaffoldingSidebar() {
   return [
     {
-      text: 'Create Vitawind',
+      text: 'Getting Started',
       children: [
         { text: 'Introdution', link: '/scaffolding/' },
       ]

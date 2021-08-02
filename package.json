@@ -11,15 +11,14 @@
   "author": "huibizhang",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^0.14.1",
-    "vuepress": "~1.7.1"
+    "vitepress": "^0.15.6"
   },
   "dependencies": {
     "autoprefixer": "^10.0.2",
-    "tailwindcss": "~2.2.2"
+    "tailwindcss": "^2.2.7"
   },
   "peerDependencies": {
     "autoprefixer": "^10.0.2",
-    "tailwindcss": "~2.2.2"
+    "tailwindcss": "^2.2.7"
   }
 }

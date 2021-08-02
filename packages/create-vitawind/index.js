@@ -169,6 +169,16 @@ const colorStr = (string,type='normal') => {
   return color[type].concat(string).concat(color.normal)
 }
 
+// const filtedList = [
+//   '',
+//   '',
+//   '.git',
+// ]
+
+// const copyFilter = () => {
+
+// }
+
 const creator = (_setting) => {
   if (_setting.error) return
 
@@ -189,6 +199,7 @@ const creator = (_setting) => {
       const template = rread(src)
       debugLogger("files in template: " + template)
 
+      template.push('.gitignore')
       template
         .filter((filename) => filename.indexOf('package-lock.json')===-1 && filename.indexOf('yarn.lock')===-1 && filename.indexOf('node_modules')===-1)
         .forEach((file) => {

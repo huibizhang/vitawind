@@ -13,6 +13,8 @@ sidebar: false
 
 <script setup>
 import HomePage from '.vitepress/components/HomePage.vue'
+import Footer from '.vitepress/components/Footer.vue'
 </script>
 
 <HomePage />
+<Footer />

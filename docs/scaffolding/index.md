@@ -16,20 +16,20 @@ import CreateVitawind from '../.vitepress/components/CreateVitawind.vue'
 
 <CreateVitawind />
 
-
 ### Keep it easy, Keep it simple.
+
 Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!
 
 ### How Can I do ?
 
-To start, open terminal at your directory where you want to put project. And, run following command:
+To start, open terminal at your directory where you want to put project. And, run following commands:
 
-```shell
+```bash
 npm init vitawind@latest {project-name} -- {template}
 ```
 base on this command, please give project name and choose a template, for example:
 
-```shell
+```bash
 npm init vitawind@latest my-first-app -- --vue
 ```
 

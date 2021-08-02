@@ -4,18 +4,18 @@ slug: configurations
 ---
 
 ## Get full Tailwind's configuration
-If you want to get configuration file that includes all of Tailwind’s default configuration , use  `-f` or `--full` option:
+If you want to get configuration file that includes all of Tailwind’s default configuration, use  `-f` or `--full` option:
 ```bash
 npx vitaiwind -f
 # or `npx vitawind --full`
 ```
 
 ## Set customzie filename and path
-Tailwind compiling css need to get an output css files. By default, vitawind will named filenames like:
+Tailwind compiling css need to get an output css files. By default, vitawind will named filename like:
 
 - `./src/index.css`
 
-But you can also customize filenames you like , to do this , use  `-o` or `--output` option:
+But you can also customize filename you like , to do this , use  `-o` or `--output` option:
 
 ```bash
 npx vitaiwind -o {output.css}
@@ -23,7 +23,7 @@ npx vitaiwind -o {output.css}
 ```
 
 ::: warning
-It's must need an argument follow behind **`-o`** or **`--output`** command.
+It's must need an argument of ***FILE-NAME*** follow behind **`-o`** or **`--output`** command.
 :::
 <br>
 
@@ -59,5 +59,5 @@ ReactDOM.render(
 )
 ```
 
-after add to `./src/main.js` , you can open dev server by `npm run dev` command as fast as you can ... because , it's working ! Enjoy your devloping time , thank you ! 🤪
+After add to your main script , you can open dev server by `npm run dev` command as fast as you can ... because , it's working ! Enjoy your devloping time , thank you ! 🤪
 <br>

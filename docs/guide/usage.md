@@ -5,7 +5,11 @@ slug: usage
 
 ## Installation
 ```bash
+# npm
 $ npm install vitawind 
+
+# yarn
+$ yarn add vitawind 
 ```
 Installing vitawind , then Tailwind will be installed in your vite project by npm.
 
@@ -31,7 +35,7 @@ createApp(App).mount('#app')
 
 ### for React
 For react , the vite template is already have a line of import `index.css` in `./src/main.jsx` , and vitawind will replace the contents of `index.css` automatically. All you have to do is starting to develop your vite-react project with Tailwind :
-```jsx{3}
+```jsx{4}
 // ./src/main.jsx
 import React from 'react'
 import ReactDOM from 'react-dom'

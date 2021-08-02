@@ -20,6 +20,7 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
       { text: 'Scaffolding', link: '/scaffolding/', activeMatch: '^/scaffolding/' },
+      { text: '切換至繁中', link: 'https://vitawind-blog-tw.vercel.app' },
       // {
       //   text: 'Config Reference',
       //   link: '/config/basics',

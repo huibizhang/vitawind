@@ -1,6 +1,6 @@
 {
   "name": "create-vitawind",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Scaffolding for your tailwind project",
   "main": "index.js",
   "bin": {
@@ -35,7 +35,12 @@
     "tailwindcss",
     "vue-cli",
     "cra",
-    "ng"
+    "create react app",
+    "create-react-app",
+    "ng",
+    "angular",
+    "angular cli",
+    "angular-cli"
   ],
   "author": "huibizhang",
   "license": "MIT",

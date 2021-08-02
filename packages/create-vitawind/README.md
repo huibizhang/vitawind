@@ -43,7 +43,9 @@ npm init vitawind my-first-app -- --vue
 
 ### Template List
 - --vue
+- --vue-ts
 - --react
+- --react-ts
 - --vuecli
 - --cra
 - --cra22

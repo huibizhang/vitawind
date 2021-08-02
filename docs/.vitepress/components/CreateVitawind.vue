@@ -13,7 +13,7 @@
     >
     <p align="center">
       <span style="display: flex; gap: 5px">
-        <a href="https://npmjs.com/package/vite"
+        <a href="https://npmjs.com/package/create-vitawind"
           ><img
             src="https://img.shields.io/npm/v/create-vitawind?style=flat-square"
             alt="version"
@@ -23,7 +23,7 @@
             src="https://img.shields.io/node/v/create-vitawind?style=flat-square"
             alt="node version"
         /></a>
-        <a href="https://nodejs.org/en/about/releases/"
+        <a href="https://npmjs.com/package/create-vitawind"
           ><img
             src="https://img.shields.io/npm/dw/create-vitawind?style=flat-square"
             alt="npm-download"

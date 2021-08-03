@@ -5,6 +5,7 @@ const path = require('path')
 const cwd = process.cwd()
 const rread = require('fs-readdir-recursive')
 var argv = require('minimist')(process.argv.slice(2));
+const packageJson = require('./package.json')
 
 const setting = {
   project_name: '',
@@ -45,6 +46,7 @@ const configure = (_setting) => {
   else if (argv.vuecli || argv._.find(arg => arg==='--vuecli')) element = 'vuecli'
   else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
   else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
+  else if (argv.v || argv._.find(arg => arg==='--version' || arg==='-v')) element = 'version'
 
   switch (element) {
     case 'vue':{
@@ -92,6 +94,7 @@ const configure = (_setting) => {
     case 'version':{
       _setting.initial = false
       console.log(packageJson.version)
+      return false
     }
   }
 
@@ -102,6 +105,7 @@ const configure = (_setting) => {
     _setting.error = true
     _setting.error_msg = `'${element}' isn't a valid template.\n\n${colorStr('Pattern: ','info')}For more information, see https://vitawind-blog.vercel.app/scaffolding/templates.html`
   }
+  return true
 }
 
 function isValidPackageName(projectName) {
@@ -128,9 +132,8 @@ const getTemplateFullname = ( template, version ) => {
 }
 
 const write = (file,content,_setting) => {
-  // let src = pkgPath.concat(`/${getTemplateFullname(_setting.template,_setting.version)}/${file}`)
   let src = path.join(__dirname, getTemplateFullname(_setting.template,_setting.version), file)
-  let dist = cwd.concat(`/${_setting.project_name}/${file}`)
+  let dist = cwd.concat(`/${_setting.project_name}/${file.replace('../gitignore','.gitignore')}`)
   if (content) {
     fs.writeFileSync(dist,content)
   } else {
@@ -169,16 +172,6 @@ const colorStr = (string,type='normal') => {
   return color[type].concat(string).concat(color.normal)
 }
 
-// const filtedList = [
-//   '',
-//   '',
-//   '.git',
-// ]
-
-// const copyFilter = () => {
-
-// }
-
 const creator = (_setting) => {
   if (_setting.error) return
 
@@ -191,20 +184,21 @@ const creator = (_setting) => {
     if (isEmpty(_setting.project_name)){
       if (!fs.existsSync(src)) {
         _setting.error = true
-        _setting.error_msg = 'Target template is not exist.'
+        _setting.error_msg = 'Target template is not exist. To help us improving this package, please visit https://github.com/huibizhang/vitawind/issues.'
         debugLogger("source template path: " + src)
         return
       }
-      
-      const template = rread(src)
-      debugLogger("files in template: " + template)
 
-      template.push('.gitignore')
+      const template = rread(src)
+      template.push('../gitignore')
+      debugLogger("files in template: " + template)
+      
       template
         .filter((filename) => filename.indexOf('package-lock.json')===-1 && filename.indexOf('yarn.lock')===-1 && filename.indexOf('node_modules')===-1)
         .forEach((file) => {
           write(file,undefined,_setting)
         })
+
       console.log(
         `${colorStr('Template created.','success')}\n\n`,
         `Now do following steps:\n\n`,
@@ -218,7 +212,7 @@ const creator = (_setting) => {
     }
   } else {
     _setting.error = true
-    _setting.error_msg = 'Unknown error.'
+    _setting.error_msg = 'Unknown error. To help us improving this package, please visit https://github.com/huibizhang/vitawind/issues.'
   }
 }
 
@@ -229,8 +223,11 @@ const debugLogger = (msg) => {
 }
 
 
-configure(setting)
+const reader = configure(setting)
 debugLogger(setting)
+
+if(!reader)
+  return
 
 creator(setting)
 

@@ -26,7 +26,7 @@
 <br/>
 
 ### Keep it easy, Keep it simple.
-Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!
+Nothing even **"setup tailwindcss in jit mode"** can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!
 
 ### How Can I do ?
 
@@ -48,7 +48,6 @@ npm init vitawind my-first-app -- --vue
 - --react-ts
 - --vuecli
 - --cra
-- --cra22
 - --ng
 
 ### More

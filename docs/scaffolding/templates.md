@@ -1,3 +1,7 @@
+<script setup>
+import Badge from '../.vitepress/components/Badge.vue'
+</script>
+
 # Templates
 
 The Tailwind CSS jit mode pre built-in template that can help you setup developing environment quickly and easily.
@@ -28,6 +32,7 @@ npm run dev  # or `yarn dev`
 #### Typescript for Vue 
 To create project with **typescript** for vue in vite, use flag `--vue-ts`.
 
+
 ### React in Vite 
 Use flag `--react` to create project with react in vite.
 ```bash
@@ -42,6 +47,7 @@ npm run dev  # or `yarn dev`
 #### Typescript for React 
 To create project with **typescript** for react in vite, use flag `--react-ts`.
 
+
 ### Vue-CLI
 Use flag `--vuecli` to create project with Vue-CLI.
 ```bash
@@ -53,6 +59,9 @@ cd {project-name}
 npm install    # or `yarn`
 npm run serve  # or `yarn serve`
 ```
+#### Vue-CLI 5 <Badge color="green" text="BETA" />
+**Vue-CLI 5 builds on postcss 8** that is more better than Vue-CLI 4 to develop with Tailwind CSS. To create project with **Vue-CLI 5**, please use flag `--vuecli5`.
+
 
 ### Create React App 
 Use flag `--cra` to create project with Create React App.

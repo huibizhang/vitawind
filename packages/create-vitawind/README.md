@@ -14,13 +14,6 @@
     <br>
     <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/npm/dw/create-vitawind?style=flat-square" alt="npm-download"></a>
   </span>
-  <!-- <br>
-  <span>
-    <span id="dep">- Dependencies -</span><br>
-    <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/tailwindcss?style=flat-square" alt="tailwindcss"></a>
-    <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss?style=flat-square" alt="postcss"></a>
-    <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/autoprefixer?style=flat-square" alt="tailwindcss"></a>
-  </span> -->
 
 </p>
 <br/>

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// var exec = require('child_process').exec
 const fs = require('fs')
 const path = require('path')
 const cwd = process.cwd()
@@ -44,6 +43,7 @@ const configure = (_setting) => {
   else if (argv.react || argv._.find(arg => arg==='--react')) element = 'react'
   else if (argv['react-ts'] || argv._.find(arg => arg==='--react-ts')) element = 'react-ts'
   else if (argv.vuecli || argv._.find(arg => arg==='--vuecli')) element = 'vuecli'
+  else if (argv.vuecli5 || argv._.find(arg => arg==='--vuecli5')) element = 'vuecli5'
   else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
   else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
   else if (argv.v || argv._.find(arg => arg==='--version' || arg==='-v')) element = 'version'
@@ -71,6 +71,11 @@ const configure = (_setting) => {
     }
     case 'vuecli':{
       _setting.template = "vuecli"
+      _setting.script = "serve"
+      break
+    }
+    case 'vuecli5':{
+      _setting.template = "vuecli5"
       _setting.script = "serve"
       break
     }
@@ -199,13 +204,21 @@ const creator = (_setting) => {
           write(file,undefined,_setting)
         })
 
-      console.log(
-        `${colorStr('Template created.','success')}\n\n`,
-        `Now do following steps:\n\n`,
-        `> ${colorStr('cd','info')} ${_setting.project_name}\n`,
-        `> ${colorStr('npm','info')} install  (or \`yarn\`)\n`,
-        `> ${colorStr('npm','info')} run ${_setting.script}  (or \`yarn ${_setting.script}\`)\n`
-      )
+      const hint = [
+        `${colorStr('Template created.','success')}\n`,
+        ` Now do following steps:\n`,
+        ` > ${colorStr('cd','info')} ${_setting.project_name}`,
+        _setting.template==='vuecli'?` > ${colorStr('npm','info')} install -g tailwindcss-cli  (or \`yarn global add tailwindcss-cli\`)`:'',
+        ` > ${colorStr('npm','info')} install  (or \`yarn\`)`,
+        ` > ${colorStr('npm','info')} run ${_setting.script}  (or \`yarn ${_setting.script}\`)`,
+        ' '
+      ].forEach((line) => {
+        if (line!=='') {
+          console.log(line)
+        }
+      })
+    
+       
     } else {
       _setting.error = true
       _setting.error_msg = 'Directory is not empty.'
@@ -225,6 +238,8 @@ const debugLogger = (msg) => {
 
 const reader = configure(setting)
 debugLogger(setting)
+
+console.log(`create-vitawind v${packageJson.version}`)
 
 if(!reader)
   return

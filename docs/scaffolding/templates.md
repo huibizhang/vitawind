@@ -56,6 +56,7 @@ npm init vitawind@latest {project-name} -- --vuecli
 After creating project, you need:
 ```bash
 cd {project-name}
+npm install -g tailwindcss-cli    # or `yarn global add tailwindcss-cli`
 npm install    # or `yarn`
 npm run serve  # or `yarn serve`
 ```

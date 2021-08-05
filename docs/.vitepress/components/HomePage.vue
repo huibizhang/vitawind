@@ -35,7 +35,7 @@ export default {
   name: "HomePage",
   data() {
     return {
-      logoPath: "/logo.svg",
+      logoPath: "/logo-w700.png",
       url: "/guide/",
     };
   },

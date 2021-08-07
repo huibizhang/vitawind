@@ -46,59 +46,49 @@ const configure = (_setting) => {
   else if (argv.vuecli5 || argv._.find(arg => arg==='--vuecli5')) element = 'vuecli5'
   else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
   else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
-  else if (argv.v || argv._.find(arg => arg==='--version' || arg==='-v')) element = 'version'
+  else if (argv.version || argv._.find(arg => arg==='--version' || arg==='-v')) element = 'version'
 
-  switch (element) {
-    case 'vue':{
+  const excutor = {
+    'vue': () => {
       _setting.template = "vite-vue"
       _setting.script = "dev"
-      break
-    }
-    case 'react':{
-      _setting.template = "vite-react"
-      _setting.script = "dev"
-      break
-    }
-    case 'vue-ts':{
+    },
+    'vue-ts': () => {
       _setting.template = "vite-vue-ts"
       _setting.script = "dev"
-      break
-    }
-    case 'react-ts':{
+    },
+    'react': () => {
+      _setting.template = "vite-react"
+      _setting.script = "dev"
+    },
+    'react-ts': () => {
       _setting.template = "vite-react-ts"
       _setting.script = "dev"
-      break
-    }
-    case 'vuecli':{
+    },
+    'vuecli': () => {
       _setting.template = "vuecli"
       _setting.script = "serve"
-      break
-    }
-    case 'vuecli5':{
+    },
+    'vuecli5': () => {
       _setting.template = "vuecli5"
       _setting.script = "serve"
-      break
-    }
-    case 'cra':{
+    },
+    'cra': () => {
       _setting.template = "cra"
-      _setting.version = "v2.2"
       _setting.script = "start"
-      break
-    }
-    // case 'cra214':{
-    //   _setting.template = "cra"
-    //   _setting.version = "v2.1.4"
-    //   _setting.script = "start"
-    //   break
-    // }
-    case 'ng':{
+    },
+    'ng': () => {
       _setting.template = "ng"
       _setting.script = "start"
-      break
-    }
-    case 'version':{
+    },
+    'version':() => {
       _setting.initial = false
-      console.log(packageJson.version)
+      return true
+    }
+  }[element]
+
+  if (excutor) {
+    if (excutor()) {
       return false
     }
   }
@@ -177,6 +167,16 @@ const colorStr = (string,type='normal') => {
   return color[type].concat(string).concat(color.normal)
 }
 
+const colorBg = (string,type='normal') => {
+  const color = {
+    success:'\x1b[42m',
+    info:'\x1b[43m',
+    error:'\x1b[41m',
+    normal: '\x1b[40m',
+  }
+  return color[type].concat(string).concat(color.normal)
+}
+
 const creator = (_setting) => {
   if (_setting.error) return
 
@@ -206,11 +206,16 @@ const creator = (_setting) => {
 
       const hint = [
         `${colorStr('Template created.','success')}\n`,
-        ` Now do following steps:\n`,
-        ` > ${colorStr('cd','info')} ${_setting.project_name}`,
-        _setting.template==='vuecli'?` > ${colorStr('npm','info')} install -g tailwindcss-cli  (or \`yarn global add tailwindcss-cli\`)`:'',
-        ` > ${colorStr('npm','info')} install  (or \`yarn\`)`,
-        ` > ${colorStr('npm','info')} run ${_setting.script}  (or \`yarn ${_setting.script}\`)`,
+        `Now do following steps:\n`,
+        `${colorBg(' npm ','info')}`,
+        `${colorStr('cd','info')} ${_setting.project_name}`,
+        `${colorStr('npm','info')} install`,
+        `${colorStr('npm','info')} run ${_setting.script}`,
+        ' ',
+        `${colorBg(' yarn ','info')}`,
+        `${colorStr('cd','info')} ${_setting.project_name}`,
+        `${colorStr('yarn','info')}`,
+        `${colorStr('yarn','info')} ${_setting.script}`,
         ' '
       ].forEach((line) => {
         if (line!=='') {
@@ -241,8 +246,7 @@ debugLogger(setting)
 
 console.log(`create-vitawind v${packageJson.version}`)
 
-if(!reader)
-  return
+if (!reader) {return}
 
 creator(setting)
 

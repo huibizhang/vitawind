@@ -169,10 +169,10 @@ const colorStr = (string,type='normal') => {
 
 const colorBg = (string,type='normal') => {
   const color = {
-    success:'\x1b[42m',
-    info:'\x1b[43m',
-    error:'\x1b[41m',
-    normal: '\x1b[40m',
+    success:'\x1b[30;42m',
+    info:'\x1b[30;43m',
+    error:'\x1b[30;41m',
+    normal: '\x1b[0m',
   }
   return color[type].concat(string).concat(color.normal)
 }
@@ -244,7 +244,7 @@ const debugLogger = (msg) => {
 const reader = configure(setting)
 debugLogger(setting)
 
-console.log(`create-vitawind v${packageJson.version}`)
+console.log(`${packageJson.name} v${packageJson.version}`)
 
 if (!reader) {return}
 

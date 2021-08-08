@@ -23,7 +23,7 @@ export default{
       tool: 'npm',
       npm: true,
       yarn: false,
-      storage: null,
+      storage: undefined,
       modalOpen: false,
       msgShow: false,
       template: 'vue',
@@ -64,9 +64,11 @@ export default{
     }
   },
   mounted () {
+    let tool = ''
     if (typeof window !== 'undefined') {
-      this.stroage = window.localStorage
-      let tool = this.storage.getItem('tool')
+      if(window.localStorage.length>0) {
+        tool = window.localStorage.getItem('tool')
+      }
     }
     this.tool = tool?tool:'npm';
     this.ct(this.tool)
@@ -77,9 +79,12 @@ export default{
       this.tool = event
       this.npm = status
       this.yarn = !status
-      if (this.storage) {
-        this.storage.setItem('tool',event)
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('tool',event)
       }
+      // if (this.storage = !) {
+      //   this.storage.setItem('tool',event)
+      // }
     },
     copy () {
       const copied = document.getElementById(`code-${this.tool}`).innerText

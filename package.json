@@ -15,10 +15,18 @@
   },
   "dependencies": {
     "autoprefixer": "^10.0.2",
-    "tailwindcss": "^2.2.7"
+    "clipboard": "^2.0.8",
+    "tailwindcss": "^2.2.7",
+    "vitawind": "^1.2.7"
   },
   "peerDependencies": {
     "autoprefixer": "^10.0.2",
     "tailwindcss": "^2.2.7"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }

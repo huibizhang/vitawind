@@ -1,3 +1,15 @@
+---
+title: Templates
+head:
+  - - meta
+    - name: description
+      content: Choose a template for your tailwind project. Keep it easy, Keep it simple.
+  - - meta
+    - name: keywords
+      content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
+sidebarDepth: 3
+---
+
 <script>
 import Badge from '../.vitepress/components/Badge.vue'
 import ToolToggle from '../.vitepress/components/ToolToggle.vue'

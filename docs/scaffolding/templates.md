@@ -25,7 +25,9 @@ export default{
       this.tool = event
       this.npm = status
       this.yarn = !status
-      this.storage.setItem('tool',event)
+      if (this.storage) {
+        this.storage.setItem('tool',event)
+      }
     }
   },
   components: {

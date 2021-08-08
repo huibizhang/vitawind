@@ -121,7 +121,7 @@ cd {{projectName}}
 npm install
 npm {{getScript().trim()}}
 </pre></div><div v-if="yarn"><pre id="code-yarn">
-npm init vitawind@latest {{projectName}} -- --vue
+npm init vitawind@latest {{projectName}} -- --{{template}}
 cd {{projectName}}
 yarn
 yarn {{getScript().trim()}}

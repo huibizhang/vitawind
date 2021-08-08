@@ -120,7 +120,13 @@ function getScaffoldingSidebar() {
           ]
         }
       ]
-    }
+    },
+    {
+      text: 'Tools',
+      children: [
+        { text: 'Creator', link: '/scaffolding/creator' },
+      ]
+    },
   ]
 }
 

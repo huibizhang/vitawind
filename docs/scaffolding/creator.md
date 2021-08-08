@@ -23,7 +23,7 @@ export default{
       tool: 'npm',
       npm: true,
       yarn: false,
-      storage: window.localStorage,
+      storage: null,
       modalOpen: false,
       msgShow: false,
       template: 'vue',
@@ -64,8 +64,10 @@ export default{
     }
   },
   mounted () {
-    let tool = this.storage.getItem('tool')
-    console.log(tool)
+    if (typeof window !== 'undefined') {
+      this.stroage = window.localStorage
+      let tool = this.storage.getItem('tool')
+    }
     this.tool = tool?tool:'npm';
     this.ct(this.tool)
   },

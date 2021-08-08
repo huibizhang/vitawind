@@ -34,4 +34,4 @@ npm init vitawind@latest my-first-app -- --vue
 ```
 
 ### Template List
-Go to [See all templates](./templates).
+Go to [See all templates](./templates). Or, you can using our [Creator](./creator) tool to quick start.

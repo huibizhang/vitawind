@@ -5,6 +5,14 @@ module.exports = {
   description: "Vitawind, Install and Setting Tailwindcss automatically for Vite",
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
+    [
+      "script",
+      {
+        "data-ad-client": "ca-pub-4421198672614357",
+        async: true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      }
+    ]
   ],
   markdown: {
     lineNumbers: true,

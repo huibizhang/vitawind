@@ -34,7 +34,7 @@
           </label>
         </div>
       </div>
-      <div class="bg-gray-900 px-4 text-gray-300 text-sm">
+      <div class="w-full bg-gray-900 px-4 text-gray-300 text-sm overflow-x-auto">
         <slot>
         </slot>
       </div>

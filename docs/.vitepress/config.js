@@ -12,7 +12,15 @@ module.exports = {
         async: true,
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       }
-    ]
+    ],
+    // [
+    //   "script",
+    //   {
+    //     "crossorigin": "anonymous",
+    //     async: true,
+    //     src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4421198672614357"
+    //   }
+    // ]
   ],
   markdown: {
     lineNumbers: true,
@@ -47,6 +55,14 @@ module.exports = {
       // '/advanced/': getConfigSidebar(),
     }
   },
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'G-0NB9RXPJK9' // UA-00000000-0
+      }
+    ]
+  ]
   // alias: {
   //   '@': path.resolve(__dirname, '../.vuepress')
   // },

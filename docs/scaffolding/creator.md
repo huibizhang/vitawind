@@ -24,7 +24,7 @@ export default{
       storage: undefined,
       modalOpen: false,
       msgShow: false,
-      template: 'vue',
+      template: '',
       templates:{
         'vue':{
           name: 'Vite Vue',
@@ -76,9 +76,7 @@ export default{
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('tool',event)
       }
-      // if (this.storage = !) {
-      //   this.storage.setItem('tool',event)
-      // }
+      this.tool = event
     },
     copy () {
       const copied = document.getElementById(`code-${this.tool}`).innerText
@@ -90,10 +88,14 @@ export default{
       this.msgShow = false
     },
     getScript() {
-      if (this.tool==='npm') {
-        return this.templates[this.template].script.join(' ')
+      const template = this.templates[this.template]
+
+      if (!template) { return '' }
+
+      if (this.tool==='npm' || this.tool==='pnpm') {
+        return template.script.join(' ')
       } else {
-        return this.templates[this.template].script[1]
+        return template.script[1]
       }
     }
   },
@@ -111,27 +113,28 @@ Generate your scaffolding installation commands rapidly, just give project name 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
 <div v-if="tool === 'npm'"><pre id="code-npm">
-npm init vitawind@latest {{projectName}} -- --{{template}}
+npm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 npm install
-npm {{getScript().trim()}}</pre>
-</div>
+npm {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
 
 <div v-if="tool === 'yarn'"><pre id="code-yarn">
-npm init vitawind@latest {{projectName}} -- --{{template}}
+yarn create vitawind {{projectName}} --{{template?template:'{template}'}}
 cd {{projectName}}
 yarn
-yarn {{getScript().trim()}}</pre>
-</div>
+yarn {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
 
 <div v-if="tool === 'pnpm'"><pre id="code-pnpm">
-npm init vitawind@latest {{projectName}} -- --{{template}}
+npm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 pnpm install
-pnpm {{getScript().trim()}}</pre>
-</div>
+pnpm {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
 
 </Terminal>
+
 <div
   class="text-sm text-gray-500 text-center mt-4 transition-all"
   :class="{'scale-100':msgShow,'scale-0':!msgShow}"

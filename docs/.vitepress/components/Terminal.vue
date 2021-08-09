@@ -32,6 +32,11 @@
             <input type="radio" :name="name" v-model="tool" :key="`${name}-yarn`" class="appearance-none hidden peer" value="yarn" />
             <div class="px-1.5 py-0.5 mx-2 rounded-md inline-block text-sm hover:bg-gray-500 peer-checked:bg-white/70 peer-checked:text-gray-700 transition-all">yarn</div>
           </label>
+          <div class="w-0.5 h-5/6 bg-gray-500/60" />
+          <label class="cursor-pointer">
+            <input type="radio" :name="name" v-model="tool" :key="`${name}-pnpm`" class="appearance-none hidden peer" value="pnpm" />
+            <div class="px-1.5 py-0.5 mx-2 rounded-md inline-block text-sm hover:bg-gray-500 peer-checked:bg-white/70 peer-checked:text-gray-700 transition-all">pnpm</div>
+          </label>
         </div>
       </div>
       <div class="w-full bg-gray-900 px-4 text-gray-300 text-sm overflow-x-auto">

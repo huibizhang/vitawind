@@ -21,8 +21,6 @@ export default{
     return {
       projectName: 'test-project',
       tool: 'npm',
-      npm: true,
-      yarn: false,
       storage: undefined,
       modalOpen: false,
       msgShow: false,
@@ -75,10 +73,6 @@ export default{
   },
   methods:{
     ct (event) {
-      const status = (event==='npm')
-      this.tool = event
-      this.npm = status
-      this.yarn = !status
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('tool',event)
       }
@@ -115,17 +109,28 @@ export default{
 Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
-<div v-if="npm"><pre id="code-npm" class="">
+
+<div v-if="tool === 'npm'"><pre id="code-npm">
 npm init vitawind@latest {{projectName}} -- --{{template}}
 cd {{projectName}}
 npm install
-npm {{getScript().trim()}}
-</pre></div><div v-if="yarn"><pre id="code-yarn">
+npm {{getScript().trim()}}</pre>
+</div>
+
+<div v-if="tool === 'yarn'"><pre id="code-yarn">
 npm init vitawind@latest {{projectName}} -- --{{template}}
 cd {{projectName}}
 yarn
-yarn {{getScript().trim()}}
-</pre></div>
+yarn {{getScript().trim()}}</pre>
+</div>
+
+<div v-if="tool === 'pnpm'"><pre id="code-pnpm">
+npm init vitawind@latest {{projectName}} -- --{{template}}
+cd {{projectName}}
+pnpm install
+pnpm {{getScript().trim()}}</pre>
+</div>
+
 </Terminal>
 <div
   class="text-sm text-gray-500 text-center mt-4 transition-all"

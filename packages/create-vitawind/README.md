@@ -35,11 +35,13 @@ npm init vitawind my-first-app -- --vue
 ```
 
 ### Template List
+- --pure *(vallia-js, BETA)*
 - --vue
-- --vue-ts
+  - --vue-ts
 - --react
-- --react-ts
+  - --react-ts
 - --vuecli
+  - --vuecli5 *(BETA)*
 - --cra
 - --ng
 

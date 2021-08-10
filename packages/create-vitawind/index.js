@@ -38,7 +38,8 @@ const configure = (_setting) => {
   }
 
   let element = ''
-  if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
+  if (argv.pure || argv._.find(arg => arg==='--pure')) element = 'pure'
+  else if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
   else if (argv['vue-ts'] || argv._.find(arg => arg==='--vue-ts')) element = 'vue-ts'
   else if (argv.react || argv._.find(arg => arg==='--react')) element = 'react'
   else if (argv['react-ts'] || argv._.find(arg => arg==='--react-ts')) element = 'react-ts'
@@ -49,6 +50,10 @@ const configure = (_setting) => {
   else if (argv.version || argv._.find(arg => arg==='--version' || arg==='-v')) element = 'version'
 
   const excutor = {
+    'pure': () => {
+      _setting.template = "vite-vanilla"
+      _setting.script = "dev"
+    },
     'vue': () => {
       _setting.template = "vite-vue"
       _setting.script = "dev"

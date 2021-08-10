@@ -26,6 +26,10 @@ export default{
       msgShow: false,
       template: '',
       templates:{
+        'pure':{
+          name: 'Vite Vanilla-JS',
+          script: ['run','dev'],
+        },
         'vue':{
           name: 'Vite Vue',
           script: ['run','dev'],

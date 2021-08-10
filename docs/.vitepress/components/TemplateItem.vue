@@ -7,6 +7,7 @@
         'bg-green-100 hover:bg-green-200 active:bg-green-300 ring-green-400 peer-checked:text-green-600': (color==='green'),
         'bg-blue-100 hover:bg-blue-200 active:bg-blue-300 ring-blue-400 peer-checked:text-blue-600': (color==='blue'),
         'bg-red-100 hover:bg-red-200 active:bg-red-300 ring-red-400 peer-checked:text-red-600': (color==='red'),
+        'bg-yellow-100 hover:bg-yellow-200 active:bg-yellow-300 ring-yellow-400 peer-checked:text-yellow-600': (color==='yellow'),
       }"
     >
       {{name}}
@@ -17,6 +18,7 @@
         'peer-checked:text-green-500': (color==='green'),
         'peer-checked:text-blue-500': (color==='blue'),
         'peer-checked:text-red-500': (color==='red'),
+        'peer-checked:text-yellow-500': (color==='yellow'),
       }"  
     >
       <path d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0

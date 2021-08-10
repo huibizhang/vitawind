@@ -1,12 +1,16 @@
 <template>
   <div class="p-3 pointer-events-auto flex flex-col gap-3 select-none">
+
     <!-- Vite -->
     <div class="rounded-lg overflow-hidden">
       <div class="h-10 bg-gray-200 text-gray-500 font-bold flex justify-center items-center">
         <img :src="'/vite-logo.svg'" class="w-8 h-8 object-contain p-1">Vite
       </div>
-      <div class="bg-gray-100 p-2 grid grid-cols-2 gap-2">
-        <TemplateItem v-for="t in list.vite" :key="t.id" v-bind="t" :current="template" @checked="template=$event" />
+      <div class="bg-gray-100 p-2 grid grid-cols-1 gap-2">
+        <TemplateItem :key="list.pure.id" v-bind="list.pure" :current="template" @checked="template=$event" class="text-center" />
+        <div class="grid grid-cols-2 gap-2">
+          <TemplateItem v-for="t in list.vite" :key="t.id" v-bind="t" :current="template" @checked="template=$event" />
+        </div>
       </div>
     </div>
 
@@ -40,6 +44,11 @@ export default {
     return {
       template: '',
       list: {
+        pure: {
+          id: 'pure',
+          name: 'Vanilla JS',
+          color: "yellow",
+        },
         vite: [
           {
             id: 'vue',

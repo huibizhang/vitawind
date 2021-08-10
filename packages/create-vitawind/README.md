@@ -12,7 +12,7 @@
     <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/npm/v/create-vitawind?style=flat-square" alt="version"></a>
     <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/create-vitawind?style=flat-square" alt="node version"></a>
     <br>
-    <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/npm/dw/create-vitawind?style=flat-square" alt="npm-download"></a>
+    <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/npm/dt/create-vitawind?style=flat-square" alt="npm-download"></a>
   </span>
 
 </p>

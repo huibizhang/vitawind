@@ -16,6 +16,13 @@ module.exports = {
     // [
     //   "script",
     //   {
+    //     async: true,
+    //     src: "https://www.googletagmanager.com/gtag/js?id=G-0NB9RXPJK9"
+    //   }
+    // ],
+    // [
+    //   "script",
+    //   {
     //     "crossorigin": "anonymous",
     //     async: true,
     //     src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4421198672614357"

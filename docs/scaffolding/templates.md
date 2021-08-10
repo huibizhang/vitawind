@@ -54,16 +54,60 @@ export default{
 The Tailwind CSS jit mode pre built-in template that can help you setup developing environment quickly and easily.
 
 ::: tip There are full list of templates:
+- [`--pure`](#vanilla-js-in-vite) <Badge color="green" text="BETA" size="small" />
 - [`--vue`](#vue-in-vite)
-- [`--vue-ts`](#typescript-for-vue)
+  - [`--vue-ts`](#typescript-for-vue)
 - [`--react`](#react-in-vite)
-- [`--react-ts`](#typescript-for-react)
+  - [`--react-ts`](#typescript-for-react)
 - [`--vuecli`](#vue-cli)
+  - [`--vuecli5`](#vue-cli-5) <Badge color="green" text="BETA" size="small" />
 - [`--cra`](#create-react-app)
 - [`--ng`](#angular)
 :::
 <!-- - [`--cra22`](#create-react-app-tailwindcss-2-2) -->
 <br>
+
+### Vanilla-JS in Vite <Badge color="green" text="BETA" />
+Use flag `--pure` to create project with vanilla-js in vite.
+
+<ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+
+```bash
+npm init vitawind@latest {project-name} -- --pure
+```
+</div><div v-if="tool === 'yarn'">
+
+```bash
+yarn create vitawind {project-name} --pure
+```
+</div></ToolToggle>
+
+After creating project, you need:
+
+<ToolToggle :name="'tool-pure'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
+
+```bash
+cd {project-name}
+npm install
+npm run dev
+```
+</div><div v-if="tool === 'yarn'">
+
+```bash
+cd {project-name}
+yarn
+yarn dev
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+cd {project-name}
+pnpm install
+pnpm dev
+```
+</div></ToolToggle>
+
+-----
 
 ### Vue in Vite 
 Use flag `--vue` to create project with vue in vite.
@@ -306,7 +350,5 @@ pnpm install
 pnpm start
 ```
 </div></ToolToggle>
-
----
 
 <!-- <TemplateCmd /> -->

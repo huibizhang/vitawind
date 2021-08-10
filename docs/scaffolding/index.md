@@ -59,7 +59,7 @@ Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you c
 
 To start, open terminal at your directory where you want to put project. And, run following commands:
 
-<ToolToggle :name="'tool-vue-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-vue-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest {project-name} -- --vue
@@ -69,11 +69,16 @@ npm init vitawind@latest {project-name} -- --vue
 ```bash
 yarn create vitawind {project-name} --vue
 ```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest {project-name} -- --vue
+```
 </div></ToolToggle>
 
 base on this command, please give project name and choose a template, for example:
 
-<ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest my-first-app -- --vue
@@ -82,6 +87,11 @@ npm init vitawind@latest my-first-app -- --vue
 
 ```bash
 yarn create vitawind my-first-app --vue
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest my-first-app -- --vue
 ```
 </div></ToolToggle>
 

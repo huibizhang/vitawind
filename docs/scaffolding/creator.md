@@ -131,7 +131,7 @@ yarn {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
 <div v-if="tool === 'pnpm'"><pre id="code-pnpm">
-npm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
+pnpm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 pnpm install
 pnpm {{getScript()?getScript().trim():'{script}'}}

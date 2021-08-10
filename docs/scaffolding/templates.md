@@ -70,7 +70,7 @@ The Tailwind CSS jit mode pre built-in template that can help you setup developi
 ### Vanilla-JS in Vite <Badge color="green" text="BETA" />
 Use flag `--pure` to create project with vanilla-js in vite.
 
-<ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest {project-name} -- --pure
@@ -79,6 +79,11 @@ npm init vitawind@latest {project-name} -- --pure
 
 ```bash
 yarn create vitawind {project-name} --pure
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest {project-name} -- --pure
 ```
 </div></ToolToggle>
 
@@ -112,7 +117,7 @@ pnpm dev
 ### Vue in Vite 
 Use flag `--vue` to create project with vue in vite.
 
-<ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest {project-name} -- --vue
@@ -121,6 +126,11 @@ npm init vitawind@latest {project-name} -- --vue
 
 ```bash
 yarn create vitawind {project-name} --vue
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest {project-name} -- --vue
 ```
 </div></ToolToggle>
 
@@ -157,7 +167,7 @@ To create project with **typescript** for vue in vite, use flag `--vue-ts`.
 ### React in Vite 
 Use flag `--react` to create project with react in vite.
 
-<ToolToggle :name="'tool-react-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-react-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest {project-name} -- --react
@@ -166,6 +176,11 @@ npm init vitawind@latest {project-name} -- --react
 
 ```bash
 yarn create vitawind {project-name} --react
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest {project-name} -- --react
 ```
 </div></ToolToggle>
 
@@ -202,7 +217,7 @@ To create project with **typescript** for react in vite, use flag `--react-ts`.
 ### Vue-CLI
 Use flag `--vuecli` to create project with Vue-CLI 4.
 
-<ToolToggle :name="'tool-vuecli-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-vuecli-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest {project-name} -- --vuecli
@@ -211,6 +226,11 @@ npm init vitawind@latest {project-name} -- --vuecli
 
 ```bash
 yarn create vitawind {project-name} --vuecli
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest {project-name} -- --vuecli
 ```
 </div></ToolToggle>
 
@@ -247,7 +267,7 @@ pnpm serve
 ### Create React App 
 Use flag `--cra` to create project with Create React App.
 
-<ToolToggle :name="'tool-cra-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-cra-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest {project-name} -- --cra
@@ -256,6 +276,11 @@ npm init vitawind@latest {project-name} -- --cra
 
 ```bash
 yarn create vitawind {project-name} --cra
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest {project-name} -- --cra
 ```
 </div></ToolToggle>
 
@@ -314,7 +339,7 @@ npm run start  # or `yarn start`
 ### Angular
 Use flag `--ng` to create project with Angular CLI.
 
-<ToolToggle :name="'tool-ng-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm' || tool === 'pnpm'">
+<ToolToggle :name="'tool-ng-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
 npm init vitawind@latest {project-name} -- --vue
@@ -323,6 +348,11 @@ npm init vitawind@latest {project-name} -- --vue
 
 ```bash
 yarn create vitawind {project-name} --vue
+```
+</div><div v-if="tool === 'pnpm'">
+
+```bash
+pnpm init vitawind@latest {project-name} -- --vue
 ```
 </div></ToolToggle>
 

@@ -25,7 +25,7 @@
         /></a>
         <a href="https://npmjs.com/package/create-vitawind"
           ><img
-            src="https://img.shields.io/npm/dw/create-vitawind?style=flat-square"
+            src="https://img.shields.io/npm/dt/create-vitawind?style=flat-square"
             alt="npm-download"
         /></a>
       </span>

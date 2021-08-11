@@ -1,6 +1,9 @@
-git clone git@github.com:huibizhang/template-cra-tailwind-jit-v2.2.git
-git clone git@github.com:huibizhang/template-cra-tailwind-jit-v2.1.4.git
-git clone git@github.com:huibizhang/template-ng-tailwind-jit.git
-git clone git@github.com:huibizhang/template-vuecli-tailwind-jit.git
+git clone git@github.com:huibizhang/template-vite-vanilla-tailwind-jit.git
 git clone git@github.com:huibizhang/template-vite-vue-tailwind-jit.git
+git clone git@github.com:huibizhang/template-vite-vue-ts-tailwind-jit.git
 git clone git@github.com:huibizhang/template-vite-react-tailwind-jit.git
+git clone git@github.com:huibizhang/template-vite-react-ts-tailwind-jit.git
+git clone git@github.com:huibizhang/template-vuecli-tailwind-jit.git
+git clone git@github.com:huibizhang/template-vuecli5-tailwind-jit.git
+git clone git@github.com:huibizhang/template-cra-tailwind-jit.git
+git clone git@github.com:huibizhang/template-ng-tailwind-jit.git

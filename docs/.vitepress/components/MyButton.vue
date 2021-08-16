@@ -1,6 +1,6 @@
 <template>
   <a :href="url">
-    <button class="myBtn">Getting Start</button>
+    <button class="myBtn">Getting Started</button>
   </a>
 </template>
 

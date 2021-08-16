@@ -1,5 +1,5 @@
 ---
-title: Vitawind - The Lightning Wind , Stronger and Faster.
+title: Vitawind - The Lightning Wind, Stronger and Faster.
 head:
   - - meta
     - name: description

@@ -30,21 +30,27 @@
 - ⚙ One-Command Setting
 
 ## Why Vitawind
-Vitawind is a Vite helper that can installing and setting Tailwind CSS in few steps. Easy to use , just install Vitawind and add one line setting , you'll have the most fantastic developer experience !
+
+<!-- Vitawind is a Vite helper that can installing and setting Tailwind CSS in few steps. Easy to use , just install Vitawind and add one line setting , you'll have the most fantastic developer experience ! -->
+
+If you like Vite and Tailwind, Vitawind is definitely your best tool! With Vitawind, you can install both Vite and Tailwind in just one single command line. Enjoy the most fantastic developer experience with Vitawind !
 
 ### Vite
-[Vite](https://vitejs.dev/) is the best frontend dev tool in my mind. Actually , Vite is really fast and convenient when your are devloping Vue or React project. Instead to **Webpack** is , Vite's [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement) resolve that devlopers always need to take a long long time for waiting dev server updated when  modifying a very small thing.
+
+<!-- [Vite](https://vitejs.dev/) is the best frontend dev tool in my mind. Actually , Vite is really fast and convenient when your are devloping Vue or React project. Instead to **Webpack** is , Vite's [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement) resolve that devlopers always need to take a long long time for waiting dev server updated when  modifying a very small thing. -->
+
+[Vite](https://vitejs.dev/) is the best frontend dev tool in my mind. It is really fast and convenient when you are developing Vue or React project. Unlike **Webpack** , Vite's [Hot Module Replacement (HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement) helps to reduce the long dev server update time when you just modify a very small part.
 
 ---
 
-## Dependencies 
+## Dependencies
 
-| Package                                                       | Version Used                                                                                                                                           |
-| ------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TailwindCSS                                                   | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/tailwindcss?style=flat-square&label=%20)                  |
-| autoprefixer                                                  | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/autoprefixer?style=flat-square&label=%20)                 |
-<!-- | postcss                                                       | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss?style=flat-square&label=%20)                      |
-| postcss-cli                                                   | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss-cli?style=flat-square&label=%20)                  | -->
+| Package      | Version Used                                                                                                                           |
+| ------------ | :------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| TailwindCSS  | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/tailwindcss?style=flat-square&label=%20)  |
+| autoprefixer | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/autoprefixer?style=flat-square&label=%20) |
+| <!--         | postcss                                                                                                                                | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss?style=flat-square&label=%20) |
+| postcss-cli  | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss-cli?style=flat-square&label=%20)  | -->                                                                                                                               |
 
 <!-- ## Contribution -->
 

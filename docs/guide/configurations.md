@@ -6,7 +6,7 @@ slug: configurations
 ## Get full Tailwind's configuration
 If you want to get configuration file that includes all of Tailwind’s default configuration, use  `-f` or `--full` option:
 ```bash
-npx vitaiwind -f
+npx vitawind -f
 # or `npx vitawind --full`
 ```
 
@@ -18,7 +18,7 @@ Tailwind compiling css need to get an output css files. By default, vitawind wil
 But you can also customize filename you like , to do this , use  `-o` or `--output` option:
 
 ```bash
-npx vitaiwind -o {output.css}
+npx vitawind -o {output.css}
 # or `npx vitawind --output ...
 ```
 

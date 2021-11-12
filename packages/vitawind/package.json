@@ -1,14 +1,6 @@
 {
   "name": "vitawind",
-<<<<<<< HEAD
-<<<<<<< HEAD
   "version": "1.2.9",
-=======
-  "version": "1.2.8",
->>>>>>> 28c3828 (lock tailwind version at 2.2.7)
-=======
-  "version": "1.2.9",
->>>>>>> fbd8b88 (tailwind version update to 2.2.19)
   "description": "Install and Setting Tailwindcss automatically for Vite",
   "main": "./src/index.js",
   "engines": {

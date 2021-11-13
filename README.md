@@ -6,7 +6,7 @@
 <br>
 <p align="center">
   <span>
-    <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/npm/v/vitawind?style=flat-square" alt="version"></a>
+    <a href="https://npmjs.com/package/vitawind"><img src="https://img.shields.io/npm/v/vitawind?style=flat-square" alt="version"></a>
     <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/vitawind?style=flat-square" alt="node version"></a>
     <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/npm/dw/vitawind?style=flat-square" alt="npm-download"></a>
   </span>

@@ -110,7 +110,7 @@ export default{
 </script>
 
 
-# Creator <Badge :color="'green'" :text="'TEST'" />
+# Creator <Badge :color="'green'" :text="'1.0'" />
 
 Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
 

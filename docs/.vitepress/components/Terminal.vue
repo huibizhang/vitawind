@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import clsx from 'clsx'
+// import clsx from 'clsx'
 
 export default {
   name: "Terminal",

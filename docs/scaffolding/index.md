@@ -62,17 +62,17 @@ To start, open terminal at your directory where you want to put project. And, ru
 <ToolToggle :name="'tool-vue-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {project-name} -- --vue
+npm init vitawind@latest {project-name} -- {template}
 ```
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-yarn create vitawind {project-name} --vue
+yarn create vitawind {project-name} {template}
 ```
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {project-name} -- --vue
+pnpm init vitawind@latest {project-name} -- {template}
 ```
 </div></ToolToggle>
 

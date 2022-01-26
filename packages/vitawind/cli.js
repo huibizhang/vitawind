@@ -80,9 +80,9 @@ function init( _setting ) {
     return
   }
 
-  var full = (_setting.tailwind.configMode=='full')?'--full':''
+  var full = (_setting.tailwind.configMode==='full')?'--full':''
   var postcss = fs.existsSync('./postcss.config.js')?'':'-p'
-  var command = `npx tailwind init ${full} ${postcss} --jit`
+  var command = `npx tailwind init ${full} ${postcss}`
 
   var cmd = exec(command, function(err, stdout, stderr) {
     if(stderr){
@@ -105,12 +105,11 @@ function init( _setting ) {
       try {
         var tailwindConfig = fs.readFileSync('tailwind.config.js', 'utf8')
         tailwindConfig = tailwindConfig.replace(
-          'purge: [],',
-          `purge: ['index.html','./src/**/*.{js,jsx,ts,tsx,vue,html}'],`
-          // `  mode: 'jit',\r\n\  purge: ['index.html','./src/**/*.{js,jsx,ts,tsx,vue,html}'],`
+          'content: [],',
+          `content: ['index.html','./src/**/*.{js,jsx,ts,tsx,vue,html}'],`
         )
         fs.writeFileSync('tailwind.config.js',tailwindConfig)
-        console.log('  ','\x1b[33m' + "✅ Added setting for JIT:" + '\x1b[37m' + ` tailwind.config.js`)
+        console.log('  ','\x1b[33m' + "✅ Add setting for purge:" + '\x1b[37m' + ` tailwind.config.js`)
       } catch (error) {
         _setting.errorString = error
         _setting.errors++
@@ -184,93 +183,6 @@ function init( _setting ) {
       //   console.log(`CODE: ${code}`)
       // }
   });
-}
-
-function modifyViteConfig( _setting ){
-
-  if(!fs.existsSync("vite.config.js")){
-    _setting.errors++
-    _setting.errorString = " vite.config.js Not Found."
-  }
-
-  if(_setting.errors>0){
-    console.log('  ','\x1b[31m' + "Error:" + _setting.errorString,'\x1b[37m\n');
-    return
-  }
-
-  if(_setting.vite.configMode=='manual'){
-    console.log('  ','\x1b[33m' + "For manually setting, please visits " + '\x1b[37m' + "https://github.com/huibizhang/vitawind#manually\n")
-    return
-  }
-
-  var data = fs.readFileSync('vite.config.js', 'utf8')
-  
-  const viteImports = new RegExp(/(import\s+.*\s*from\s*.*\s+)+/gm)
-  let match = data.match(viteImports)[0]
-  let matchArray = match.split(/[\r\n]/)
-
-  matchArray.forEach(element => {
-    if(element=='')
-      matchArray = matchArray.filter(el => el!='');
-  })
-
-  if(match.indexOf("import vitawind from 'vitawind'")==-1){
-    matchArray.push("import vitawind from 'vitawind'\r\n\r\n")
-    matchArray = matchArray.join("\r\n")
-    data = data.replace(match,matchArray)
-  }
-
-  const vitePluginsArray = new RegExp(/(?:plugins:\s*\[)([^\]]+)(?:\])/gm)
-  match = vitePluginsArray.exec(data)
-  pluginsArray = match[1]
-
-  const vitePlugins = new RegExp(/(?:\w+(?:[\(](?:\s?.?\s?.*\s?)[\)])?)/gm)
-  match = pluginsArray.match(vitePlugins)
-  
-  if(pluginsArray.indexOf('vitawind(')==-1){
-
-    var sourceFile = _setting.tailwind.sourceFile
-    var outputFile = _setting.tailwind.outputFile
-    if(sourceFile=='' && outputFile!=''){
-      sourceFile = 'tailwind.css'
-    }else if(outputFile=='' && sourceFile!=''){
-      outputFile = './src/index.css'
-    }
-
-    var using = `vitawind('${sourceFile}','${outputFile}')`
-    if(sourceFile=='' && outputFile==''){
-      using = `vitawind()`
-    }
-
-    match.push(using)
-    data = data.replace(pluginsArray,match.join(','))
-  }
-  //console.log(data);
-  
-  if(!async){
-    try {
-      fs.writeFileSync('./vite.config.js',data)
-      console.log('  ','\x1b[33m' + "✅ Added setting to config file:" + '\x1b[37m' + " vite.config.js")
-    } catch (error) {
-      _setting.errorString = error
-      _setting.errors++
-    }
-  }else{
-    fs.writeFile('./vite.config.js',data,function (error) {
-        if(error){
-          _setting.errorString = error
-          _setting.errors++
-        }else{
-          console.log('  ','\x1b[33m' + "✅ Added setting to config file:" + '\x1b[37m' + " vite.config.js")
-        }
-    })
-  }
-
-  if(_setting.errors>0){
-    console.log('  ','\x1b[31m' + "Error:" + _setting.errorString,'\x1b[37m\n');
-    return
-  }
-  console.log('')
 }
 
 configure(localSettings)

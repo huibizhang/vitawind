@@ -37,15 +37,6 @@ Vitawind is a Vite helper that can installing and setting Tailwind CSS in few st
 
 ---
 
-## Dependencies 
-
-| Package                                                       | Version Used                                                                                                                                           |
-| ------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TailwindCSS                                                   | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/tailwindcss?style=flat-square&label=%20)                  |
-| autoprefixer                                                  | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/autoprefixer?style=flat-square&label=%20)                 |
-<!-- | postcss                                                       | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss?style=flat-square&label=%20)                      |
-| postcss-cli                                                   | ![version](https://img.shields.io/github/package-json/dependency-version/huibizhang/vitawind/postcss-cli?style=flat-square&label=%20)                  | -->
-
 <!-- ## Contribution -->
 
 ## License

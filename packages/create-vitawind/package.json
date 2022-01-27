@@ -1,6 +1,6 @@
 {
   "name": "create-vitawind",
-  "version": "0.3.10",
+  "version": "2.0.0",
   "description": "Scaffolding for your tailwind project",
   "main": "index.js",
   "bin": {
@@ -22,7 +22,7 @@
     "url": "git+https://github.com/huibizhang/vitawind.git",
     "directory": "packages/create-vitawind"
   },
-  "homepage": "https://vitawind-blog.vercel.app/scaffolding/",
+  "homepage": "https://vitawind.vercel.app/scaffolding/",
   "keywords": [
     "create vitawind",
     "create-vitawind",

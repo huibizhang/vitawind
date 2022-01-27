@@ -28,7 +28,7 @@ const configure = (_setting) => {
 
   if (argv._.length===0) {
     _setting.error = true
-    _setting.error_msg = `Please give project name.\n\n${colorStr('Pattern: ','info')}npm init vitawind {project-name} -- {template}`
+    _setting.error_msg = `Please give project name.\n\n${colorStr('Pattern: ','info')}npm init vitawind@next {project-name} -- {template}`
     return
   }
 
@@ -38,22 +38,23 @@ const configure = (_setting) => {
   }
 
   let element = ''
-  if (argv.pure || argv._.find(arg => arg==='--pure')) element = 'pure'
-  else if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
+  // if (argv.pure || argv._.find(arg => arg==='--pure')) element = 'pure'
+  if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
+  // else if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
   else if (argv['vue-ts'] || argv._.find(arg => arg==='--vue-ts')) element = 'vue-ts'
   else if (argv.react || argv._.find(arg => arg==='--react')) element = 'react'
   else if (argv['react-ts'] || argv._.find(arg => arg==='--react-ts')) element = 'react-ts'
-  else if (argv.vuecli || argv._.find(arg => arg==='--vuecli')) element = 'vuecli'
-  else if (argv.vuecli5 || argv._.find(arg => arg==='--vuecli5')) element = 'vuecli5'
-  else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
-  else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
+  // else if (argv.vuecli || argv._.find(arg => arg==='--vuecli')) element = 'vuecli'
+  // else if (argv.vuecli5 || argv._.find(arg => arg==='--vuecli5')) element = 'vuecli5'
+  // else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
+  // else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
   else if (argv.version || argv._.find(arg => arg==='--version' || arg==='-v')) element = 'version'
 
   const excutor = {
-    'pure': () => {
-      _setting.template = "vite-vanilla"
-      _setting.script = "dev"
-    },
+    // 'pure': () => {
+    //   _setting.template = "vite-vanilla"
+    //   _setting.script = "dev"
+    // },
     'vue': () => {
       _setting.template = "vite-vue"
       _setting.script = "dev"
@@ -70,22 +71,22 @@ const configure = (_setting) => {
       _setting.template = "vite-react-ts"
       _setting.script = "dev"
     },
-    'vuecli': () => {
-      _setting.template = "vuecli"
-      _setting.script = "serve"
-    },
-    'vuecli5': () => {
-      _setting.template = "vuecli5"
-      _setting.script = "serve"
-    },
-    'cra': () => {
-      _setting.template = "cra"
-      _setting.script = "start"
-    },
-    'ng': () => {
-      _setting.template = "ng"
-      _setting.script = "start"
-    },
+    // 'vuecli': () => {
+    //   _setting.template = "vuecli"
+    //   _setting.script = "serve"
+    // },
+    // 'vuecli5': () => {
+    //   _setting.template = "vuecli5"
+    //   _setting.script = "serve"
+    // },
+    // 'cra': () => {
+    //   _setting.template = "cra"
+    //   _setting.script = "start"
+    // },
+    // 'ng': () => {
+    //   _setting.template = "ng"
+    //   _setting.script = "start"
+    // },
     'version':() => {
       _setting.initial = false
       return true
@@ -100,7 +101,7 @@ const configure = (_setting) => {
 
   if (!element) {
     _setting.error = true
-    _setting.error_msg = `Please give a template type.\n\n${colorStr('Pattern: ','info')}npm init vitawind {project-name} -- {template}`
+    _setting.error_msg = `Please give a template type.\n\n${colorStr('Pattern: ','info')}npm init vitawind@next {project-name} -- {template}`
   } else if (!_setting.template) {
     _setting.error = true
     _setting.error_msg = `'${element}' isn't a valid template.\n\n${colorStr('Pattern: ','info')}For more information, see https://vitawind-blog.vercel.app/scaffolding/templates.html`
@@ -125,9 +126,9 @@ function toValidPackageName(projectName) {
 
 const getTemplateFullname = ( template, version ) => {
   if (version) {
-    return `template-${template}-tailwind-jit-${version}`
+    return `template-${template}-tailwind-v3-${version}`
   } else {
-    return `template-${template}-tailwind-jit`
+    return `template-${template}-tailwind-v3`
   }
 }
 

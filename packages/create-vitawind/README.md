@@ -2,7 +2,7 @@
   <a href="https://www.github.com/huibizhang/vitawind/packages/create-vitawind" target="_blank" rel="noopener noreferrer">
     <img width="180" src="./vitawind_pack.svg" alt="vitawind pack logo">
   </a>
-  <h1 align="center">create-vitawind</h1>
+  <h1 align="center">create-vitawind v2</h1>
   <h4 align="center">Scaffolding for your tailwind project</h4>
 </p>
 
@@ -26,24 +26,21 @@ Nothing even **"setup tailwindcss in jit mode"** can stop you developing! Now, y
 To start, open terminal at your directory where you want to put project. And, run following command:
 
 ```shell
-npm init vitawind {project-name} -- {template}
+yarn create vitawind@next {project-name} --{template}
+# or `npm init vitawind@next {project-name} -- --{template}`
 ```
 base on this command, please give project name and choose a template, example:
 
 ```shell
-npm init vitawind my-first-app -- --vue
+yarn create vitawind@next my-first-app --vue
+# or `npm init vitawind@next my-first-app -- --vue`
 ```
 
 ### Template List
-- --pure *(vallia-js, BETA)*
 - --vue
   - --vue-ts
 - --react
   - --react-ts
-- --vuecli
-  - --vuecli5 *(BETA)*
-- --cra
-- --ng
 
 ### More
-for more information, please read ["Scaffolding for your tailwind project"](https://vitawind-blog.vercel.app/scaffolding/).
+for more information, please read ["Scaffolding for your tailwind project"](https://vitawind.vercel.app/scaffolding/).

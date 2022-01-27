@@ -43,7 +43,7 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
       { text: 'Scaffolding', link: '/scaffolding/', activeMatch: '^/scaffolding/' },
-      { text: 'to v1 docs', link: 'https://vitawind-v1.vercel.app' },
+      { text: 'to v1 docs', link: 'https://v1-vitawind.vercel.app' },
       // {
       //   text: 'Config Reference',
       //   link: '/config/basics',

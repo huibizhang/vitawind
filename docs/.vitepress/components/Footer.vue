@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    MIT Licensed | Copyright © 2021-present huibizhang Rabbit
+    MIT Licensed | Copyright © {{new Date().getFullYear()}}-present huibizhang Rabbit
   </div>
 </template>
 

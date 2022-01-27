@@ -118,11 +118,19 @@ Generate your scaffolding installation commands rapidly, just give project name 
 
 <div v-if="tool === 'npm'"><pre id="code-npm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 npm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
 =======
 npm i -g create-vitawind@latest
 npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
 >>>>>>> f810adf (fix: all commands)
+=======
+npm i -g create-vitawind@latest
+npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+=======
+npm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
+>>>>>>> f374774 (update: blog content for `@next`)
+>>>>>>> 516713d (update: blog content for `@next`)
 cd {{projectName}}
 npm install
 npm {{getScript()?getScript().trim():'{script}'}}
@@ -137,11 +145,19 @@ yarn {{getScript()?getScript().trim():'{script}'}}
 
 <div v-if="tool === 'pnpm'"><pre id="code-pnpm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 pnpm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
 =======
 pnpm i -g create-vitawind@latest
 pnpm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
 >>>>>>> f810adf (fix: all commands)
+=======
+pnpm i -g create-vitawind@latest
+pnpm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+=======
+pnpm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
+>>>>>>> f374774 (update: blog content for `@next`)
+>>>>>>> 516713d (update: blog content for `@next`)
 cd {{projectName}}
 pnpm install
 pnpm {{getScript()?getScript().trim():'{script}'}}

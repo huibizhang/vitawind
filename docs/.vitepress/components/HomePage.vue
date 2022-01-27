@@ -1,13 +1,16 @@
 <template>
   <div id="hp">
     <img id="logo" :src="logoPath" />
-    <h1 style="font-size:40px;">Vitawind</h1>
+    <h1 style="font-size:40px;">
+      Vitawind
+      <span class="inline-block text-lg bg-gradient-to-br from-blue-400 to-green-400 text-white px-1.5 py-0.5 rounded-lg">next</span>
+    </h1>
     <span style="font-size:20px;color:#AAAAAA;display:block;margin:5px 0 10px 0;">The Lightning Wind , Stronger and Faster.</span>
     <p align="center">
       <span style="display:flex;gap:5px;">
         <a href="https://npmjs.com/package/vitawind"
           ><img
-            src="https://img.shields.io/npm/v/vitawind?style=flat-square"
+            src="https://img.shields.io/npm/v/vitawind/next?style=flat-square"
             alt="version"
         /></a>
         <a href="https://nodejs.org/en/about/releases/"

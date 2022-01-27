@@ -7,7 +7,7 @@
         <img :src="'/vite-logo.svg'" class="w-8 h-8 object-contain p-1">Vite
       </div>
       <div class="bg-gray-100 p-2 grid grid-cols-1 gap-2">
-        <TemplateItem :key="list.pure.id" v-bind="list.pure" :current="template" @checked="template=$event" class="text-center" />
+        <!-- TemplateItem :key="list.pure.id" v-bind="list.pure" :current="template" @checked="template=$event" class="text-center" /-->
         <div class="grid grid-cols-2 gap-2">
           <TemplateItem v-for="t in list.vite" :key="t.id" v-bind="t" :current="template" @checked="template=$event" />
         </div>
@@ -15,14 +15,14 @@
     </div>
 
     <!-- CLI -->
-    <div class="rounded-lg overflow-hidden">
+    <!--div class="rounded-lg overflow-hidden">
       <div class="h-10 bg-gray-200 text-gray-500 font-bold flex justify-center items-center">
         <img :src="'/webpack-logo.svg'" class="w-9 h-9 object-contain p-1">CLI
       </div>
       <div class="bg-gray-100 p-2 grid grid-cols-2 gap-2">
         <TemplateItem v-for="t in list.cli" :key="t.id" v-bind="t" :current="template" @checked="template=$event" />
       </div>
-    </div>
+    </div-->
     
     <button
       class="w-1/2 h-10 text-base text-white font-bold bg-blue-400 hover:bg-blue-300 active:bg-blue-500 active:scale-95 disabled:bg-gray-500 flex justify-center items-center inset-0 mx-auto rounded-md transition-all cursor-pointer border-0"

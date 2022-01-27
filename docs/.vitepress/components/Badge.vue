@@ -24,6 +24,9 @@ export default {
       if (this.color==='green') {
         return 'badgeGreen'
       }
+      else if (this.color==='red') {
+        return 'badgeRed'
+      }
     }    
   }
 }
@@ -32,5 +35,8 @@ export default {
 <style lang="postcss">
   .badgeGreen {
     @apply bg-green-600 text-white
+  }
+  .badgeRed {
+    @apply bg-red-500 text-white
   }
 </style>

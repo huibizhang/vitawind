@@ -110,28 +110,28 @@ export default{
 </script>
 
 
-# Creator <Badge :color="'green'" :text="'1.0'" />
+# Creator <Badge :color="'red'" :text="'HOT'" />
 
 Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
 <div v-if="tool === 'npm'"><pre id="code-npm">
-npm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
+npm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 npm install
 npm {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
 <div v-if="tool === 'yarn'"><pre id="code-yarn">
-yarn create vitawind {{projectName}} --{{template?template:'{template}'}}
+npm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 yarn
 yarn {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
 <div v-if="tool === 'pnpm'"><pre id="code-pnpm">
-pnpm init vitawind@latest {{projectName}} -- --{{template?template:'{template}'}}
+pnpm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 pnpm install
 pnpm {{getScript()?getScript().trim():'{script}'}}

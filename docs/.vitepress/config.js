@@ -1,8 +1,8 @@
 //const { path } = require('@vuepress/shared-utils')
 
 module.exports = {
-  title: 'Vitawind',
-  description: "Vitawind, Install and Setting Tailwindcss automatically for Vite",
+  title: 'Vitawind v2',
+  description: "Vitawind v2, Install and Setting Tailwindcss v3 automatically for Vite",
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
     [
@@ -43,7 +43,7 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
       { text: 'Scaffolding', link: '/scaffolding/', activeMatch: '^/scaffolding/' },
-      { text: '切換至繁中', link: 'https://vitawind-blog-tw.vercel.app' },
+      { text: 'to v1 docs', link: 'https://vitawind-v1.vercel.app' },
       // {
       //   text: 'Config Reference',
       //   link: '/config/basics',
@@ -133,23 +133,23 @@ function getScaffoldingSidebar() {
             }
           ]
         },
-        {
-          text: 'CLI',
-          children: [
-            {
-              text: 'Vue CLI',
-              link: '/scaffolding/templates#vue-cli'
-            },
-            {
-              text: 'Create React App',
-              link: '/scaffolding/templates#create-react-app'
-            },
-            {
-              text: 'Angular CLI',
-              link: '/scaffolding/templates#angular'
-            },
-          ]
-        }
+        // {
+        //   text: 'CLI',
+        //   children: [
+        //     {
+        //       text: 'Vue CLI',
+        //       link: '/scaffolding/templates#vue-cli'
+        //     },
+        //     {
+        //       text: 'Create React App',
+        //       link: '/scaffolding/templates#create-react-app'
+        //     },
+        //     {
+        //       text: 'Angular CLI',
+        //       link: '/scaffolding/templates#angular'
+        //     },
+        //   ]
+        // }
       ]
     },
     {

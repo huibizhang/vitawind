@@ -51,29 +51,29 @@ export default{
 
 # Templates
 
-The Tailwind CSS jit mode pre built-in template that can help you setup developing environment quickly and easily.
+The Tailwind CSS v3 pre built-in template that can help you setup developing environment quickly and easily.
 
 ::: tip There are full list of templates:
-- [`--pure`](#vanilla-js-in-vite) <Badge color="green" text="BETA" size="small" />
+<!-- - [`--pure`](#vanilla-js-in-vite) <Badge color="green" text="BETA" size="small" /> -->
 - [`--vue`](#vue-in-vite)
   - [`--vue-ts`](#typescript-for-vue)
 - [`--react`](#react-in-vite)
   - [`--react-ts`](#typescript-for-react)
-- [`--vuecli`](#vue-cli)
-  - [`--vuecli5`](#vue-cli-5) <Badge color="green" text="BETA" size="small" />
-- [`--cra`](#create-react-app)
-- [`--ng`](#angular)
 :::
+<!-- - [`--vuecli`](#vue-cli) -->
+  <!-- - [`--vuecli5`](#vue-cli-5) <Badge color="green" text="BETA" size="small" /> -->
+<!-- - [`--cra`](#create-react-app) -->
+<!-- - [`--ng`](#angular) -->
 <!-- - [`--cra22`](#create-react-app-tailwindcss-2-2) -->
 <br>
 
-### Vanilla-JS in Vite <Badge color="green" text="BETA" />
+<!-- ### Vanilla-JS in Vite <Badge color="green" text="BETA" />
 Use flag `--pure` to create project with vanilla-js in vite.
 
 <ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {project-name} -- --pure
+npm init vitawind@next {project-name} -- --pure
 ```
 </div><div v-if="tool === 'yarn'">
 
@@ -83,7 +83,7 @@ yarn create vitawind {project-name} --pure
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {project-name} -- --pure
+pnpm init vitawind@next {project-name} -- --pure
 ```
 </div></ToolToggle>
 
@@ -112,7 +112,7 @@ pnpm dev
 ```
 </div></ToolToggle>
 
------
+----- -->
 
 ### Vue in Vite 
 Use flag `--vue` to create project with vue in vite.
@@ -120,17 +120,17 @@ Use flag `--vue` to create project with vue in vite.
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {project-name} -- --vue
+npm init vitawind@next {project-name} -- --vue
 ```
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-yarn create vitawind {project-name} --vue
+npm init vitawind@next {project-name} -- --vue
 ```
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {project-name} -- --vue
+pnpm init vitawind@next {project-name} -- --vue
 ```
 </div></ToolToggle>
 
@@ -170,17 +170,17 @@ Use flag `--react` to create project with react in vite.
 <ToolToggle :name="'tool-react-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {project-name} -- --react
+npm init vitawind@next {project-name} -- --react
 ```
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-yarn create vitawind {project-name} --react
+npm init vitawind@next {project-name} -- --react
 ```
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {project-name} -- --react
+pnpm init vitawind@next {project-name} -- --react
 ```
 </div></ToolToggle>
 
@@ -212,7 +212,7 @@ pnpm run dev
 #### Typescript for React 
 To create project with **typescript** for react in vite, use flag `--react-ts`.
 
----
+<!-- ---
 
 ### Vue-CLI
 Use flag `--vuecli` to create project with Vue-CLI 4.
@@ -220,7 +220,7 @@ Use flag `--vuecli` to create project with Vue-CLI 4.
 <ToolToggle :name="'tool-vuecli-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {project-name} -- --vuecli
+npm init vitawind@next {project-name} -- --vuecli
 ```
 </div><div v-if="tool === 'yarn'">
 
@@ -230,7 +230,7 @@ yarn create vitawind {project-name} --vuecli
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {project-name} -- --vuecli
+pnpm init vitawind@next {project-name} -- --vuecli
 ```
 </div></ToolToggle>
 
@@ -270,7 +270,7 @@ Use flag `--cra` to create project with Create React App.
 <ToolToggle :name="'tool-cra-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {project-name} -- --cra
+npm init vitawind@next {project-name} -- --cra
 ```
 </div><div v-if="tool === 'yarn'">
 
@@ -280,7 +280,7 @@ yarn create vitawind {project-name} --cra
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {project-name} -- --cra
+pnpm init vitawind@next {project-name} -- --cra
 ```
 </div></ToolToggle>
 
@@ -309,31 +309,6 @@ pnpm start
 ```
 </div></ToolToggle>
 
-<!-- ### Create React App 
-Use flag `--cra` to create project with Create React App and ***Tailwind CSS version is 2.1.4***. For newest version of Tailwind, see ["Create React App + TailwindCSS 2.2"](#create-react-app-tailwindcss-2-2) section.
-```bash
-npm init vitawind {project-name} --cra
-```
-After creating project, you need:
-```bash
-cd {project-name}
-npm install  # or `yarn`
-npm run start  # or `yarn start`
-``` -->
-
-<!-- ### Create React App + TailwindCSS 2.2
-Use flag `--cra22` to create project with Create React App and ***Tailwind CSS version is 2.2 or higher***.
-
-```bash
-npm init vitawind {project-name} --cra22
-```
-After creating project, you need:
-```bash
-cd {project-name}
-npm install  # or `yarn`
-npm run start  # or `yarn start`
-``` -->
-
 ---
 
 ### Angular
@@ -342,7 +317,7 @@ Use flag `--ng` to create project with Angular CLI.
 <ToolToggle :name="'tool-ng-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm init vitawind@latest {project-name} -- --vue
+npm init vitawind@next {project-name} -- --vue
 ```
 </div><div v-if="tool === 'yarn'">
 
@@ -352,7 +327,7 @@ yarn create vitawind {project-name} --vue
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm init vitawind@latest {project-name} -- --vue
+pnpm init vitawind@next {project-name} -- --vue
 ```
 </div></ToolToggle>
 
@@ -379,6 +354,4 @@ cd {project-name}
 pnpm install
 pnpm start
 ```
-</div></ToolToggle>
-
-<!-- <TemplateCmd /> -->
+</div></ToolToggle> -->

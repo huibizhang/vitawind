@@ -2,6 +2,7 @@
   "name": "create-vitawind",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "2.0.0",
   "description": "Scaffolding for your tailwind project",
 =======
@@ -9,6 +10,9 @@
 =======
   "version": "0.3.12",
 >>>>>>> 4693d2d (fix: `.gitignore` instead `gitignore`, update version `0.3.11` -> `0.3.12`)
+=======
+  "version": "0.3.13",
+>>>>>>> 0b950d5 (fix: link of hero-img)
   "description": "Scaffolding for your tailwind v2 project",
 >>>>>>> dfb392d (update: `readme.md` installation commands)
   "main": "index.js",

@@ -15,7 +15,7 @@ on:
 jobs:
   publish-create-vitawind:
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/create-vitawind' }}
+    # if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/create-vitawind' }}
     steps:
       - name: actions/checkout@v2
         uses: actions/checkout@v2
@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: show pr status
+        run: echo ${{ github.event.pull_request }}
       - name: npm publish
         run: |
           cd ./packages/create-vitawind/

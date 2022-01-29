@@ -6,6 +6,7 @@ name: npm_publish
 on:
   pull_request:
     branches: [v1.x]
+    type: [closed]
 #     paths:
 #       - packages/create-vitawind/**
   # push:
@@ -14,6 +15,7 @@ on:
 jobs:
   publish-create-vitawind:
     runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/create-vitawind' }}
     steps:
       - name: actions/checkout@v2
         uses: actions/checkout@v2
@@ -22,15 +24,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: check source branch
-        run: |
-          echo ${{ github.head_ref == 'v1/blog' }}
-      - name: if source branch
-        if: ${{ github.head_ref == 'v1/blog' }}
-        run: |
-          echo "Yes, is 'v1/blog'"
       - name: npm publish
-        if: github.head_ref == 'v1/package/create-vitawind'
         run: |
           cd ./packages/create-vitawind/
           npm publish

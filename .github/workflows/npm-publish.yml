@@ -5,11 +5,11 @@ name: npm_publish
 
 on:
   pull_request:
-    branches: ['v1.x']
+    branches: [v1.x]
 #     paths:
 #       - packages/create-vitawind/**
-  push:
-    branches: ['v1.x']
+  # push:
+  #   branches: ['v1.x']
 
 jobs:
   publish-create-vitawind:

@@ -7,28 +7,43 @@ on:
   pull_request:
     branches: [v1.x]
     types: [closed]
-    # paths:
-    #   - packages/create-vitawind/**
-  # push:
-  #   branches: ['v1.x']
 
 jobs:
-  publish-create-vitawind:
+  publish-vitawind:
+    name: "npm-publish: vitawind"
     runs-on: ubuntu-latest
-    # if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/create-vitawind' }}
+    if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/vitawind' }}
     steps:
-      - name: actions/checkout@v2
+      - name: checkout
         uses: actions/checkout@v2
-      - name: actions/setup-node@v2
+      - name: setup-node
         uses: actions/setup-node@v2
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: show pr status
-        run: echo ${{ github.event.pull_request.merged }}
+      - name: npm publish
+        run: |
+          cd ./packages/vitawind/
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          
+  publish-create-vitawind:
+    name: "npm-publish: create-vitawind"
+    runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/create-vitawind' }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
       - name: npm publish
         run: |
           cd ./packages/create-vitawind/
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+

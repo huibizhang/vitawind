@@ -22,8 +22,11 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: Source Branch
+        run: |
+          echo ${{ GITHUB_HEAD_REF }}
       - name: npm publish
-        if: github.ref == 'refs/heads/v1/package/create-vitawind'
+        if: github.head_ref == 'refs/heads/v1/package/create-vitawind'
         run: |
           cd ./package/create-vitawind/
           npm publish

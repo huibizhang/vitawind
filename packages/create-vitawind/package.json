@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huibizhang/vitawind.git",
+    "url": "git+https://github.com/huibizhang/vitawind.git/tree/v1.x",
     "directory": "packages/create-vitawind"
   },
   "homepage": "https://vitawind-blog.vercel.app/scaffolding/",

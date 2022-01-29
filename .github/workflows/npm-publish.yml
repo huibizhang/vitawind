@@ -25,7 +25,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - name: show pr status
-        run: echo ${{ github.event.pull_request }}
+        run: echo ${{ github.event.pull_request.merged }}
       - name: npm publish
         run: |
           cd ./packages/create-vitawind/

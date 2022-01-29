@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.github.com/huibizhang/vitawind/packages/create-vitawind" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/huibizhang/vitawind/tree/v1.x/packages/create-vitawind" target="_blank" rel="noopener noreferrer">
     <img width="180" src="./vitawind_pack.svg" alt="vitawind pack logo">
   </a>
   <h1 align="center">create-vitawind</h1>

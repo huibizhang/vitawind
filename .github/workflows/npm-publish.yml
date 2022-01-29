@@ -6,6 +6,7 @@ name: npm_publish
 on:
   pull_request:
     branches: [v1.x]
+    types: [closed]
 #     paths:
 #       - packages/create-vitawind/**
   # push:

@@ -8,6 +8,10 @@ on:
     branches: ['v1.x']
 #     paths:
 #       - packages/create-vitawind/**
+  push:
+    branches: ['v1.x']
+    paths:
+      - packages/create-vitawind/**
 
 jobs:
   publish-create-vitawind:

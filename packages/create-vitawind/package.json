@@ -1,7 +1,7 @@
 {
   "name": "create-vitawind",
-  "version": "0.3.10",
-  "description": "Scaffolding for your tailwind project",
+  "version": "0.3.11",
+  "description": "Scaffolding for your tailwind v2 project",
   "main": "index.js",
   "bin": {
     "create-vitawind": "index.js"

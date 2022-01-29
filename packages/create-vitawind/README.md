@@ -3,7 +3,7 @@
     <img width="180" src="./vitawind_pack.svg" alt="vitawind pack logo">
   </a>
   <h1 align="center">create-vitawind</h1>
-  <h4 align="center">Scaffolding for your tailwind project</h4>
+  <h4 align="center">Scaffolding for your tailwind v2 project</h4>
 </p>
 
 <br>
@@ -26,11 +26,13 @@ Nothing even **"setup tailwindcss in jit mode"** can stop you developing! Now, y
 To start, open terminal at your directory where you want to put project. And, run following command:
 
 ```shell
+npm i -g create-vitawind@latest
 npm init vitawind {project-name} -- {template}
 ```
 base on this command, please give project name and choose a template, example:
 
 ```shell
+npm i -g create-vitawind@latest
 npm init vitawind my-first-app -- --vue
 ```
 

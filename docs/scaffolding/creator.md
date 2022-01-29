@@ -117,7 +117,12 @@ Generate your scaffolding installation commands rapidly, just give project name 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
 <div v-if="tool === 'npm'"><pre id="code-npm">
+<<<<<<< HEAD
 npm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
+=======
+npm i -g create-vitawind@latest
+npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+>>>>>>> f810adf (fix: all commands)
 cd {{projectName}}
 npm install
 npm {{getScript()?getScript().trim():'{script}'}}
@@ -131,7 +136,12 @@ yarn {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
 <div v-if="tool === 'pnpm'"><pre id="code-pnpm">
+<<<<<<< HEAD
 pnpm init vitawind@next {{projectName}} -- --{{template?template:'{template}'}}
+=======
+pnpm i -g create-vitawind@latest
+pnpm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+>>>>>>> f810adf (fix: all commands)
 cd {{projectName}}
 pnpm install
 pnpm {{getScript()?getScript().trim():'{script}'}}

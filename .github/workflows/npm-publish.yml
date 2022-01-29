@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: Source Branch
+      - name: show source branch
         run: |
           echo "${{ github.head_ref }}"
       - name: npm publish

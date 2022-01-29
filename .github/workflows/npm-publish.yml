@@ -7,8 +7,8 @@ on:
   pull_request:
     branches: [v1.x]
     types: [closed]
-#     paths:
-#       - packages/create-vitawind/**
+    # paths:
+    #   - packages/create-vitawind/**
   # push:
   #   branches: ['v1.x']
 

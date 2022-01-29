@@ -6,8 +6,8 @@ name: npm_publish
 on:
   pull_request:
     branches: ['v1.x']
-    paths:
-      - packages/create-vitawind/**
+#     paths:
+#       - packages/create-vitawind/**
 
 jobs:
   publish-create-vitawind:

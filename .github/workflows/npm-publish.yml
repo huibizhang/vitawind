@@ -5,14 +5,14 @@ name: npm_publish
 
 on:
   pull_request:
-    branches: [v1.x]
+    branches: [master]
     types: [closed]
 
 jobs:
   publish-vitawind:
     name: "npm-publish: vitawind"
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/vitawind' }}
+    if: ${{ github.event.pull_request.merged && github.head_ref == 'package/vitawind' }}
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -24,14 +24,14 @@ jobs:
       - name: npm publish
         run: |
           cd ./packages/vitawind/
-          npm publish
+          npm publish --tag next
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           
   publish-create-vitawind:
     name: "npm-publish: create-vitawind"
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.merged && github.head_ref == 'v1/package/create-vitawind' }}
+    if: ${{ github.event.pull_request.merged && github.head_ref == 'package/create-vitawind' }}
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -43,7 +43,6 @@ jobs:
       - name: npm publish
         run: |
           cd ./packages/create-vitawind/
-          npm publish
+          npm publish --tag next
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-

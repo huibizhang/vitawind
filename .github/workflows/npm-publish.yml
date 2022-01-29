@@ -23,10 +23,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: npm publish
         if: github.ref == 'refs/heads/v1/package/create-vitawind'
-        with:
-          path: node_modules
-          run: |
-            cd ./package/create-vitawind/
-            npm publish
+        run: |
+          cd ./package/create-vitawind/
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

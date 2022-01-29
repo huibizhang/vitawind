@@ -2,8 +2,13 @@
   <a href="https://www.github.com/huibizhang/vitawind/packages/create-vitawind" target="_blank" rel="noopener noreferrer">
     <img width="180" src="./vitawind_pack.svg" alt="vitawind pack logo">
   </a>
+<<<<<<< HEAD
   <h1 align="center">create-vitawind v2</h1>
   <h4 align="center">Scaffolding for your tailwind project</h4>
+=======
+  <h1 align="center">create-vitawind</h1>
+  <h4 align="center">Scaffolding for your tailwind v2 project</h4>
+>>>>>>> dfb392d (update: `readme.md` installation commands)
 </p>
 
 <br>
@@ -26,14 +31,24 @@ Nothing even **"setup tailwindcss in jit mode"** can stop you developing! Now, y
 To start, open terminal at your directory where you want to put project. And, run following command:
 
 ```shell
+<<<<<<< HEAD
 yarn create vitawind@next {project-name} --{template}
 # or `npm init vitawind@next {project-name} -- --{template}`
+=======
+npm i -g create-vitawind@latest
+npm init vitawind {project-name} -- {template}
+>>>>>>> dfb392d (update: `readme.md` installation commands)
 ```
 base on this command, please give project name and choose a template, example:
 
 ```shell
+<<<<<<< HEAD
 yarn create vitawind@next my-first-app --vue
 # or `npm init vitawind@next my-first-app -- --vue`
+=======
+npm i -g create-vitawind@latest
+npm init vitawind my-first-app -- --vue
+>>>>>>> dfb392d (update: `readme.md` installation commands)
 ```
 
 ### Template List

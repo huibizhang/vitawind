@@ -3,7 +3,7 @@ title: Scaffolding
 head:
   - - meta
     - name: description
-      content: Scaffolding for your tailwind project. Keep it easy, Keep it simple.
+      content: Scaffolding for your tailwindcss v3 project. Keep it easy, Keep it simple.
   - - meta
     - name: keywords
       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular

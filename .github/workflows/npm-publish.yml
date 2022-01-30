@@ -49,10 +49,10 @@ jobs:
         run: |
           cd ./packages/create-vitawind/
           npm publish --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: auto taging
         uses: Klemensas/action-autotag@1.2.3
         with:
           GITHUB_TOKEN: "${{ secrets.MY_GITHUB_TOKEN }}"
           tag_prefix: "create-vitawind-v"
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

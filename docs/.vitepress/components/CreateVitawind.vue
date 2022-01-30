@@ -12,7 +12,7 @@
         display: block;
         margin: 5px 0 10px 0;
       "
-      >Scaffolding for your Tailwind v2 project</span
+      >Scaffolding for your Tailwindcss v3 project</span
     >
     <p align="center">
       <span style="display: flex; gap: 5px">

@@ -46,12 +46,12 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      # - name: npm publish
-      #   run: |
-      #     cd ./packages/create-vitawind/
-      #     npm publish --tag next
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: npm publish
+        run: |
+          cd ./packages/create-vitawind/
+          npm publish --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: auto taging
         uses: Klemensas/action-autotag@stable
         with:

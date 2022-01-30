@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+    @apply mt-14 text-center text-gray-600;
+}

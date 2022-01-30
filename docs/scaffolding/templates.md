@@ -182,11 +182,7 @@ npm init vitawind {project-name} -- --react
 
 ```bash
 npm i -g create-vitawind@next
-<<<<<<< HEAD
-npm init vitawind {project-name} -- --vuegi
-=======
 npm init vitawind {project-name} -- --react
->>>>>>> 516713d (update: blog content for `@next`)
 ```
 </div><div v-if="tool === 'pnpm'">
 

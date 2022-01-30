@@ -27,6 +27,12 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: auto taging
+        uses: Klemensas/action-autotag@stable
+        with:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          tag_prefix: "vitawind-v"
+          package_root: "./packages/vitawind"
           
   publish-create-vitawind:
     name: "npm-publish: create-vitawind"
@@ -46,4 +52,10 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: auto taging
+        uses: Klemensas/action-autotag@stable
+        with:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          tag_prefix: "create-vitawind-v"
+          package_root: "./packages/create-vitawind"
 

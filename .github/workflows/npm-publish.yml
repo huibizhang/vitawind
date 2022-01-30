@@ -49,10 +49,6 @@ jobs:
       - name: npm publish
         run: |
           cd ./packages/create-vitawind/
-          git clone git@github.com:huibizhang/template-vite-vue-tailwind-v3.git
-          git clone git@github.com:huibizhang/template-vite-vue-ts-tailwind-v3.git
-          git clone git@github.com:huibizhang/template-vite-react-tailwind-v3.git
-          git clone git@github.com:huibizhang/template-vite-react-ts-tailwind-v3.git
           npm publish --tag next
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

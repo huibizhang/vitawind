@@ -37,7 +37,7 @@ module.exports = {
     toc: { includeLevel: [1, 2] },
   },
   themeConfig: {
-    repo: 'huibizhang/vitawind',
+    repo: 'huibizhang/vitawind/tree/v1.x',
 
     nav: [
       { text: 'Home', link: '/' },

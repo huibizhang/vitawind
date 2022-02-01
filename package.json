@@ -9,9 +9,10 @@
   },
   "author": "huibizhang",
   "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {
-    "clipboard": "^2.0.8",
+  "devDependencies": {
     "vuepress": "^2.0.0-beta.35"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.8"
   }
 }

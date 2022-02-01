@@ -46,8 +46,8 @@ const configure = (_setting) => {
   else if (argv['react-ts'] || argv._.find(arg => arg==='--react-ts')) element = 'react-ts'
   // else if (argv.vuecli || argv._.find(arg => arg==='--vuecli')) element = 'vuecli'
   // else if (argv.vuecli5 || argv._.find(arg => arg==='--vuecli5')) element = 'vuecli5'
-  // else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
-  // else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
+  else if (argv.cra || argv._.find(arg => arg==='--cra')) element = 'cra'
+  else if (argv.ng || argv._.find(arg => arg==='--ng')) element = 'ng'
   else if (argv.version || argv._.find(arg => arg==='--version' || arg==='-v')) element = 'version'
 
   const excutor = {
@@ -79,14 +79,14 @@ const configure = (_setting) => {
     //   _setting.template = "vuecli5"
     //   _setting.script = "serve"
     // },
-    // 'cra': () => {
-    //   _setting.template = "cra"
-    //   _setting.script = "start"
-    // },
-    // 'ng': () => {
-    //   _setting.template = "ng"
-    //   _setting.script = "start"
-    // },
+    'cra': () => {
+      _setting.template = "cra"
+      _setting.script = "start"
+    },
+    'ng': () => {
+      _setting.template = "ng"
+      _setting.script = "start"
+    },
     'version':() => {
       _setting.initial = false
       return true

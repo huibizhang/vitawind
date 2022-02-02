@@ -4,10 +4,7 @@ module.exports = {
     "./docs/**/*.{md,vue}",
     "./docs/.vuepress/**/*.{md,vue}",
   ],
-  darkMode: "class",
-  corePlugins: {
-    preflight: false,
-  },
+>>>>>>> c109656 (add: tailwindcss v3)
   theme: {
     extend: {},
   },

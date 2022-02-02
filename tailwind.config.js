@@ -1,14 +1,9 @@
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     './docs/index.md',
     './docs/**/*.{md,vue}',
-    './docs/.vitepress/**/*.{md,vue}'
+    './docs/.vuepress/**/*.{md,vue}'
   ],
-  darkMode: false, // or 'media' or 'class'
-  corePlugins: {
-    preflight: false,
-  },
   theme: {
     extend: {},
   },

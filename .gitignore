@@ -1,6 +1,7 @@
 node_modules
 
 yarn.lock
+yarn-error.log
 
 docs/.vuepress/.cache/*
 docs/.vuepress/.temp/*

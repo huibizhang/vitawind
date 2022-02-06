@@ -1,49 +1,55 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import poweredBy from './powered-by-vitawind-dark.png'
+import { useState } from "react";
+import logo from "./logo.svg";
+import poweredBy from "./powered-by-vitawind-dark.png";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="text-center selection:bg-green-900">
-      <header className="bg-[#282c34] min-h-screen text-white flex flex-col justify-center items-center">
+      <header className="flex min-h-screen flex-col items-center justify-center bg-[#282c34] text-white">
         <img
           src={logo}
-          className="h-60 motion-safe:animate-spin animate-speed"
+          className="animate-speed h-60 motion-safe:animate-spin"
           alt="logo"
         />
         <style>
-          {"\
+          {
+            "\
             .animate-speed{\
               animation-duration:20s;\
             }\
-          "}
+          "
+          }
         </style>
-        <p className="text-5xl font-black bg-gradient-to-r from-emerald-300 to-sky-300 text-transparent bg-clip-text selection:bg-transparent">Vite + React + Typescript + Tailwindcss v3</p>
+        <p className="bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text text-5xl font-black text-transparent selection:bg-transparent">
+          Vite + React + Typescript + Tailwindcss v3
+        </p>
         <p className="mt-3">
           <button
             type="button"
-            className="rounded text-[#282C34] bg-gray-300 px-2 py-2 my-6 hover:bg-gray-200 transition-all"
-            onClick={() => setCount((count) => count + 1)}>
+            className="my-6 rounded bg-gray-300 px-2 py-2 text-[#282C34] transition-all hover:bg-gray-200"
+            onClick={() => setCount((count) => count + 1)}
+          >
             count is: {count}
           </button>
         </p>
         <p>
-          Edit <code className="text-[#8d96a7]">App.tsx</code> and save to test HMR updates.
+          Edit <code className="text-[#8d96a7]">App.tsx</code> and save to test
+          HMR updates.
         </p>
         <p className="mt-3 flex gap-3 text-center text-[#8d96a7]">
           <a
-            className="text-[#61dafb] hover:text-blue-400 transition-all"
+            className="text-[#61dafb] transition-all hover:text-blue-400"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
-            className="text-[#61dafb] hover:text-blue-400 transition-all"
+            className="text-[#61dafb] transition-all hover:text-blue-400"
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,7 +60,7 @@ function App() {
         <img src={poweredBy} className="mx-auto my-8" alt="powered-by" />
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

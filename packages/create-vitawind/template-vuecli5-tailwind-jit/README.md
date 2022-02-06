@@ -2,7 +2,7 @@
 
 - **template of:** vue-cli 5-beta + vue3
 - **postcss ver:** 8
-- **tailwindcss:** v2.2.7
+- **tailwindcss:** `^2.2.19`
 
 ## Started
 with npm:

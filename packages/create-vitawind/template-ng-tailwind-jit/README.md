@@ -1,7 +1,7 @@
 # template-ng-tailwind-jit
 
 - **template of:** angular cli
-- **tailwindcss:** v2.2.7
+- **tailwindcss:** `^2.2.19`
 
 ## Started
 with npm:

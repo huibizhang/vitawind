@@ -1,7 +1,7 @@
 # template-vite-vue-ts-tailwind-jit
 
 - **template of:** vite + vue + typescript
-- **tailwindcss:** v2.2.7
+- **tailwindcss:** `^2.2.19`
 
 ## Started
 with npm:

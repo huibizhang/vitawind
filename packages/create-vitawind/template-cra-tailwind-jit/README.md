@@ -1,7 +1,7 @@
 # template-cra-tailwind-jit
 
 - **template of:** create-react-app
-- **tailwindcss:** v2.2.7
+- **tailwindcss:** `^2.2.19`
 
 ## Started
 with npm:

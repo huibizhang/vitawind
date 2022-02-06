@@ -3,8 +3,10 @@
   "version": "2.0.0",
   "description": "Install and Setting Tailwindcss automatically for Vite",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "vuepress:dev": "vuepress dev docs-new",
+    "vuepress:build": "vuepress build docs-new",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs"
   },
   "author": "huibizhang",
   "license": "MIT",
@@ -12,13 +14,12 @@
     "@vuepress/plugin-container": "^2.0.0-beta.33",
     "@vuepress/plugin-register-components": "^2.0.0-beta.33",
     "@vuepress/plugin-toc": "^2.0.0-beta.33",
-    "clipboard": "^2.0.8",
-    "vuepress": "^2.0.0-beta.35",
     "autoprefixer": "^10.4.2",
+    "clipboard": "^2.0.8",
     "postcss": "^8.4.6",
-    "tailwindcss": "^3.0.18"
+    "tailwindcss": "^3.0.18",
+    "vitepress": "^0.21.6",
+    "vuepress": "^2.0.0-beta.35"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }

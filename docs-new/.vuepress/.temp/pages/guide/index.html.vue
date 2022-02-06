@@ -1,0 +1,5 @@
+<template><h2 id="why-vitawind" tabindex="-1"><a class="header-anchor" href="#why-vitawind" aria-hidden="true">#</a> Why Vitawind</h2>
+<p>Vitawind is a Vite helper that can installing and setting Tailwind CSS in few steps. Easy to use , just install Vitawind and add one line setting , you'll have the most fantastic developer experience !</p>
+<h3 id="vite" tabindex="-1"><a class="header-anchor" href="#vite" aria-hidden="true">#</a> Vite</h3>
+<p><a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">Vite<ExternalLinkIcon/></a> is the best frontend dev tool in my mind. Actually , Vite is really fast and convenient when your are devloping Vue or React project. Instead to <strong>Webpack</strong> is , Vite's <a href="https://vitejs.dev/guide/features.html#hot-module-replacement" target="_blank" rel="noopener noreferrer">Hot Module Replacement (HMR)<ExternalLinkIcon/></a> resolve that devlopers always need to take a long long time for waiting dev server updated when modifying a very small thing.</p>
+</template>

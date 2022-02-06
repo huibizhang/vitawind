@@ -1,20 +1,46 @@
----
-title: Creator
-head:
-  - - meta
-    - name: description
-      content: Create scaffolding installation commands for your tailwind project. Keep it easy, Keep it simple.
-  - - meta
-    - name: keywords
-      content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
-sidebarDepth: 2
----
+<template><h1 id="creator" tabindex="-1"><a class="header-anchor" href="#creator" aria-hidden="true">#</a> Creator <Badge :color="'red'" :text="'HOT'" /></h1>
+<p>Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! 🎉</p>
+<Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
+<div v-if="tool === 'npm'"><pre id="code-npm">
+npm i -g create-vitawind@next
+npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+cd {{projectName}}
+npm install
+npm {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
+<div v-if="tool === 'yarn'"><pre id="code-yarn">
+npm i -g create-vitawind@next
+npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+cd {{projectName}}
+yarn
+yarn {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
+<div v-if="tool === 'pnpm'"><pre id="code-pnpm">
+pnpm i -g create-vitawind@next
+pnpm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+cd {{projectName}}
+pnpm install
+pnpm {{getScript()?getScript().trim():'{script}'}}
+</pre></div>
+</Terminal>
+<div
+  class="text-sm text-gray-500 text-center mt-4 transition-all"
+  :class="{'scale-100':msgShow,'scale-0':!msgShow}"
+>
+  <span class="bg-gray-200 p-1 rounded-md">
+    Copied to you clipboard.
+  </span>
+</div>
+<Modal :open="modalOpen" @close="modalOpen=false">
+<TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
+</Modal>
+</template>
 
 <script>
-import Badge from '../.vitepress/components/Badge.vue'
-import Terminal from '../.vitepress/components/Terminal.vue'
-import Modal from '../.vitepress/components/Modal.vue'
-import TemplateList from '../.vitepress/components/TemplateList.vue'
+// import Badge from '../.vitepress/components/Badge.vue'
+// import Terminal from '../.vitepress/components/Terminal.vue'
+// import Modal from '../.vitepress/components/Modal.vue'
+// import TemplateList from '../.vitepress/components/TemplateList.vue'
 
 export default{
   data () {
@@ -108,49 +134,3 @@ export default{
   }
 }
 </script>
-
-
-# Creator <Badge :color="'red'" :text="'HOT'" />
-
-Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
-
-<Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
-
-<div v-if="tool === 'npm'"><pre id="code-npm">
-npm i -g create-vitawind@next
-npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
-cd {{projectName}}
-npm install
-npm {{getScript()?getScript().trim():'{script}'}}
-</pre></div>
-
-<div v-if="tool === 'yarn'"><pre id="code-yarn">
-npm i -g create-vitawind@next
-npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
-cd {{projectName}}
-yarn
-yarn {{getScript()?getScript().trim():'{script}'}}
-</pre></div>
-
-<div v-if="tool === 'pnpm'"><pre id="code-pnpm">
-pnpm i -g create-vitawind@next
-pnpm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
-cd {{projectName}}
-pnpm install
-pnpm {{getScript()?getScript().trim():'{script}'}}
-</pre></div>
-
-</Terminal>
-
-<div
-  class="text-sm text-gray-500 text-center mt-4 transition-all"
-  :class="{'scale-100':msgShow,'scale-0':!msgShow}"
->
-  <span class="bg-gray-200 p-1 rounded-md">
-    Copied to you clipboard.
-  </span>
-</div>
-
-<Modal :open="modalOpen" @close="modalOpen=false">
-  <TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
-</Modal>

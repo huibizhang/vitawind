@@ -9,12 +9,9 @@ head:
       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr
 navbar: true
 sidebar: false
+lastUpdated: false
+editLink: false
 ---
-
-<script setup>
-import HomePage from '.vitepress/components/HomePage.vue'
-import Footer from '.vitepress/components/Footer.vue'
-</script>
 
 <HomePage />
 <Footer />

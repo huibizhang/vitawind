@@ -14,6 +14,7 @@ head:
 sidebar: false
 ---
 
+<<<<<<< HEAD
 <script>
 export default{
   data () {
@@ -109,6 +110,13 @@ export default{
 </script>
 
 <!-- <zh-HomePage /> -->
+=======
+<script setup>
+import HomePage from '.vitepress/components/HomePage.vue'
+import Footer from '.vitepress/components/Footer.vue'
+</script>
+
+>>>>>>> 8588c96 (update: vitepress for mentaining old v2 docs)
 <HomePage />
 
 ## Getting Started

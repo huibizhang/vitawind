@@ -12,8 +12,6 @@ head:
     - name: keywords
       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
 sidebar: false
-lastUpdated: false
-editLink: false
 ---
 
 <script>

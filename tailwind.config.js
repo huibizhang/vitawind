@@ -4,7 +4,6 @@ module.exports = {
     "./docs/**/*.{md,vue}",
     "./docs/.vuepress/**/*.{md,vue}",
   ],
->>>>>>> c109656 (add: tailwindcss v3)
   theme: {
     extend: {},
   },

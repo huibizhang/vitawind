@@ -1,33 +1,48 @@
 <template>
-  <div class="p-3 pointer-events-auto flex flex-col gap-3 select-none">
-
+  <div class="pointer-events-auto flex select-none flex-col gap-3 p-3">
     <!-- Vite -->
-    <div class="rounded-lg overflow-hidden">
-      <div class="h-10 bg-gray-200 text-gray-500 font-bold flex justify-center items-center">
-        <img :src="'/vite-logo.svg'" class="w-8 h-8 object-contain p-1">Vite
+    <div class="overflow-hidden rounded-lg">
+      <div
+        class="flex h-10 items-center justify-center bg-gray-200 font-bold text-gray-500"
+      >
+        <img :src="'/vite-logo.svg'" class="h-8 w-8 object-contain p-1" />Vite
       </div>
-      <div class="bg-gray-100 p-2 grid grid-cols-1 gap-2">
+      <div class="grid grid-cols-1 gap-2 bg-gray-100 p-2">
         <!-- TemplateItem :key="list.pure.id" v-bind="list.pure" :current="template" @checked="template=$event" class="text-center" /-->
         <div class="grid grid-cols-2 gap-2">
-          <TemplateItem v-for="t in list.vite" :key="t.id" v-bind="t" :current="template" @checked="template=$event" />
+          <TemplateItem
+            v-for="t in list.vite"
+            :key="t.id"
+            v-bind="t"
+            :current="template"
+            @checked="template = $event"
+          />
         </div>
       </div>
     </div>
 
     <!-- CLI -->
-    <!--div class="rounded-lg overflow-hidden">
-      <div class="h-10 bg-gray-200 text-gray-500 font-bold flex justify-center items-center">
-        <img :src="'/webpack-logo.svg'" class="w-9 h-9 object-contain p-1">CLI
+    <div class="overflow-hidden rounded-lg">
+      <div
+        class="flex h-10 items-center justify-center bg-gray-200 font-bold text-gray-500"
+      >
+        <img :src="'/webpack-logo.svg'" class="h-9 w-9 object-contain p-1" />CLI
       </div>
-      <div class="bg-gray-100 p-2 grid grid-cols-2 gap-2">
-        <TemplateItem v-for="t in list.cli" :key="t.id" v-bind="t" :current="template" @checked="template=$event" />
+      <div class="grid grid-cols-2 gap-2 bg-gray-100 p-2">
+        <TemplateItem
+          v-for="t in list.cli"
+          :key="t.id"
+          v-bind="t"
+          :current="template"
+          @checked="template = $event"
+        />
       </div>
-    </div-->
-    
+    </div>
+
     <button
-      class="w-1/2 h-10 text-base text-white font-bold bg-blue-400 hover:bg-blue-300 active:bg-blue-500 active:scale-95 disabled:bg-gray-500 flex justify-center items-center inset-0 mx-auto rounded-md transition-all cursor-pointer border-0"
-      :disabled="template===''"
-      @click="$emit('confirm',template)"
+      class="inset-0 mx-auto flex h-10 w-1/2 cursor-pointer items-center justify-center rounded-md border-0 bg-blue-400 text-base font-bold text-white transition-all hover:bg-blue-300 active:scale-95 active:bg-blue-500 disabled:bg-gray-500"
+      :disabled="template === ''"
+      @click="$emit('confirm', template)"
     >
       Confirm
     </button>
@@ -35,81 +50,79 @@
 </template>
 
 <script>
-import TemplateItem from './TemplateItem.vue'
+import TemplateItem from "./TemplateItem.vue";
 
 export default {
   name: "TemplateList",
-  props: ['modalStatus'],
-  data () {
+  props: ["modalStatus"],
+  data() {
     return {
-      template: '',
+      template: "",
       list: {
         pure: {
-          id: 'pure',
-          name: 'Vanilla JS',
+          id: "pure",
+          name: "Vanilla JS",
           color: "yellow",
         },
         vite: [
           {
-            id: 'vue',
-            name: 'Vue',
+            id: "vue",
+            name: "Vue",
             color: "green",
           },
           {
-            id: 'vue-ts',
-            name: 'Vue + Typescript',
+            id: "vue-ts",
+            name: "Vue + Typescript",
             color: "green",
           },
           {
-            id: 'react',
-            name: 'React',
+            id: "react",
+            name: "React",
             color: "blue",
           },
           {
-            id: 'react-ts',
-            name: 'React + Typescript',
+            id: "react-ts",
+            name: "React + Typescript",
             color: "blue",
           },
         ],
         cli: [
+          // {
+          //   id: "vuecli",
+          //   name: "Vue-CLI",
+          //   color: "green",
+          // },
+          // {
+          //   id: "vuecli5",
+          //   name: "Vue-CLI 5",
+          //   color: "green",
+          // },
           {
-            id: 'vuecli',
-            name: 'Vue-CLI',
-            color: "green",
-          },
-          {
-            id: 'vuecli5',
-            name: 'Vue-CLI 5',
-            color: "green",
-          },
-          {
-            id: 'cra',
-            name: 'Create React App',
+            id: "cra",
+            name: "Create React App",
             color: "blue",
           },
           {
-            id: 'ng',
-            name: 'Angular',
+            id: "ng",
+            name: "Angular",
             color: "red",
           },
-        ]
-      }
-    }
+        ],
+      },
+    };
   },
   watch: {
     modalStatus: "modalState",
   },
   methods: {
-    modalState () {
-      this.template = !this.modalStatus?'':this.template
-    }
+    modalState() {
+      this.template = !this.modalStatus ? "" : this.template;
+    },
   },
   components: {
-    TemplateItem
-  }
-}
+    TemplateItem,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

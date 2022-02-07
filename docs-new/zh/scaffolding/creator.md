@@ -1,19 +1,5 @@
 ---
-title: Vitawind v2 - The Lightning Wind, Stronger and Faster.
-# head:
-#   - - meta
-#     - name: description
-#       content: Install and Setting Tailwindcss automatically for Vite. Easy To Install, automatically open Tailwind JIT Mode and  One-Command Setting
-#   - - meta
-#     - name: keywords
-#       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr scaffolding
-head:
-  - - meta
-    - name: keywords
-      content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
-sidebar: false
-lastUpdated: false
-editLink: false
+permalinkPattern: scaffolding/:slug
 ---
 
 <script>
@@ -110,14 +96,9 @@ export default{
 }
 </script>
 
-<!-- <zh-HomePage /> -->
-<zh-HomePage />
+# Creator <Badge type="danger" text="HOT" vertical="middle" class="text-white" />
 
-## 起手式
-
-**Creator** is a generator that can generate your scaffolding installation commands rapidly, just give project name and template type.
-
-Try it ! :tada:
+Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
@@ -159,5 +140,3 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
 <Modal :open="modalOpen" @close="modalOpen=false">
 <TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
 </Modal>
-
-<Footer />

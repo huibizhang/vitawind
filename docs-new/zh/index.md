@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 66655a1 (updated: v2 blog using vuepress)
 ---
 title: Vitawind v2 - The Lightning Wind, Stronger and Faster.
 # head:
@@ -111,13 +115,19 @@ export default{
 </script>
 
 <!-- <zh-HomePage /> -->
-<HomePage />
+<zh-HomePage />
 
-## Getting Started
+## 起手式
 
+<<<<<<< HEAD
+**Creator** 是一個能快速產生腳手架建置指令給你用的工具，僅僅只要輸入專案名稱並且選擇所想使用的範本類型。
+
+還不快試試？
+=======
 **Creator** is a generator that can generate your scaffolding installation commands rapidly, just give project name and template type.
 
 Try it ! :tada:
+>>>>>>> 66655a1 (updated: v2 blog using vuepress)
 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
@@ -161,3 +171,9 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
 </Modal>
 
 <Footer />
+<<<<<<< HEAD
+=======
+# 嗨!
+>>>>>>> 3118ad5 (update: vitepress for mentaining old v2 docs)
+=======
+>>>>>>> 66655a1 (updated: v2 blog using vuepress)

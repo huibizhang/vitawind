@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 66655a1 (updated: v2 blog using vuepress)
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: rgb(91, 183, 219);
+  }
+}
+
+html {
+  @apply scroll-smooth;
+}
+<<<<<<< HEAD
+=======
+@tailwind utilities;
+>>>>>>> 3118ad5 (update: vitepress for mentaining old v2 docs)
+=======
+>>>>>>> 66655a1 (updated: v2 blog using vuepress)

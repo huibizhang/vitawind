@@ -4,6 +4,10 @@ module.exports = {
     "./docs/**/*.{md,vue}",
     "./docs/.vuepress/**/*.{md,vue}",
   ],
+  darkMode: "class",
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     extend: {},
   },

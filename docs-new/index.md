@@ -13,5 +13,7 @@ lastUpdated: false
 editLink: false
 ---
 
-<HomePage />
+<!-- <HomePage /> -->
+
+<HomePage2 />
 <Footer />

@@ -23,7 +23,11 @@
 <script>
 export default {
   name: "Modal",
-  props:['open'],
+  props:{
+    'open': {
+      default: false,
+    }
+  },
   data () {
     return {
       title: "Choose a template",

@@ -5,12 +5,12 @@ module.exports = {
       children: [
         "/zh/guide-for-vitawind/",
         {
-          text: "配置",
-          link: "/zh/guide-for-vitawind/configurations/",
-        },
-        {
           text: "使用方法",
           link: "/zh/guide-for-vitawind/usage/",
+        },
+        {
+          text: "配置",
+          link: "/zh/guide-for-vitawind/configurations/",
         },
       ],
     },
@@ -24,7 +24,7 @@ module.exports = {
           link: "/zh/scaffolding/",
         },
         {
-          text: "模板專案",
+          text: "範本 (Templates)",
           link: "/zh/scaffolding/templates/",
         },
       ],
@@ -36,7 +36,7 @@ module.exports = {
           text: "Creator",
           link: "/zh/scaffolding/creator/",
         },
-      ]
+      ],
     },
   ],
 };

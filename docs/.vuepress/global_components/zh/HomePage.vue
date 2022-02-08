@@ -1,6 +1,8 @@
 <template>
   <div class="flex w-full justify-center">
-    <h1 class="text-center text-6xl font-black transition-all md:text-7xl">
+    <h1
+      class="text-center text-6xl font-black transition-all md:text-7xl lg:text-8xl"
+    >
       極速建立
       <span
         class="bg-gradient-to-r from-emerald-500 to-sky-400 box-decoration-clone bg-clip-text text-transparent md:whitespace-nowrap"

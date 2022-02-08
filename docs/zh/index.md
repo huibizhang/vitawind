@@ -119,7 +119,7 @@ export default{
 
 還不快試試？
 
-<Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
+<zh-Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
 <div v-if="tool === 'npm'"><pre id="code-npm" class="!p-0">
 npm i -g create-vitawind@next
@@ -145,7 +145,7 @@ pnpm install
 pnpm {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
-</Terminal>
+</zh-Terminal>
 
 <div
   class="text-sm text-gray-500 text-center mt-4 transition-all"
@@ -156,8 +156,8 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
   </span>
 </div>
 
-<Modal :open="modalOpen" @close="modalOpen=false">
-<TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
-</Modal>
+<zh-Modal :open="modalOpen" @close="modalOpen=false">
+<zh-TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
+</zh-Modal>
 
 <Footer />

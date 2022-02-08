@@ -4,7 +4,7 @@ module.exports = [
     link: "/zh/scaffolding/",
   },
   {
-    text: "Vitawind",
+    text: "關於 Vitawind",
     link: "/zh/guide-for-vitawind/",
   },
   {

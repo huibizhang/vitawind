@@ -30,24 +30,13 @@ module.exports = {
       ],
     },
     {
-<<<<<<< HEAD
       text: "Tool",
       children: [
         {
           text: "Creator",
           link: "/scaffolding/creator/",
         },
-<<<<<<< HEAD:docs/.vuepress/configs/sidebar/en.js
       ],
     },
-=======
-      ]
-    }
-=======
-      text: "Creator",
-      link: "/scaffolding/creator/",
-    },
->>>>>>> 66655a1 (updated: v2 blog using vuepress)
->>>>>>> 2c996b7 (updated: v2 blog using vuepress):docs-new/.vuepress/configs/sidebar/en.js
   ],
 };

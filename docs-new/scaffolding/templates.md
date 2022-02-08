@@ -3,7 +3,7 @@ title: Templates
 head:
   - - meta
     - name: description
-      content: Choose a template for your tailwind project. Keep it easy, Keep it simple.
+      content: 選擇一個 Tailwindcss v3 的範本，輕鬆又簡單的建立專案環境。
   - - meta
     - name: keywords
       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
@@ -43,15 +43,15 @@ export default{
 }
 </script>
 
-# Templates
+# 範本
 
-The Tailwind CSS v3 built-in template that can help you setup developing environment quickly and easily.
+預建構 Tailwind CSS v3 的範本可以幫你輕鬆又快速的建立開發環境。
 
-::: tip There are full list of templates:
+::: tip 全部可用範本列表：
 
 Vite:
 
-- [`--pure`](#vanilla-js-in-vite) <MyBadge color="green" text="BETA" size="small" />
+- [`--pure`](#vanilla-js-in-vite) <MyBadge color="green" text="測試" size="small" />
 - [`--vue`](#vue-in-vite)
   - [`--vue-ts`](#typescript-for-vue)
 - [`--react`](#react-in-vite)
@@ -118,7 +118,7 @@ pnpm dev
 
 ### Vue in Vite
 
-Use flag `--vue` to create project with vue in vite.
+使用 `--vue` 參數來建立 vite 的 vue 專案。
 
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -143,7 +143,7 @@ pnpm init vitawind {project-name} -- --vue
 
 </div></ToolToggle>
 
-After creating project, you need:
+建立專案之後，你需要做：
 
 <ToolToggle :name="'tool-vue'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -173,13 +173,13 @@ pnpm dev
 
 #### Typescript for Vue
 
-To create project with **typescript** for vue in vite, use flag `--vue-ts`.
+若要建立加入 **typescript** 的 vite vue 專案，請使用 `--vue-ts` 參數。
 
 ---
 
 ### React in Vite
 
-Use flag `--react` to create project with react in vite.
+使用 `--react` 參數來建立 vite 的 react 專案。
 
 <ToolToggle :name="'tool-react-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -204,7 +204,7 @@ pnpm init vitawind {project-name} -- --react
 
 </div></ToolToggle>
 
-After creating project, you need:
+建立專案之後，你需要做：
 
 <ToolToggle :name="'tool-react'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -234,7 +234,7 @@ pnpm run dev
 
 #### Typescript for React
 
-To create project with **typescript** for react in vite, use flag `--react-ts`.
+若要建立加入 **typescript** 的 vite react 專案，請使用 `--react-ts` 參數。
 
 ---
 
@@ -242,7 +242,7 @@ To create project with **typescript** for react in vite, use flag `--react-ts`.
 
 ### Create React App
 
-Use flag `--cra` to create project with Create React App.
+使用 `--cra` 參數來建立 Create React App 專案。
 
 <ToolToggle :name="'tool-cra-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -266,7 +266,7 @@ pnpm init vitawind {project-name} -- --cra
 
 </div></ToolToggle>
 
-After creating project, you need:
+建立專案之後，你需要做：
 
 <ToolToggle :name="'tool-cra'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -298,7 +298,7 @@ pnpm start
 
 ### Angular
 
-Use flag `--ng` to create project with Angular 12.
+使用 `--ng` 參數來建立 Angular 12 專案。
 
 <ToolToggle :name="'tool-ng-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -322,7 +322,7 @@ pnpm init vitawind {project-name} -- --ng
 
 </div></ToolToggle>
 
-After creating project, you need:
+建立專案之後，你需要做：
 
 <ToolToggle :name="'tool-ng'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 

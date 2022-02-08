@@ -98,9 +98,11 @@ export default{
 
 # Creator <Badge type="danger" text="HOT" vertical="middle" class="text-white" />
 
-Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
+是一個能快速產生腳手架建置指令給你用的工具，僅僅只要輸入專案名稱並且選擇所想使用的範本類型。
 
-<Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
+還不快試試？
+
+<zh-Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
 <div v-if="tool === 'npm'"><pre id="code-npm" class="!p-0">
 npm i -g create-vitawind@next
@@ -126,7 +128,7 @@ pnpm install
 pnpm {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
-</Terminal>
+</zh-Terminal>
 
 <div
   class="text-sm text-gray-500 text-center mt-4 transition-all"
@@ -137,6 +139,6 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
   </span>
 </div>
 
-<Modal :open="modalOpen" @close="modalOpen=false">
-<TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
-</Modal>
+<zh-Modal :open="modalOpen" @close="modalOpen=false">
+<zh-TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
+</zh-Modal>

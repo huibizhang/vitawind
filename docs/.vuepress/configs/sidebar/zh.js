@@ -8,6 +8,10 @@ module.exports = {
           text: "使用方法",
           link: "/zh/guide-for-vitawind/usage/",
         },
+        {
+          text: "配置",
+          link: "/zh/guide-for-vitawind/configurations/",
+        },
       ],
     },
   ],

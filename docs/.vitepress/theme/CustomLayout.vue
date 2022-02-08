@@ -8,6 +8,10 @@ const { Layout } = DefaultTheme
     <div class="flex-none flex p-2 justifycenter bg-green-500 text-white">
       You're looking v1 documents.
     </div>
-    <Layout class="flex-1" />
+    <Layout class="flex-1">
+      <template #page-bottom>
+        TEST AREA
+      </template>
+    </Layout>
   </div>
 </template>

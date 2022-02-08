@@ -115,9 +115,9 @@ export default{
 
 ## 起手式
 
-**Creator** is a generator that can generate your scaffolding installation commands rapidly, just give project name and template type.
+**Creator** 是一個能快速產生腳手架建置指令給你用的工具，僅僅只要輸入專案名稱並且選擇所想使用的範本類型。
 
-Try it ! :tada:
+還不快試試？
 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 

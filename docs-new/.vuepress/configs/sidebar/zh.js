@@ -34,7 +34,7 @@ module.exports = {
       children: [
         {
           text: "Creator",
-          link: "/scaffolding/creator/",
+          link: "/zh/scaffolding/creator/",
         },
       ]
     },

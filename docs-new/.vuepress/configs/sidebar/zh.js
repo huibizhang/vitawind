@@ -30,8 +30,13 @@ module.exports = {
       ],
     },
     {
-      text: "Creator",
-      link: "/zh/scaffolding/creator/",
+      text: "工具",
+      children: [
+        {
+          text: "Creator",
+          link: "/scaffolding/creator/",
+        },
+      ]
     },
   ],
 };

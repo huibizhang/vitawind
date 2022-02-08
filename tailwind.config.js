@@ -1,8 +1,8 @@
 module.exports = {
   content: [
-    "./docs-new/index.md",
-    "./docs-new/**/*.{md,vue}",
-    "./docs-new/.vuepress/**/*.{md,vue}",
+    "./docs/index.md",
+    "./docs/**/*.{md,vue}",
+    "./docs/.vuepress/**/*.{md,vue}",
   ],
   darkMode: "class",
   corePlugins: {

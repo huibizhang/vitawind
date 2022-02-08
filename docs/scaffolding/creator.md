@@ -1,21 +1,8 @@
 ---
-title: Creator
-head:
-  - - meta
-    - name: description
-      content: Create scaffolding installation commands for your tailwind project. Keep it easy, Keep it simple.
-  - - meta
-    - name: keywords
-      content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
-sidebarDepth: 2
+permalinkPattern: scaffolding/:slug
 ---
 
 <script>
-import Badge from '../.vitepress/components/Badge.vue'
-import Terminal from '../.vitepress/components/Terminal.vue'
-import Modal from '../.vitepress/components/Modal.vue'
-import TemplateList from '../.vitepress/components/TemplateList.vue'
-
 export default{
   data () {
     return {
@@ -103,20 +90,19 @@ export default{
       }
     }
   },
-  components: {
-    Terminal,Badge,Modal,TemplateList
-  }
+  // components: {
+  //   Terminal, MyBadge, Modal, TemplateList
+  // }
 }
 </script>
 
-
-# Creator <Badge :color="'red'" :text="'HOT'" />
+# Creator <Badge type="danger" text="HOT" vertical="middle" class="text-white" />
 
 Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
-<div v-if="tool === 'npm'"><pre id="code-npm">
+<div v-if="tool === 'npm'"><pre id="code-npm" class="!p-0">
 npm i -g create-vitawind@next
 npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
@@ -124,7 +110,7 @@ npm install
 npm {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
-<div v-if="tool === 'yarn'"><pre id="code-yarn">
+<div v-if="tool === 'yarn'"><pre id="code-yarn" class="!p-0">
 npm i -g create-vitawind@next
 npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
@@ -132,7 +118,7 @@ yarn
 yarn {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
-<div v-if="tool === 'pnpm'"><pre id="code-pnpm">
+<div v-if="tool === 'pnpm'"><pre id="code-pnpm" class="!p-0">
 pnpm i -g create-vitawind@next
 pnpm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
@@ -152,5 +138,5 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
 </div>
 
 <Modal :open="modalOpen" @close="modalOpen=false">
-  <TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
+<TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
 </Modal>

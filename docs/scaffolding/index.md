@@ -11,10 +11,6 @@ sidebarDepth: 2
 ---
 
 <script>
-import CreateVitawind from '../.vitepress/components/CreateVitawind.vue'
-import Badge from '../.vitepress/components/Badge.vue'
-import ToolToggle from '../.vitepress/components/ToolToggle.vue'
-
 export default{
   data () {
     return {
@@ -43,9 +39,6 @@ export default{
       // }
     }
   },
-  components: {
-    CreateVitawind,Badge,ToolToggle
-  }
 }
 </script>
 
@@ -57,7 +50,7 @@ Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you c
 
 ### How Can I do ?
 
-To start, open terminal at your directory where you want to put project. And, run following commands:
+Just open terminal of your directory where you want to put the project. And, run following commands:
 
 <ToolToggle :name="'tool-vue-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -65,21 +58,25 @@ To start, open terminal at your directory where you want to put project. And, ru
 npm i -g create-vitawind@next
 npm init vitawind {project-name} -- {template}
 ```
+
 </div><div v-if="tool === 'yarn'">
 
 <!-- ```bash
 yarn create vitawind {project-name} {template}
 ``` -->
+
 ```bash
 npm i -g create-vitawind@next
 npm init vitawind {project-name} -- {template}
 ```
+
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
 pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- {template}
 ```
+
 </div></ToolToggle>
 
 base on this command, please give project name and choose a template, for example:
@@ -90,19 +87,23 @@ base on this command, please give project name and choose a template, for exampl
 npm i -g create-vitawind@next
 npm init vitawind my-first-app -- --vue
 ```
+
 </div><div v-if="tool === 'yarn'">
 
 ```bash
 npm i -g create-vitawind@next
 npm init vitawind my-first-app -- --vue
 ```
+
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
 pnpm i -g create-vitawind@next
 pnpm init vitawind my-first-app -- --vue
 ```
+
 </div></ToolToggle>
 
 ### Template List
+
 Go to [See all templates](./templates). Or, you can using our [Creator](./creator) tool to quick start.

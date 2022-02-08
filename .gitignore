@@ -5,5 +5,3 @@ yarn-error.log
 
 docs/.vuepress/.cache/*
 docs/.vuepress/.temp/*
-docs-new/.vuepress/.cache/*
-docs-new/.vuepress/.temp/*

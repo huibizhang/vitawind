@@ -13,9 +13,7 @@ const { Layout } = DefaultTheme;
         >v2.x document</a
       >.
     </div>
-    <Layout class="flex-1">
-      <template #page-bottom> TEST AREA </template>
-    </Layout>
+    <Layout class="flex-1" />
   </div>
 </template>
 

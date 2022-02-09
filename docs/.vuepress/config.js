@@ -2,7 +2,7 @@ const { path } = require("@vuepress/utils");
 const { sidebar, navbar } = require("./configs");
 
 module.exports = {
-  dest: "docs/.vitepress/dist",
+  // dest: "docs/.vitepress/dist",
 
   title: "vitawind v2",
   description: "Vitawind, create TailwindCSS v3 project rapidly",

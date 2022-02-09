@@ -1,6 +1,8 @@
 <template>
   <div class="flex w-full justify-center">
-    <h1 class="text-center text-6xl font-black transition-all md:text-7xl">
+    <h1
+      class="text-center text-6xl font-black transition-all md:text-7xl lg:text-8xl"
+    >
       Create
       <span
         class="bg-gradient-to-r from-emerald-500 to-sky-400 box-decoration-clone bg-clip-text text-transparent md:whitespace-nowrap"
@@ -69,9 +71,9 @@
   </div>
   <br />
   <div
-    class="mt-10 mb-10 grid items-start space-y-10 md:grid-cols-3 md:space-y-0 md:space-x-5"
+    class="mt-10 mb-10 grid items-start space-y-12 md:grid-cols-3 md:space-y-0 md:space-x-5"
   >
-    <div class="flex flex-col text-lg">
+    <div class="flex flex-col space-y-1 text-lg">
       <span class="font-bold text-gray-600 dark:text-gray-400"
         >v3 Supported</span
       >
@@ -79,7 +81,7 @@
         >The templates are all upgraded for build-in Tailwindcss v3 in project.
       </span>
     </div>
-    <div class="flex flex-col text-lg">
+    <div class="flex flex-col space-y-1 text-lg">
       <span class="font-bold text-gray-600 dark:text-gray-400"
         >Prettier For Tailwind</span
       >
@@ -88,7 +90,7 @@
         setting prettier for tailwindcss yourselfs anymore.
       </span>
     </div>
-    <div class="flex flex-col text-lg">
+    <div class="flex flex-col space-y-1 text-lg">
       <span class="font-bold text-gray-600 dark:text-gray-400"
         >Keep It Simple</span
       >

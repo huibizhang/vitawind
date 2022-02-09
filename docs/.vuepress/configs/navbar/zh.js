@@ -9,6 +9,6 @@ module.exports = [
   },
   {
     text: "v1 文件",
-    link: "https://v1-vitawind.vercel.app",
+    link: "https://v1-vitawind-tw.vercel.app",
   },
 ];

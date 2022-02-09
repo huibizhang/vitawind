@@ -1,13 +1,12 @@
 <template>
   <div id="hp">
-    <img id="logo" :src="$withBase(logoPath)" />
+    <img id="logo" :src="logoPath" />
     <h1 style="font-size: 40px">
-      Vitawind
+      create-vitawind
       <span
         class="inline-block rounded-lg bg-gradient-to-br from-blue-400 to-green-400 px-1.5 py-0.5 text-lg text-white"
+        >next</span
       >
-        next
-      </span>
     </h1>
     <span
       style="
@@ -16,44 +15,38 @@
         display: block;
         margin: 5px 0 10px 0;
       "
-      >The Lightning Wind , Stronger and Faster.</span
+      >快速建立 Tailwindcss v3 專案</span
     >
     <p align="center">
       <span style="display: flex; gap: 5px">
-        <a href="https://npmjs.com/package/vitawind"
+        <a href="https://npmjs.com/package/create-vitawind"
           ><img
-            src="https://img.shields.io/npm/v/vitawind/next?style=flat-square"
+            src="https://img.shields.io/npm/v/create-vitawind/next?style=flat-square"
             alt="version"
         /></a>
         <a href="https://nodejs.org/en/about/releases/"
           ><img
-            src="https://img.shields.io/node/v/vitawind?style=flat-square"
+            src="https://img.shields.io/node/v/create-vitawind?style=flat-square"
             alt="node version"
         /></a>
-        <a href="https://npmjs.com/package/vitawind"
+        <a href="https://npmjs.com/package/create-vitawind"
           ><img
-            src="https://img.shields.io/npm/dw/vitawind?style=flat-square"
+            src="https://img.shields.io/npm/dt/create-vitawind?style=flat-square"
             alt="npm-download"
         /></a>
       </span>
     </p>
   </div>
-  <br />
 </template>
 
 <script>
-import MyButton from "./MyButton.vue";
-
 export default {
-  name: "Vitawind",
+  name: "CreateVitawind",
   data() {
     return {
-      logoPath: "logo-w700.png",
-      url: "/guide/",
+      logoPath: "/pack-logo-w700.png",
+      url: "/scaffolding/",
     };
-  },
-  components: {
-    MyButton,
   },
 };
 </script>

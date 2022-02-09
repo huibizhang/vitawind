@@ -3,6 +3,8 @@ title: Configurations
 permalinkPattern: guide-for-vitawind/:slug/
 ---
 
+# Configurations
+
 ## Get full Tailwind's configuration
 
 If you want to get configuration file that includes all of Tailwind’s default configuration, use `-f` or `--full` option:
@@ -32,7 +34,7 @@ It's must need an argument of **_FILE-NAME_** follow behind **`-o`** or **`--out
 
 ## Using after `--output` option
 
-Difference with [Using](#using) part , we need to add a line of css file import , **this is output.css , and change the filename to your customize output.css filename setting in last section by `-o` option** :
+Difference with [Using](/guide-for-vitawind/usage/#using) part , we need to add a line of css file import , **this is output.css , and change the filename to your customize output.css filename setting in last section by `-o` option** :
 
 ### for Vue
 

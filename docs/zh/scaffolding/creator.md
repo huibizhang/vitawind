@@ -1,4 +1,12 @@
 ---
+title: 專案建立器 (Creator)
+head:
+  - - meta
+    - name: description
+      content: 使用 Creator，極速建立 Tailwindcss v3 的專案
+  - - meta
+    - name: keywords
+      content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
 permalinkPattern: scaffolding/:slug
 ---
 

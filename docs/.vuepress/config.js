@@ -2,7 +2,7 @@ const { path } = require("@vuepress/utils");
 const { sidebar, navbar } = require("./configs");
 
 module.exports = {
-  // dest: "docs/.vitepress/dist"
+  dest: "docs/.vitepress/dist",
 
   title: "vitawind v2",
   description: "Vitawind, create TailwindCSS v3 project rapidly",
@@ -22,6 +22,11 @@ module.exports = {
     logo: "vitawind_pack.svg",
     logoDark: "logo.svg",
     repo: "https://github.com/huibizhang/vitawind",
+
+    docsRepo: "https://github.com/huibizhang/vitawind",
+    docsBranch: "master",
+    docsDir: "docs",
+
     contributors: false,
     locales: {
       "/": {
@@ -33,6 +38,8 @@ module.exports = {
         selectLanguageName: "繁體中文",
         selectLanguageText: "切換語言",
         selectLanguageAriaLabel: "切換語言",
+        lastUpdatedText: "最後更新",
+        editLinkText: "在 Github 上編輯",
         navbar: navbar.zh,
         sidebar: sidebar.zh,
       },
@@ -45,7 +52,6 @@ module.exports = {
         componentsDir: path.resolve(__dirname, "./global_components"),
       },
     ],
-    // [() => {}],
   ],
   bundlerConfig: {
     viteOptions: {

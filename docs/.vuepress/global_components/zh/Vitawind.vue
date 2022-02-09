@@ -16,7 +16,7 @@
         display: block;
         margin: 5px 0 10px 0;
       "
-      >The Lightning Wind , Stronger and Faster.</span
+      >快如疾風，迅如閃電。</span
     >
     <p align="center">
       <span style="display: flex; gap: 5px">
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import MyButton from "./MyButton.vue";
+import MyButton from "../MyButton.vue";
 
 export default {
   name: "Vitawind",

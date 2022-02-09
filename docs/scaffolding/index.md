@@ -46,7 +46,7 @@ export default{
 
 ### Keep it easy, Keep it simple.
 
-Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!
+Nothing even "setup a tailwindcss v3 project" can stop you developing! Now, you can create project that pre built-in tailwindcss v3 just using one-line command. Try it!
 
 ### How Can I do ?
 

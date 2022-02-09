@@ -5,12 +5,12 @@ module.exports = {
       children: [
         "/guide-for-vitawind/",
         {
-          text: "Configurations",
-          link: "/guide-for-vitawind/configurations/",
-        },
-        {
           text: "Usage",
           link: "/guide-for-vitawind/usage/",
+        },
+        {
+          text: "Configurations",
+          link: "/guide-for-vitawind/configurations/",
         },
       ],
     },
@@ -36,7 +36,7 @@ module.exports = {
           text: "Creator",
           link: "/scaffolding/creator/",
         },
-      ]
-    }
+      ],
+    },
   ],
 };

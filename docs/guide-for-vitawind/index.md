@@ -2,6 +2,8 @@
 sidebarDepth: 2
 ---
 
+<Vitawind />
+
 # Why Vitawind
 
 Vitawind is a Vite helper that can installing and setting Tailwind CSS in few steps. Easy to use , just install Vitawind and add one line setting , you'll have the most fantastic developer experience !

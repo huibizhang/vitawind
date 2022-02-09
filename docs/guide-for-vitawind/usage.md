@@ -3,6 +3,8 @@ title: Usage
 permalinkPattern: guide-for-vitawind/:slug/
 ---
 
+# Usage
+
 ## Installation
 
 ```bash
@@ -21,7 +23,7 @@ Installing vitawind , then Tailwind will be installed in your vite project by np
 $ npx vitawind
 ```
 
-Run `npx vitawind` and vitawind will generates config file all you need and setting automatically , but if you want to create the full configurations of `tailwind.config.js` , or maybe you want to create or set config files with your own setting , you can [configuring vitawind with arguments](#configuring-with-arguments).
+Run `npx vitawind` and vitawind will generates config file all you need and setting automatically , but if you want to create the full configurations of `tailwind.config.js` , or maybe you want to create or set config files with your own setting , you can [configuring vitawind with arguments](/guide-for-vitawind/configurations/).
 
 ## Using
 

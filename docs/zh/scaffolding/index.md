@@ -1,9 +1,9 @@
 ---
-title: Scaffolding
+title: 快速建立專案
 head:
   - - meta
     - name: description
-      content: Scaffolding for your tailwindcss v3 project. Keep it easy, Keep it simple.
+      content: 輕鬆簡單地建立 Tailwindcss v3 專案
   - - meta
     - name: keywords
       content: create-vitawind vitawind vite vitejs vitejs-plugin tailwind tailwindcss hmr react create-react-app vuecli vue-cli ng angular
@@ -42,15 +42,15 @@ export default{
 }
 </script>
 
-<CreateVitawind />
+<zh-CreateVitawind />
 
-### Keep it easy, Keep it simple.
+### 輕鬆又簡單
 
-Nothing even "setup tailwindcss in jit mode" can stop you developing! Now, you can create project that pre built-in tailwindcss jit mode just using one-line command. Try it!
+就算是「安裝 Tailwind 並設定 jit 模式」也不能成為停下你開發腳步的阻礙！ 現在，你可以只用一行指令來建立「預先建構好 Tailwind jit 模式」的專案，快試試看吧！
 
-### How Can I do ?
+### 我該做些什麼？
 
-Just open terminal of your directory where you want to put the project. And, run following commands:
+首先，在你要放置專案的資料夾中開啟 terminal，然後執行下列指令：
 
 <ToolToggle :name="'tool-vue-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -79,7 +79,7 @@ pnpm init vitawind {project-name} -- {template}
 
 </div></ToolToggle>
 
-base on this command, please give project name and choose a template, for example:
+請基於這個指令，換成你的專案名稱以及你所要使用的範本，舉例：
 
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
@@ -104,6 +104,6 @@ pnpm init vitawind my-first-app -- --vue
 
 </div></ToolToggle>
 
-### Template List
+### 有哪些範本呢？
 
-Go to [See all templates](./templates). Or, you can using our [Creator](./creator) tool to quick start.
+來去[看看所有的範本](./templates)。 或者，你可以使用 [Creator](./creator) 工具來快速開始你的奇幻之旅。

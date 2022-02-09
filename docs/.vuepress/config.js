@@ -10,13 +10,12 @@ module.exports = {
   locales: {
     "/": {
       lang: "en-US",
-      description:
-        "Vitawind v2, Install and Setting Tailwindcss v3 automatically for Vite",
+      description: "Vitawind, create Tailwindcss v3 project rapidly.",
     },
-    // "/zh/": {
-    //   lang: "zh-TW",
-    //   description: "Vitawind v2，為 Vite 自動安裝及設定 Tailwindcss v3",
-    // },
+    "/zh/": {
+      lang: "zh-TW",
+      description: "Vitawind，快速搭建起 Tailwindcss v3 專案開發環境。",
+    },
   },
   themeConfig: {
     logo: "vitawind_pack.svg",

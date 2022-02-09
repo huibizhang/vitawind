@@ -1,6 +1,8 @@
 <template>
   <div class="flex w-full justify-center">
-    <h1 class="text-center text-6xl font-black transition-all md:text-7xl">
+    <h1
+      class="text-center text-6xl font-black transition-all md:text-7xl lg:text-8xl"
+    >
       極速建立
       <span
         class="bg-gradient-to-r from-emerald-500 to-sky-400 box-decoration-clone bg-clip-text text-transparent md:whitespace-nowrap"
@@ -11,7 +13,7 @@
   </div>
 
   <div class="text-center text-lg text-gray-400">
-    create-vitawind，一個 Tailwind CSS v3 專案的腳手架
+    create-vitawind，一個建立 Tailwind CSS v3 專案腳手架的工具
   </div>
 
   <div class="mt-8 flex justify-center space-x-5">
@@ -69,15 +71,15 @@
   </div>
   <br />
   <div
-    class="mt-10 mb-10 grid items-start space-y-10 md:grid-cols-3 md:space-y-0 md:space-x-5"
+    class="mt-10 mb-10 grid items-start space-y-12 md:grid-cols-3 md:space-y-0 md:space-x-5"
   >
-    <div class="flex flex-col text-lg">
+    <div class="flex flex-col space-y-1 text-lg">
       <span class="font-bold text-gray-600 dark:text-gray-400">已支援 v3</span>
       <span class="text-base text-gray-500"
         >所有範本專案都已經升級並內建好 Tailwindcss v3
       </span>
     </div>
-    <div class="flex flex-col text-lg">
+    <div class="flex flex-col space-y-1 text-lg">
       <span class="font-bold text-gray-600 dark:text-gray-400"
         >Prettier For Tailwind</span
       >
@@ -88,7 +90,7 @@
         專案安裝或設定 Prettier
       </span>
     </div>
-    <div class="flex flex-col text-lg">
+    <div class="flex flex-col space-y-1 text-lg">
       <span class="font-bold text-gray-600 dark:text-gray-400">保持簡單</span>
       <span class="text-base text-gray-500">
         <!-- Just few steps, get the scaffolding-creating commands for your

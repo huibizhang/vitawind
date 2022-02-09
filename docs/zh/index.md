@@ -152,7 +152,7 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
   :class="{'scale-100':msgShow,'scale-0':!msgShow}"
 >
   <span class="bg-gray-200 p-1 rounded-md">
-    Copied to you clipboard.
+    已複製到剪貼簿
   </span>
 </div>
 

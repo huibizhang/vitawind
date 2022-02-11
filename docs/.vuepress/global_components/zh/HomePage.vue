@@ -13,7 +13,7 @@
   </div>
 
   <div class="text-center text-lg text-gray-400">
-    create-vitawind，一個建立 Tailwind CSS v3 專案腳手架的工具
+    create-vitawind，一個建立 Tailwind CSS v3 範本專案的工具
   </div>
 
   <div class="mt-8 flex justify-center space-x-5">

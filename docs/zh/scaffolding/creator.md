@@ -106,7 +106,7 @@ export default{
 
 # Creator <Badge type="danger" text="HOT" vertical="middle" class="text-white" />
 
-這是一個能快速產生腳手架建置指令給你用的工具，僅僅只要輸入專案名稱並且選擇所想使用的範本類型。
+這是一個能快速產生範本專案建置指令給你用的工具，僅僅只要輸入專案名稱並且選擇所想使用的範本類型。
 
 還不快試試？
 

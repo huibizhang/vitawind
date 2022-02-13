@@ -1,6 +1,6 @@
 {
   "name": "vitawind",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Install and Setting Tailwindcss automatically for Vite",
   "main": "./src/index.js",
   "engines": {
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/huibizhang/vitawind.git"
   },
-  "homepage": "https://vitawind.vercel.app/",
+  "homepage": "https://vitawind.vercel.app/guide-for-vitawind/",
   "keywords": [
     "vitawind",
     "vite",
@@ -28,12 +28,12 @@
   "author": "huibizhang",
   "license": "MIT",
   "dependencies": {
-    "tailwindcss": "^3.0.17",
-    "autoprefixer": "^10.4.2"
   },
   "peerDependencies": {
     "tailwindcss": "^3.0.17",
-    "autoprefixer": "^10.4.2"
+    "autoprefixer": "^10.4.2",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.5"
   },
   "bin": {
     "vitawind": "./cli.js"

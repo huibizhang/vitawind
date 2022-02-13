@@ -41,7 +41,6 @@ reops.forEach((repo) => {
 
   execSync(
     [
-      argv._ && `cd ./${argv._[0]}`,
       `git clone git@github.com:${from}/${repo}.git`,
       argv.clear_git && clearGit,
     ]

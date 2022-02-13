@@ -1,6 +1,6 @@
 {
   "name": "vitawind",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Install and Setting Tailwindcss automatically for Vite",
   "main": "./src/index.js",
   "engines": {
@@ -32,9 +32,7 @@
   "peerDependencies": {
     "tailwindcss": "^3.0.17",
     "postcss": "^8.4.6",
-    "autoprefixer": "^10.4.2",
-    "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.5"
+    "autoprefixer": "^10.4.2"
   },
   "bin": {
     "vitawind": "./cli.js"

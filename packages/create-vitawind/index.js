@@ -15,6 +15,7 @@ const setting = {
   error: false,
   error_msg: "",
   debug: false,
+  element: "",
 };
 
 const configure = (_setting) => {
@@ -41,9 +42,8 @@ const configure = (_setting) => {
   }
 
   let element = "";
-  // if (argv.pure || argv._.find(arg => arg==='--pure')) element = 'pure'
-  if (argv.vue || argv._.find((arg) => arg === "--vue")) element = "vue";
-  // else if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
+  if (argv.pure || argv._.find(arg => arg==='--pure')) element = 'pure'
+  else if (argv.vue || argv._.find(arg => arg==='--vue')) element = 'vue'
   else if (argv["vue-ts"] || argv._.find((arg) => arg === "--vue-ts"))
     element = "vue-ts";
   else if (argv.react || argv._.find((arg) => arg === "--react"))
@@ -61,39 +61,38 @@ const configure = (_setting) => {
     element = "version";
 
   const excutor = {
-    // 'pure': () => {
-    //   _setting.template = "vite-vanilla"
-    //   _setting.script = "dev"
-    // },
+    'pure': () => {
+      _setting.element = "pure"
+      _setting.template = "vite-vanilla"
+      _setting.script = "dev"
+    },
     vue: () => {
+      _setting.element = "vue"
       _setting.template = "vite-vue";
       _setting.script = "dev";
     },
     "vue-ts": () => {
+      _setting.element = "vue-ts"
       _setting.template = "vite-vue-ts";
       _setting.script = "dev";
     },
     react: () => {
+      _setting.element = "react"
       _setting.template = "vite-react";
       _setting.script = "dev";
     },
     "react-ts": () => {
+      _setting.element = "react-ts"
       _setting.template = "vite-react-ts";
       _setting.script = "dev";
     },
-    // 'vuecli': () => {
-    //   _setting.template = "vuecli"
-    //   _setting.script = "serve"
-    // },
-    // 'vuecli5': () => {
-    //   _setting.template = "vuecli5"
-    //   _setting.script = "serve"
-    // },
     cra: () => {
+      _setting.element = "cra"
       _setting.template = "cra";
       _setting.script = "start";
     },
     ng: () => {
+      _setting.element = "ng"
       _setting.template = "ng";
       _setting.script = "start";
     },
@@ -231,7 +230,7 @@ const creator = (_setting) => {
       template.push("../gitignore");
       template.push(".prettierrc.json");
       template.push(".vscode/extensions.json");
-      template.push(".vscode/setting.json");
+      template.push(".vscode/settings.json");
       debugLogger("files in template: \n  " + template.join("\n  "));
 
       template
@@ -246,7 +245,7 @@ const creator = (_setting) => {
         });
 
       const hint = [
-        `${colorStr("Template created.", "success")}\n`,
+        `${colorStr(`Template`, "success")} ${colorStr(_setting.element, "normal")} ${colorStr(`created.`, "success")}\n`,
         `Now do following steps:\n`,
         `${colorBg(" npm ", "info")}`,
         `${colorStr("cd", "info")} ${_setting.project_name}`,

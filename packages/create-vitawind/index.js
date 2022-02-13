@@ -230,6 +230,8 @@ const creator = (_setting) => {
       const template = rread(src);
       template.push("../gitignore");
       template.push(".prettierrc.json");
+      template.push(".vscode/extensions.json");
+      template.push(".vscode/setting.json");
       debugLogger("files in template: \n  " + template.join("\n  "));
 
       template

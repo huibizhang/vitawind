@@ -1,6 +1,6 @@
 {
   "name": "vitawind",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Install and Setting Tailwindcss automatically for Vite",
   "main": "./src/index.js",
   "engines": {
@@ -28,6 +28,9 @@
   "author": "huibizhang",
   "license": "MIT",
   "dependencies": {
+    "tailwindcss": "^3.0.17",
+    "postcss": "^8.4.6",
+    "autoprefixer": "^10.4.2"
   },
   "peerDependencies": {
     "tailwindcss": "^3.0.17",

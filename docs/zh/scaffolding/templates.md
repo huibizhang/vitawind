@@ -68,7 +68,7 @@ CLI:
 ## Vite
 
 ### Vanilla-JS in Vite <Badge color="green" text="BETA" />
-Use flag `--pure` to create project with vanilla-js in vite.
+使用 `--pure` 來建立 vite 的原生 js 專案。
 
 <ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 

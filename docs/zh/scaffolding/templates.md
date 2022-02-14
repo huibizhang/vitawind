@@ -51,8 +51,7 @@ export default{
 
 Vite:
 
-  <!-- - [`--pure`](#vanilla-js-in-vite) <MyBadge color="green" text="BETA" size="small" /> -->
-
+- [`--pure`](#vanilla-js-in-vite) <MyBadge color="green" text="BETA" size="small" />
 - [`--vue`](#vue-in-vite)
   - [`--vue-ts`](#typescript-for-vue)
 - [`--react`](#react-in-vite)
@@ -68,7 +67,7 @@ CLI:
 
 ## Vite
 
-<!-- ### Vanilla-JS in Vite <Badge color="green" text="BETA" />
+### Vanilla-JS in Vite <Badge color="green" text="BETA" />
 Use flag `--pure` to create project with vanilla-js in vite.
 
 <ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
@@ -80,7 +79,8 @@ npm init vitawind {project-name} -- --pure
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-yarn create vitawind {project-name} --pure
+npm i -g create-vitawind@next
+npm init vitawind {project-name} -- --pure
 ```
 </div><div v-if="tool === 'pnpm'">
 
@@ -115,7 +115,7 @@ pnpm dev
 ```
 </div></ToolToggle>
 
------ -->
+-----
 
 ### Vue in Vite
 

@@ -8,7 +8,7 @@
         <img :src="'/vite-logo.svg'" class="h-8 w-8 object-contain p-1" />Vite
       </div>
       <div class="grid grid-cols-1 gap-2 bg-gray-100 p-2">
-        <!-- TemplateItem :key="list.pure.id" v-bind="list.pure" :current="template" @checked="template=$event" class="text-center" /-->
+        <TemplateItem :key="list.pure.id" v-bind="list.pure" :current="template" @checked="template=$event" class="text-center" />
         <div class="grid grid-cols-2 gap-2">
           <TemplateItem
             v-for="t in list.vite"

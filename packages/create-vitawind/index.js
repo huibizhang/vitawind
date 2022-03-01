@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require("fs");
+const fsPromise = require("fs").promises;
 const path = require("path");
 const cwd = process.cwd();
 const rread = require("fs-readdir-recursive");
@@ -147,7 +148,7 @@ const getTemplateFullname = (template, version) => {
   }
 };
 
-const write = (file, content, _setting) => {
+const write = async (file, content, _setting) => {
   let src = path.join(
     __dirname,
     getTemplateFullname(_setting.template, _setting.version),
@@ -156,6 +157,18 @@ const write = (file, content, _setting) => {
   let dist = cwd.concat(
     `/${_setting.project_name}/${file.replace("../gitignore", ".gitignore")}`
   );
+
+  if (file==="package.json") {
+    const packageJson = JSON.parse(await fsPromise.readFile(src))
+    packageJson.name = _setting.project_name
+    content = JSON.stringify(packageJson, null, 2)
+  }
+  if (file.toLowerCase()==="readme.md") {
+    var readmeMd = (await fsPromise.readFile(src)).toString()
+    readmeMd = readmeMd.replace(`template-${_setting.template}-tailwind-v3`, _setting.project_name)
+    content = readmeMd
+  }
+
   if (content) {
     fs.writeFileSync(dist, content);
   } else {
@@ -257,7 +270,9 @@ const creator = (_setting) => {
         `${colorStr("yarn", "info")}`,
         `${colorStr("yarn", "info")} ${_setting.script}`,
         " ",
-      ].forEach((line) => {
+      ]
+      
+      hint.forEach((line) => {
         if (line !== "") {
           console.log(line);
         }

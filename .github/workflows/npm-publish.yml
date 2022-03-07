@@ -24,7 +24,7 @@ jobs:
       - name: npm publish
         run: |
           cd ./packages/vitawind/
-          npm publish --tag next
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: auto taging
@@ -49,7 +49,7 @@ jobs:
       - name: npm publish
         run: |
           cd ./packages/create-vitawind/
-          npm publish --tag next
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: auto taging

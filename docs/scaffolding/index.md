@@ -62,20 +62,21 @@ To start, open terminal at your directory where you want to put project. And, ru
 <ToolToggle :name="'tool-vue-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind
-npm init vitawind {project-name} -- {template}
+npm init vitawind-v1 {project-name} -- {template}
 ```
+
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-yarn create vitawind {project-name} {template}
+yarn create vitawind-v1 {project-name} {template}
 ```
+
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind
-pnpm init vitawind {project-name} -- {template}
+pnpm init vitawind-v1 {project-name} -- {template}
 ```
+
 </div></ToolToggle>
 
 base on this command, please give project name and choose a template, for example:
@@ -83,21 +84,23 @@ base on this command, please give project name and choose a template, for exampl
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind
-npm init vitawind my-first-app -- --vue
+npm init vitawind-v1 my-first-app -- --vue
 ```
+
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-yarn create vitawind my-first-app --vue
+yarn create vitawind-v1 my-first-app --vue
 ```
+
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind
-pnpm init vitawind my-first-app -- --vue
+pnpm init vitawind-v1 my-first-app -- --vue
 ```
+
 </div></ToolToggle>
 
 ### Template List
+
 Go to [See all templates](./templates). Or, you can using our [Creator](./creator) tool to quick start.

@@ -157,7 +157,7 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
 </div>
 
 <Modal :open="modalOpen" @close="modalOpen=false">
-<TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
+  <TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
 </Modal>
 
 <Footer />

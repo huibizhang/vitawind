@@ -131,7 +131,13 @@
 <script>
 export default {
   name: "Terminal",
-  props: ["name", "tool", "template"],
+  props: {
+    "name":{},
+    "tool":{
+      default: "npm"
+    },
+    "template":{}
+  },
   data() {
     return {
       projectName: "test-project",

@@ -4,7 +4,7 @@
   "description": "Scaffolding for your tailwind v2 project",
   "main": "index.js",
   "bin": {
-    "create-vitawind": "index.js"
+    "create-vitawind-v1": "index.js"
   },
   "files": [
     "index.js",

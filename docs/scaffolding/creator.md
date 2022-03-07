@@ -109,7 +109,6 @@ export default{
 }
 </script>
 
-
 # Creator <Badge :color="'green'" :text="'1.0'" />
 
 Generate your scaffolding installation commands rapidly, just give project name and template type, try it ! :tada:
@@ -117,23 +116,21 @@ Generate your scaffolding installation commands rapidly, just give project name 
 <Terminal :name="'terminal'" :tool="tool" :template="template" @tool="ct($event)" @copy="copy" @typing="projectName=$event" @choosing="modalOpen=true">
 
 <div v-if="tool === 'npm'"><pre id="code-npm">
-npm i -g create-vitawind@latest
-npm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+npm init vitawind-v1 {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 npm install
 npm {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
 <div v-if="tool === 'yarn'"><pre id="code-yarn">
-yarn create vitawind {{projectName}} --{{template?template:'{template}'}}
+yarn create vitawind-v1 {{projectName}} --{{template?template:'{template}'}}
 cd {{projectName}}
 yarn
 yarn {{getScript()?getScript().trim():'{script}'}}
 </pre></div>
 
 <div v-if="tool === 'pnpm'"><pre id="code-pnpm">
-pnpm i -g create-vitawind@latest
-pnpm init vitawind {{projectName}} -- --{{template?template:'{template}'}}
+pnpm init vitawind-v1 {{projectName}} -- --{{template?template:'{template}'}}
 cd {{projectName}}
 pnpm install
 pnpm {{getScript()?getScript().trim():'{script}'}}
@@ -151,5 +148,5 @@ pnpm {{getScript()?getScript().trim():'{script}'}}
 </div>
 
 <Modal :open="modalOpen" @close="modalOpen=false">
-  <TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
+<TemplateList :modalStatus="modalOpen" @confirm="template=$event;modalOpen=false" />
 </Modal>

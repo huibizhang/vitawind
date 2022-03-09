@@ -28,13 +28,13 @@
   "author": "huibizhang",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.8",
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.0.9",
     "tailwindcss": "^3.0.23"
   },
   "peerDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.8",
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.0.9",
     "tailwindcss": "^3.0.23"
   },
   "bin": {

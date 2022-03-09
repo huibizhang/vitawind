@@ -18,7 +18,7 @@
       <span style="display: flex; gap: 5px">
         <a href="https://npmjs.com/package/create-vitawind"
           ><img
-            src="https://img.shields.io/npm/v/create-vitawind/next?style=flat-square"
+            src="https://img.shields.io/npm/v/create-vitawind?style=flat-square"
             alt="version"
         /></a>
         <a href="https://nodejs.org/en/about/releases/"

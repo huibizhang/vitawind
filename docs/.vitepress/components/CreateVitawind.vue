@@ -13,19 +13,19 @@
     >
     <p align="center">
       <span style="display: flex; gap: 5px">
-        <a href="https://npmjs.com/package/create-vitawind"
+        <a href="https://npmjs.com/package/create-vitawind-v1"
           ><img
-            src="https://img.shields.io/npm/v/create-vitawind?style=flat-square"
+            src="https://img.shields.io/npm/v/create-vitawind-v1?style=flat-square"
             alt="version"
         /></a>
         <a href="https://nodejs.org/en/about/releases/"
           ><img
-            src="https://img.shields.io/node/v/create-vitawind?style=flat-square"
+            src="https://img.shields.io/node/v/create-vitawind-v1?style=flat-square"
             alt="node version"
         /></a>
-        <a href="https://npmjs.com/package/create-vitawind"
+        <a href="https://npmjs.com/package/create-vitawind-v1"
           ><img
-            src="https://img.shields.io/npm/dt/create-vitawind?style=flat-square"
+            src="https://img.shields.io/npm/dt/create-vitawind-v1?style=flat-square"
             alt="npm-download"
         /></a>
       </span>

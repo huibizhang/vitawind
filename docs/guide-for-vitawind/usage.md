@@ -9,10 +9,10 @@ permalinkPattern: guide-for-vitawind/:slug/
 
 ```bash
 # npm
-$ npm install vitawind@next
+$ npm install vitawind
 
 # yarn
-$ yarn add vitawind@next
+$ yarn add vitawind
 ```
 
 Installing vitawind , then Tailwind will be installed in your vite project by npm.

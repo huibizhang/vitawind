@@ -73,19 +73,16 @@ CLI:
 <ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --pure
 ```
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --pure
 ```
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --pure
 ```
 </div></ToolToggle>
@@ -124,21 +121,18 @@ pnpm dev
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --vue
 ```
 
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --vue
 ```
 
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --vue
 ```
 
@@ -185,21 +179,18 @@ pnpm dev
 <ToolToggle :name="'tool-react-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --react
 ```
 
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --react
 ```
 
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --react
 ```
 
@@ -248,7 +239,6 @@ pnpm run dev
 <ToolToggle :name="'tool-cra-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --cra
 ```
 
@@ -261,7 +251,6 @@ yarn create vitawind {project-name} --cra
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --cra
 ```
 
@@ -304,7 +293,6 @@ pnpm start
 <ToolToggle :name="'tool-ng-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --ng
 ```
 
@@ -317,7 +305,6 @@ yarn create vitawind {project-name} --ng
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --ng
 ```
 

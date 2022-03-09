@@ -55,7 +55,6 @@ export default{
 <ToolToggle :name="'tool-vue-example-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- {template}
 ```
 
@@ -66,14 +65,12 @@ yarn create vitawind {project-name} {template}
 ``` -->
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- {template}
 ```
 
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- {template}
 ```
 
@@ -84,21 +81,18 @@ pnpm init vitawind {project-name} -- {template}
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind my-first-app -- --vue
 ```
 
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind my-first-app -- --vue
 ```
 
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind my-first-app -- --vue
 ```
 

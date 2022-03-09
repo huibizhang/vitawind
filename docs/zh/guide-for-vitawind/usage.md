@@ -42,19 +42,19 @@ export default{
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm install vitawind@next
+npm install vitawind
 ```
 
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-yarn add vitawind@next
+yarn add vitawind
 ```
 
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm install vitawind@next
+pnpm install vitawind
 ```
 
 </div></ToolToggle>

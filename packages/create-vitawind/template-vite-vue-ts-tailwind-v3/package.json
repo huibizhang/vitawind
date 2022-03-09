@@ -14,7 +14,7 @@
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.5",
     "typescript": "^4.4.4",
-    "vitawind": "^2.0.0",
+    "vitawind": "^2.2.4",
     "vite": "^2.7.2",
     "vue-tsc": "^0.29.8"
   }

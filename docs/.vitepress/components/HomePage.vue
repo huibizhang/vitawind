@@ -5,19 +5,19 @@
     <span style="font-size:20px;color:#AAAAAA;display:block;margin:5px 0 10px 0;">The Lightning Wind , Stronger and Faster.</span>
     <p align="center">
       <span style="display:flex;gap:5px;">
-        <a href="https://npmjs.com/package/vitawind"
+        <a href="https://npmjs.com/package/vitawind-v1"
           ><img
-            src="https://img.shields.io/npm/v/vitawind?style=flat-square"
+            src="https://img.shields.io/npm/v/vitawind-v1?style=flat-square"
             alt="version"
         /></a>
         <a href="https://nodejs.org/en/about/releases/"
           ><img
-            src="https://img.shields.io/node/v/vitawind?style=flat-square"
+            src="https://img.shields.io/node/v/vitawind-v1?style=flat-square"
             alt="node version"
         /></a>
-        <a href="https://npmjs.com/package/vitawind"
+        <a href="https://npmjs.com/package/vitawind-v1"
           ><img
-            src="https://img.shields.io/npm/dw/vitawind?style=flat-square"
+            src="https://img.shields.io/npm/dw/vitawind-v1?style=flat-square"
             alt="npm-download"
         /></a>
       </span>

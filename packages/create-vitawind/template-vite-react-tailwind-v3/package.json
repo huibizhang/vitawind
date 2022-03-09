@@ -14,7 +14,7 @@
     "@vitejs/plugin-react": "^1.0.7",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.5",
-    "vitawind": "^2.0.0",
+    "vitawind": "^2.2.4",
     "vite": "^2.7.2"
   }
 }

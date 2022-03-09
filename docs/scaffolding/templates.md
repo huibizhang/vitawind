@@ -73,19 +73,16 @@ Use flag `--pure` to create project with vanilla-js in vite.
 <ToolToggle :name="'tool-pure-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --pure
 ```
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --pure
 ```
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --pure
 ```
 </div></ToolToggle>
@@ -124,21 +121,18 @@ Use flag `--vue` to create project with vue in vite.
 <ToolToggle :name="'tool-vue-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --vue
 ```
 
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --vue
 ```
 
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --vue
 ```
 
@@ -185,21 +179,18 @@ Use flag `--react` to create project with react in vite.
 <ToolToggle :name="'tool-react-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --react
 ```
 
 </div><div v-if="tool === 'yarn'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --react
 ```
 
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --react
 ```
 
@@ -248,7 +239,6 @@ Use flag `--cra` to create project with Create React App.
 <ToolToggle :name="'tool-cra-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --cra
 ```
 
@@ -261,7 +251,6 @@ yarn create vitawind {project-name} --cra
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --cra
 ```
 
@@ -304,7 +293,6 @@ Use flag `--ng` to create project with Angular 12.
 <ToolToggle :name="'tool-ng-install'" :tool="tool" @tool="ct($event)"><div v-if="tool === 'npm'">
 
 ```bash
-npm i -g create-vitawind@next
 npm init vitawind {project-name} -- --ng
 ```
 
@@ -317,7 +305,6 @@ yarn create vitawind {project-name} --ng
 </div><div v-if="tool === 'pnpm'">
 
 ```bash
-pnpm i -g create-vitawind@next
 pnpm init vitawind {project-name} -- --ng
 ```
 

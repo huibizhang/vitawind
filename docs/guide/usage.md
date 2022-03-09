@@ -6,10 +6,10 @@ slug: usage
 ## Installation
 ```bash
 # npm
-$ npm install vitawind 
+$ npm install vitawind-v1
 
 # yarn
-$ yarn add vitawind 
+$ yarn add vitawind-v1
 ```
 Installing vitawind , then Tailwind will be installed in your vite project by npm.
 

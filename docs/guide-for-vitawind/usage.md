@@ -15,7 +15,7 @@ $ npm install vitawind
 $ yarn add vitawind
 ```
 
-Installing vitawind , then Tailwind will be installed in your vite project by npm.
+Installing vitawind, then Tailwind will be installed in your vite project by npm.
 
 ## Configuration
 
@@ -23,15 +23,15 @@ Installing vitawind , then Tailwind will be installed in your vite project by np
 $ npx vitawind
 ```
 
-Run `npx vitawind` and vitawind will generates config file all you need and setting automatically , but if you want to create the full configurations of `tailwind.config.js` , or maybe you want to create or set config files with your own setting , you can [configuring vitawind with arguments](/guide-for-vitawind/configurations/).
+Run `npx vitawind` and vitawind will generates config file all you need and setting automatically, but if you want to create the full configurations of `tailwind.config.js`, or maybe you want to create or set config files with your own setting , you can [configuring vitawind with arguments](/guide-for-vitawind/configurations/).
 
 ## Using
 
-The final part , we need to add a line of css file import , just like :
+The final part, we need to add a line of css file import, just like :
 
 ### for Vue
 
-For vue , you need to import index.css to your `./src/main.js` :
+For vue, you need to import index.css to your `./src/main.js` :
 
 ```js{4}
 // ./src/main.js
@@ -44,7 +44,7 @@ createApp(App).mount('#app')
 
 ### for React
 
-For react , the vite template is already have a line of import `index.css` in `./src/main.jsx` , and vitawind will replace the contents of `index.css` automatically. All you have to do is starting to develop your vite-react project with Tailwind :
+For react, the vite template is already have a line of import `index.css` in `./src/main.jsx` , and vitawind will replace the contents of `index.css` automatically. All you have to do is starting to develop your vite-react project with Tailwind:
 
 ```jsx{4}
 // ./src/main.jsx
@@ -63,4 +63,4 @@ ReactDOM.render(
 
 ### Done
 
-After add to your main script , you can open dev server by `npm run dev` command as fast as you can ... because , it's working ! Enjoy your devloping time , thank you ! 🤪
+After add to your main script, you can open dev server by `npm run dev` command as fast as you can... because, it's working ! Enjoy your developing time, thank you! 🤪

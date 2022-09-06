@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   content: [
     "./docs/index.md",
     "./docs/**/*.{md,vue}",

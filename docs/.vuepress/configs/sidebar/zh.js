@@ -1,4 +1,4 @@
-module.exports = {
+export const sidebarZh = {
   "/zh/guide-for-vitawind/": [
     {
       text: "Vitawind 指南",

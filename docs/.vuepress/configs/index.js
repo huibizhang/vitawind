@@ -1,2 +1,2 @@
-module.exports.navbar = require("./navbar");
-module.exports.sidebar = require("./sidebar");
+export * from "./navbar";
+export * from "./sidebar";

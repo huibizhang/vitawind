@@ -1,4 +1,4 @@
-module.exports = [
+export const navbarZh = [
   {
     text: "快速建立專案",
     link: "/zh/scaffolding/",

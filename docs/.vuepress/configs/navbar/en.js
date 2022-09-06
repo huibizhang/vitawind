@@ -1,4 +1,4 @@
-module.exports = [
+export const navbarEn = [
   {
     text: "Scaffolding",
     link: "/scaffolding/",

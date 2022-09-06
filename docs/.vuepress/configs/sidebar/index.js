@@ -1,4 +1,2 @@
-module.exports = {
-  en: require("./en"),
-  zh: require("./zh"),
-};
+export * from "./en";
+export * from "./zh";

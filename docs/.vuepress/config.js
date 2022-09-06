@@ -1,5 +1,17 @@
-const { path } = require("@vuepress/utils");
-const { sidebar, navbar } = require("./configs");
+import { path }  from "@vuepress/utils";
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { 
+  sidebarEn,
+  sidebarZh,
+  navbarEn,
+  navbarZh,
+} from "./configs";
+
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+
+import tailwindcss from "tailwindcss"
+import autoprefixer from "autoprefixer"
 
 module.exports = {
   // dest: "docs/.vitepress/dist",
@@ -17,7 +29,7 @@ module.exports = {
       description: "Vitawind，快速搭建起 Tailwindcss v3 專案開發環境。",
     },
   },
-  themeConfig: {
+  theme: defaultTheme({
     logo: "vitawind_pack.svg",
     logoDark: "logo.svg",
     repo: "https://github.com/huibizhang/vitawind",
@@ -30,8 +42,8 @@ module.exports = {
     locales: {
       "/": {
         selectLanguageName: "English",
-        navbar: navbar.en,
-        sidebar: sidebar.en,
+        navbar: navbarEn,
+        sidebar: sidebarEn,
       },
       "/zh/": {
         selectLanguageName: "繁體中文",
@@ -39,26 +51,25 @@ module.exports = {
         selectLanguageAriaLabel: "切換語言",
         lastUpdatedText: "最後更新",
         editLinkText: "在 Github 上編輯",
-        navbar: navbar.zh,
-        sidebar: sidebar.zh,
+        navbar: navbarZh,
+        sidebar: sidebarZh,
       },
     },
-  },
+  }),
   plugins: [
     [
-      "@vuepress/register-components",
-      {
+      registerComponentsPlugin({
         componentsDir: path.resolve(__dirname, "./global_components"),
-      },
+      }),
     ],
   ],
-  bundlerConfig: {
+  bundler: viteBundler({
     viteOptions: {
       css: {
         postcss: {
-          plugins: [require("tailwindcss"), require("autoprefixer")],
+          plugins: [tailwindcss, autoprefixer],
         },
       },
-    },
-  },
+    }
+  })
 };

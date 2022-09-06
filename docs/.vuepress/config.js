@@ -1,4 +1,4 @@
-import { path }  from "@vuepress/utils";
+import { getDirname, path }  from "@vuepress/utils";
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { 
@@ -13,7 +13,9 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import tailwindcss from "tailwindcss"
 import autoprefixer from "autoprefixer"
 
-module.exports = {
+const __dirname = getDirname(import.meta.url)
+
+export default {
   // dest: "docs/.vitepress/dist",
 
   title: "vitawind v2",

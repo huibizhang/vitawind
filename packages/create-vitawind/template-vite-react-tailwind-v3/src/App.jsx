@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "./logo.svg";
 import poweredBy from "./powered-by-vitawind-dark.png";
 

@@ -68,17 +68,17 @@ export default{
   },
   mounted () {
     let tool = ''
-    if (typeof window !== 'undefined') {
+    if (typeof window != 'undefined') {
       if(window.localStorage.length>0) {
         tool = window.localStorage.getItem('tool')
       }
     }
-    this.tool = tool?tool:'npm';
+    this.tool = tool ?? 'npm';
     this.ct(this.tool)
   },
   methods:{
     ct (event) {
-      if (typeof window !== 'undefined') {
+      if (typeof window != 'undefined') {
         window.localStorage.setItem('tool',event)
       }
       this.tool = event

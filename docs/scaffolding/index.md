@@ -20,7 +20,7 @@ export default{
   },
   mounted () {
     let tool = ''
-    if (typeof window !== 'undefined') {
+    if (typeof window != 'undefined') {
       if(window.localStorage.length>0) {
         tool = window.localStorage.getItem('tool')
       }
@@ -31,7 +31,7 @@ export default{
   methods:{
     ct (event) {
       this.tool = event
-      if (typeof window !== 'undefined') {
+      if (typeof window != 'undefined') {
         window.localStorage.setItem('tool',event)
       }
       // if (this.storage = !) {

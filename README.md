@@ -26,7 +26,7 @@
 > #### The Lightning Wind , Stronger and Faster.
 
 - :toolbox: Easy To Install
-- ⚡️ Automatically open Tailwind JIT Mode
+- :zap: Automatically open Tailwind JIT Mode
 - :gear: One-Command Setting
 
 ## Why Vitawind

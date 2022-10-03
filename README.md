@@ -21,7 +21,7 @@
 </p>
 <br/>
 
-# Vitawind :cloud_tornado::zap:
+# Vitawind :tornado::zap:
 
 > #### The Lightning Wind , Stronger and Faster.
 
